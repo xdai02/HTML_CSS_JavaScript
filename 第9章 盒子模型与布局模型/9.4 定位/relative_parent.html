@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对父元素定位</title>
+    <style type="text/css">
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+
+        #div2 {
+            width: 100px;
+            height: 20px;
+            background-color: blue;
+            position: absolute;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+</body>
+</html>
