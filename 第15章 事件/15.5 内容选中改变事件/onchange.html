@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容改变事件onchange</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            console.log("文本内容被修改");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        <textarea rows="10" cols="30" onchange="feedback();">填写个人信息，不少于20个字。</textarea>
+    </form>
+</body>
+</html>

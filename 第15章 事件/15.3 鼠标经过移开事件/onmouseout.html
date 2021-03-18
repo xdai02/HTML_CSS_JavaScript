@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移开事件onmouseout</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            alert("不要离开！只要输入密码，再点击登录就OK啦！");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        密码：<input type="password"
+                onmouseout="feedback();">
+        <input type="button" value="登录">
+    </form>
+</body>
+</html>

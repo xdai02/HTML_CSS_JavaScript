@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>失焦事件onblur</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            alert("确定输对了再点登录哟！");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        密码：<input type="password"
+                onblur="feedback();">
+        <input type="button" value="登录">
+    </form>
+</body>
+</html>

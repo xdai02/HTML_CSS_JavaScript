@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标单击事件onclick</title>
+    <script type="text/JavaScript">
+        var cnt = 0;
+        function feedback() {
+            cnt++;
+            console.log("我被点击了"+ cnt + "次");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        <input type="button" value="点击" onclick="feedback();">
+    </form>
+</body>
+</html>

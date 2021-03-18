@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>光标聚焦事件onfocus</title>
+    <script type="text/JavaScript">
+        var flag = true;
+        function feedback() {
+            if(flag) {
+                alert("不要填错啦！");
+                flag = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        密码：<input type="password"
+                onfocus="feedback();">
+        <input type="button" value="登录">
+    </form>
+</body>
+</html>
