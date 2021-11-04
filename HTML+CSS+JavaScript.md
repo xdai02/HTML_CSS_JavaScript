@@ -5341,3 +5341,502 @@ Worl
 ---
 
 <div style="page-break-after: always;"></div>
+
+## 16.4 Math
+
+**Math**
+
+`Math`对象提供对数据的数学计算。需要注意的是，`Math`对象是一个固有的对象，无需创建它，直接把`Math`作为对象使用就可以调用其所有属性和方法，这是它与其它对象的区别。
+
+| 属性    | 说明                                                   |
+| ------- | ------------------------------------------------------ |
+| E       | 返回算术常量$ e $，即自然对数的底数（约等于$ 2.718 $） |
+| LN2     | 返回$ 2 $的自然对数（约等于$ 0.693 $）                 |
+| LN10    | 返回$ 10 $的自然对数（约等于$ 2.302 $）                |
+| LOG2E   | 返回以$ 2 $为底$ e $的对数（约等于$ 1.442 $）          |
+| LOG10E  | 返回以$ 10 $为底$ e $的对数（约等于$ 0.434 $）         |
+| PI      | 返回圆周率（约等于$ 3.14159 $）                        |
+| SQRT1_2 | 返回$ 2 $的平方根的倒数（约等于$ 0.707 $）             |
+| SQRT2   | 返回$ 2 $的平方根（约等于$ 1.414 $）                   |
+
+
+
+| 方法      | 描述                             |
+| --------- | -------------------------------- |
+| sin(x)    | 返回$ x $的正弦                  |
+| cos(x)    | 返回$ x $的余弦                  |
+| tan(x)    | 返回$ x $的正切                  |
+| acos(x)   | 返回$ x $的反余弦值              |
+| asin(x)   | 返回$ x $的反正弦值              |
+| atan(x)   | 返回$ x $的反正切值              |
+| ceil(x)   | 对$ x $进行上取整                |
+| floor(x)  | 对$ x $进行下取整                |
+| abs(x)    | 返回$ x $的绝对数                |
+| exp(x)    | 返回$ e $的$ x $次幂             |
+| log(x)    | 返回$ x $的自然对数（底为$ e $） |
+| pow(x, y) | 返回$ x $的$ y $次幂             |
+| max(x, y) | 返回$ x $和$ y $中的最大值       |
+| min(x, y) | 返回$ x $和$ y $中的最小值       |
+| round(x)  | 返回$ x $的四舍五入最接近的整数  |
+| sqrt(x)   | 返回$ x $的平方根                |
+| random()  | 返回$ 0 - 1 $之间的随机数        |
+
+<div style="page-break-after: always;"></div>
+
+# 第17章 浏览器对象模型BOM
+
+## 17.1 window对象
+
+**window对象**
+
+·window·对象是浏览器对象模型`BOM（Browser Object Model）`的核心。
+
+| 方法            | 描述                                           |
+| --------------- | ---------------------------------------------- |
+| alert()         | 显示带有一段消息和一个确认按钮的警告框         |
+| prompt()        | 显示可提示用户输入的对话框                     |
+| confirm()       | 显示带有一段消息以及确认按钮和取消按钮的对话框 |
+| open()          | 打开一个新的浏览器窗口或查找一个已命名的窗口   |
+| close()         | 关闭浏览器窗口                                 |
+| print()         | 打印当前窗口的内容                             |
+| focus()         | 把键盘焦点给与一个窗口                         |
+| blur()          | 把键盘焦点从顶层窗口移开                       |
+| moveBy()        | 可相对窗口的当前坐标把它移动指定的像素         |
+| moveTo()        | 把窗口的左上角移动到一个指定的坐标             |
+| resizeBy()      | 按照指定的像素调整窗口的大小                   |
+| resizeTo()      | 把窗口的大小调整到指定的宽度和高度             |
+| scrollBy()      | 按照指定的像素值来滚动内容                     |
+| scrollTo()      | 把内容滚动到指定的坐标                         |
+| setInterval()   | 每隔指定的时间执行代码                         |
+| setTimeout()    | 在指定的延迟时间之后来执行代码                 |
+| clearInterval() | 取消`setInterval()`的设置                      |
+| clearTimeout()  | 取消`setTimeout()`的设置                       |
+
+<div style="page-break-after: always;"></div>
+
+## 17.2 计时器
+
+**计时器**
+
+在JS中，可以在设定的时间间隔之后执行代码，而不是在函数被调用后立即执行。
+
+计时器的类型分为2种：
+
+1. 一次性计时器：仅在指定的延迟时间之后触发一次。
+2. 间隔性触发计时器：每隔一定的时间间隔就触发一次。
+
+| 方法            | 描述                           |
+| --------------- | ------------------------------ |
+| setTimeout()    | 在指定的延迟时间之后来执行代码 |
+| clearTimeout()  | 取消`setTimeout()`的设置       |
+| setInterval()   | 每隔指定的时间执行代码         |
+| clearInterval() | 取消`setInterval()`的设置      |
+
+
+
+**setTimeout()**
+
+`setTimeout()`计时器，在载入后延迟指定时间后，去执行一次表达式，仅执行一次。
+
+```js
+setTimeout(expr, timeout);
+```
+
+> - expr：要调用的函数或要执行的代码串。
+> - timeout：在执行代码前需等待的时间，以毫秒为单位（1s = 1000ms）。
+
+---
+
+【代码】setTimeout()计时器
+
+```js
+//网页打开2秒后弹出提示框
+setTimeout("alert('Welcome')", 2000);
+```
+
+---
+
+`clearTimeout()`和`setTimeout()`一起使用，用于停止计时器。
+
+```js
+clearTimeout(id_of_setTimeout);
+```
+
+> id_of_setTimeout：`setTimeout()`返回的ID值，该值标识要取消的延迟执行代码块。
+
+---
+
+【代码】计数器
+
+- counter.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计数器</title>
+    <script src="counter.js"></script>
+</head>
+<body>
+    <form action="get/post">
+        <input type="text" id="num">
+        <input type="button" value="stop" onclick="stopCount();">
+    </form>
+</body>
+</html>
+```
+
+- counter.js
+
+```js
+var cnt = 0;        // 计数
+var counter;        // 计数器
+
+/**
+ * 每隔1000毫秒计数加1
+ */
+function count() {
+    document.getElementById('num').value = cnt;
+    cnt++;
+    counter = setTimeout(count, 1000);
+}
+
+/**
+ * 停止计数器
+ */
+function stopCount() {
+    clearTimeout(counter);
+}
+
+setTimeout(count, 1000);        // 启动计数器
+```
+
+---
+
+
+
+**setInterval()**
+
+`setInterval()`在执行时，从载入页面后每隔指定的时间执行代码。
+
+```js
+setInterval(expr, interval);
+```
+
+> - expr：要调用的函数或要执行的代码串。
+> - interval：周期性执行或调用表达式之间的时间间隔，以毫秒为单位（1s = 1000ms）。
+
+`clearInterval()`方法可取消由`setInterval()`设置的交互时间。
+
+```js
+clearInterval(id_of_setInterval);
+```
+
+> id_of_setInterval：`setInterval()`返回的ID值。
+
+---
+
+【代码】实时显示当前时间
+
+- current_time.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示当前时间</title>
+    <script src="current_time.js"></script>
+</head>
+<body>
+    <form action="get/post">
+        <input type="text" id="time" size="50">
+    </form>
+</body>
+</html>
+```
+
+- current_time.js
+
+```js
+// function clock() {
+//     var date = new Date();
+//     document.getElementById("time").value = date;
+// }
+
+// setInterval(clock, 1000);
+
+// 箭头函数
+setInterval(() => {
+    var date = new Date();
+    document.getElementById("time").value = date;
+}, 1000);
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 17.3 Screen对象
+
+**Screen对象 **
+
+`Screen`对象用于获取用户的屏幕信息。`window.screen`对象在编写时可以不使用`window`前缀。
+
+```js
+window.screen.属性;
+```
+
+
+
+| 属性        | 描述                                                         |
+| ----------- | ------------------------------------------------------------ |
+| availHeight | 窗口可以使用的屏幕高度，单位像素                             |
+| availWidth  | 窗口可以使用的屏幕宽度，单位像素                             |
+| colorDepth  | 用户浏览器表示的颜色位数，通常为32位（每像素的位数）         |
+| pixelDepth  | 用户浏览器表示的颜色位数，通常为32位（每像素的位数），IE不支持此属性 |
+| height      | 屏幕的高度，单位像素                                         |
+| width       | 屏幕的宽度，单位像素                                         |
+
+`screen.availWidth`和`screen.availHeight`属性返回访问者屏幕的宽度和高度，单位为像素，减去界面特性，比如任务栏等。不同系统的任务栏默认高度不一样，及任务栏的位置可在屏幕上下左右任何位置，所以有可能可用宽度和高度不一样。
+
+---
+
+【代码】屏幕信息
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>屏幕信息</title>
+    <script type="text/JavaScript">
+        console.log("屏幕分辨率：" + screen.width + "*" + screen.height)
+        console.log("屏幕可用宽高：" + screen.availWidth + "*" + screen.availHeight);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
+> 运行结果
+
+```
+屏幕分辨率：1536*864
+屏幕可用宽高：1536*824
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+# 第18章 文档对象模型DOM
+
+## 18.1 DOM
+
+**DOM（Document Object Model）**
+
+文档对象模型`DOM`定义访问和处理HTML文档的标准方法，`DOM`将HTML文档呈现为带有元素、属性和文本的树结构（结点树）。
+
+![](./img/C18/18-1/1.png)
+
+<div style="page-break-after: always;"></div>
+
+## 18.2 获取结点对象
+
+**getElementById()**
+
+`getElementById()`方法可返回拥有指定ID的第一个对象的引用。
+
+```js
+document.getElementById(elementID);
+```
+
+如果没有指定ID的元素则返回`null`，如果存在多个指定ID的元素则返回第一个。
+
+---
+
+【代码】定时变换颜色
+
+- random_color.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机颜色</title>
+    <script src="random_color.js"></script>
+</head>
+<body>
+    <div id="square" style="width: 100px; height: 100px"></div>
+</body>
+</html>
+```
+
+- random_color.js
+
+```js
+/**
+ * 随机生成RGB颜色代码
+ * @returns rgb颜色
+ */
+function randomRGB() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+}
+
+/**
+ * 获取元素结点，设置背景颜色
+ */
+function changeColor() {
+    var obj = document.getElementById("square");
+    obj.style.background = randomRGB();
+}
+
+// 每隔300ms改变颜色
+setInterval(function () {
+    changeColor();
+}, 300);
+```
+
+---
+
+
+
+**getElementsByClassName()**
+
+`getElementByClassName()`方法返回文档中所有指定类名的元素集合，作为`NodeList`对象。`NodeList`对象代表一个有顺序的结点列表，可以通过索引来访问列表中的结点。使用`NodeList`的`length`属性可以确定指定类名的元素个数，并循环各个元素来获取某个元素。
+
+```js
+document.getElementsByClassName(className);
+```
+
+
+
+**getElementByName()**
+
+`getElementByName()`方法返回带有指定名称的结点对象的集合。
+
+```js
+document.getElementsByName(name);
+```
+
+与`getElementById()`方法不同的是，通过元素的`name`属性查询元素，而不是通过`id`属性。文档中的`name`属性可能不唯一，所以`getElementByName()`方法返回的是元素的数组，而不是一个元素。
+
+
+
+**getElementsByTagName()**
+
+`getElementsByTagName()`方法返回带有指定标签名的结点对象的集合，返回元素的顺序是它们在文档中的顺序。
+
+```js
+document.getElementsByTagName(tagName);
+```
+
+<div style="page-break-after: always;"></div>
+
+## 18.3 结点属性
+
+**结点属性**
+
+`getAttribute()`方法可以通过元素结点的属性名称获取属性的值。
+
+```js
+elementNode.getAttribute(name);
+```
+
+其中，`elementNode`可以使用`getElementById()`、`getElementsByTagName()`等方法获取到元素结点，参数`name`为需要查询的元素结点的属性名称。
+
+`setAttribute()`方法可以增加一个指定名称和值的新属性，或者把一个现有的属性设定为指定的值。
+
+```js
+elementNode.setAttribute(name, value);
+```
+
+> - name：设置的属性名。
+> - value：设置的属性值。
+
+---
+
+【代码】设置结点属性值
+
+- getAttribute.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置结点属性</title>
+    <script src="getAttribute.js"></script>
+</head>
+<body>
+    <a class="link" href="https://www.baidu.com">百度</a>
+    <a class="link" href="https://www.bilibili.com">哔哩哔哩</a>
+</body>
+</html>
+```
+
+- getAttribute.js
+
+```js
+window.onload = function() {
+    var links = document.getElementsByClassName("link");
+    for(var i = 0; i < links.length; i++) {
+        console.log(links[i].getAttribute("href"));
+        links[i].setAttribute("target", "_blank");
+    }
+};
+```
+
+> 运行结果
+
+```
+https://www.baidu.com
+https://www.bilibili.com
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 18.4 结点操作
+
+**结点操作**
+
+- `createElement()`：创建结点元素，此方法可返回一个`Element`对象。要与`appendChild()`或`insertBefore()`方法联合使用，将元素显示在页面中。
+
+```js
+document.createElement(tagName);
+```
+
+- `appendChild()`：在指定结点的最后一个子结点列表之后添加一个新的子结点。
+
+```js
+elementNode.appendChild(newNode);
+```
+
+- `insertBefore()`：在已有的子结点前插入一个新的子结点。
+
+```js
+elementNode.insertBefore(newNode, node);
+```
+
+- `removeChild()`：从子结点列表中删除某个结点，如删除成功返回被删除的结点，如失败则返回`null`。
+
+```js
+elementNode.removeChild(node);
+```
+
+- `replaceChild()`：实现子结点的替换，返回被替换对象的引用。当`oldNode`被替换时，所有与之相关的属性内容都将被移出。
+
+```js
+elementNode.replaceChild(newNode, oldNode);
+```
+
