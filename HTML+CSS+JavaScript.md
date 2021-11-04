@@ -3967,59 +3967,1377 @@ console.log(C);
 
 <div style="page-break-after: always;"></div>
 
+## 13.3 数组操作
+
+**数组操作**
+
+数组的常见操作主要包括：
+
+1. 计算数组长度：引用数组的`length`属性获取数组长度，需要注意的是，JS数组的`length`属性是可变的。
+
+---
+
+【代码】计算数组长度
+
+```js
+var arr = [0, 1, 2, 3, 4];
+console.log(arr.length);
+arr.length = 10;
+console.log(arr.length);
+```
+
+> 运行结果
+
+```
+5
+10
+```
+
+---
+
+2. 增加元素：
+    - 使用下一个未使用的索引，任何时刻可以不断向数组增加新元素。
+    - 使用`unshift()`方法可以向数组第一个元素前面添加一个元素，返回值为数组长度。
+    - `push()`方法可以向数组最后一个元素后面添加一个元素，返回值为数组长度。
+
+---
+
+【代码】增加元素
+
+```js
+var arr = [0, 1, 2, 3, 4];
+arr[5] = 5;
+console.log(arr);
+```
+
+> 运行结果
+
+```
+[0, 1, 2, 3, 4, 5]
+```
+
+---
+
+【代码】unshift()
+
+```js
+var arr = [0, 1, 2, 3, 4];
+arr.unshift(5);
+console.log(arr);
+```
+
+> 运行结果
+
+```
+[5, 0, 1, 2, 3, 4]
+```
+
+---
+
+【代码】push()
+
+```js
+var arr = [0, 1, 2, 3, 4];
+arr.push(5);
+console.log(arr);
+```
+
+> 运行结果
+
+```
+[0, 1, 2, 3, 4, 5]
+```
+
+---
+
+3. 删除元素：
+    - `shift()`方法可以删除数组的第一个元素，返回值为被删除元素。
+    - `pop()`方法可以删除数组的最后一个元素，返回值为被删除元素。
+
+---
+
+【代码】shift()
+
+```js
+var arr = [0, 1, 2, 3, 4];
+arr.shift();
+console.log(arr);
+```
+
+> 运行结果
+
+```
+[1, 2, 3, 4]
+```
+
+---
+
+【代码】pop()
+
+```js
+var arr = [0, 1, 2, 3, 4];
+arr.pop();
+console.log(arr);
+```
+
+> 运行结果
+
+```
+[0, 1, 2, 3]
+```
+
+---
+
+4. 合并数组：使用`concat()`方法可以合并两个或多个数组，该方法不会改变原有数组，而是返回一个新的合并完的数组。
+
+---
+
+【代码】concat()
+
+```js
+var arr1 = [1, 2, 3, 4, 5];
+var arr2 = [6, 7, 8, 9, 10];
+console.log(arr1.concat(arr2));
+console.log(arr1);
+console.log(arr2);
+```
+
+> 运行结果
+
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 2, 3, 4, 5]
+[6, 7, 8, 9, 10]
+```
+
+---
+
+5. 数组转字符串：使用`join(separator)`方法可以将数组转换为字符串，其中`separator`参数可选，用于指定要使用的分隔符，如果该参数省略，则使用逗号作为分隔符。
+
+---
+
+【代码】join()
+
+```js
+var arr = [0, 1, 2, 3, 4];
+console.log(arr.join());
+```
+
+> 运行结果
+
+```
+0,1,2,3,4
+```
+
+---
+
+6. 字符串转数组：使用`split(separator, n)`方法可以将字符串转换为数组，其中参数`separator`必选，用于指定将字符串按某个字符切割成若干个子字符串，并以数组的形式返回。参数`n`可选，用于指定返回的数组的最大长度，如果设置了该参数，返回的子串数量不会多于`n`；如果没有设置该参数，整个字符串都会被分隔。
+
+---
+
+【代码】split()
+
+```js
+var str = "hello HTML hello CSS hello JavaScript";
+var arr = str.split(' ');
+console.log(arr);
+```
+
+> 运行结果
+
+```
+["hello", "HTML", "hello", "CSS", "hello", "JavaScript"]
+```
+
+---
+
+7. 翻转数组：使用`reverse()`方法可以颠倒数组中元素的顺序。
+
+---
+
+【代码】reverse()
+
+```js
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.reverse());
+```
+
+> 运行结果
+
+```
+[5, 4, 3, 2, 1]
+```
+
+---
+
+8. 数组排序：使用`sort(sortfun)`方法可以将数组进行排序，其中参数`sortfun`可选，用于指定排序规则，而且必须是函数，该参数省略则按照字符编码顺序排序。
+
+---
+
+【代码】sort()
+
+```js
+var arr = [98, 1, 21, 8, 12, 2, 10, 25];
+arr.sort(function(a, b) {
+    return a > b ? 1 : -1;
+});
+console.log(arr);
+```
+
+> 运行结果
+
+```
+[1, 2, 8, 10, 12, 21, 25, 98]
+```
+
+---
+
+9. 数组切片：使用`slice(start, end)`方法可以返回数组中被选定的元素，不包含下标为`end`的元素。其中参数`start`必选，用于指定开始位置，如果是负数则从数组尾部开始算起。参数`end`可选，用于指定结束位置，没有该参数省略，则切分到数组结束为止，如果是负数则从数组尾部开始算起。
+
+---
+
+【代码】slice()
+
+```js
+var arr = [0, 1, 2, 3, 4, 5, 6];
+console.log(arr.slice(2, 5));
+```
+
+> 运行结果
+
+```
+[2, 3, 4]
+```
+
+---
+
+10. 查找元素：使用`indexOf(item, start)`方法可以查找指定元素，如果查找成功则返回该元素的下标，如果查找失败者返回`-1`。其中参数`item`必选，用于指定需要查找的元素，参数`start`可选，用于指定在数组中开始检索的位置，如省略则从第一个元素开始检索。
+
+---
+
+【代码】indexOf()
+
+```js
+var arr = [0, 1, 2, 3, 4, 5, 6];
+console.log(arr.indexOf(4));
+```
+
+> 运行结果
+
+```
+4
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+# 第14章 函数
+
+## 14.1 函数
+
+**函数（Function）**
+
+函数执行一个特定的任务，JS提供了大量内置函数，例如`alert()`用来显示警告对话框、`parseInt()`用来将字符串转换为整型等。
+
+<img src="./img/C14/14-1/1.png" style="zoom:80%;" />
+
+当调用函数时，程序控制权会转移给被调用的函数，当函数执行结束后，函数会把程序序控制权交还给其调用者。
+
+```mermaid
+graph TB
+	subgraph Callee
+		code2 --> code3
+	end
+
+	subgraph Caller
+		code1 --> call
+		call --> code5
+	end
+	
+	call --> code2
+	code3 --> call
+```
+
+函数的定义需要使用关键字`function`，函数的参数列表包括参数的类型、顺序、数量等信息，参数列表可以为空。
+
+```js
+function funcName(parameterList) {
+    // code
+}
+```
 
 
 
+**函数设计方法**
+
+为什么不把所有的代码全部写在一起，还需要自定义函数呢？
+
+使用函数有以下好处：
+
+1. 避免代码复制，代码复制是程序质量不良的表现
+2. 便于代码维护
+3. 避免重复造轮子，提高开发效率
+
+在设计函数的时候需要考虑以下的几点要素：
+
+1. 确定函数的功能
+2. 确定函数的参数
+    - 是否需要参数
+    - 参数个数
+    - 参数类型
+3. 确定函数的返回值
+    - 是否需要返回值
+    - 返回值类型
+
+---
+
+【代码】函数实现返回最大值
+
+```js
+function max(num1, num2) {
+    // if(num1 > num2) {
+    //     return num1;
+    // } else {
+    //     return num2;
+    // }
+
+    return num1 > num2 ? num1 : num2;
+}
+
+console.log(max(4, 12));
+console.log(max(54, 33));
+console.log(max(0, -12));
+console.log(max(-999, -774));
+```
+
+> 运行结果
+
+```
+12
+54
+0
+-774
+```
+
+---
+
+【代码】函数实现累加和
+
+```js
+function sum(start, end) {
+    var total = 0;
+    for(var i = start; i <= end; i++) {
+        total += i;
+    }
+    return total;
+}
+
+console.log("1-100的累加和 = " + sum(1, 100));
+console.log("1024-2048的累加和 = " + sum(1024, 2048));
+```
+
+> 运行结果
+
+```
+1-100的累加和 = 5050
+1024-2048的累加和 = 1574400
+```
+
+---
+
+【代码】函数实现输出i行j列由自定义字符组成的图案
+
+```js
+function print_chars(row, col, c) {
+    var str = "";
+    for(var i = 0; i < row; i++) {
+        for(var j = 0; j < col; j++) {
+            str += c;
+        }
+        str += "\n";
+    }
+    console.log(str);
+}
+
+print_chars(5, 10, '?');
+```
+
+> 运行结果
+
+```
+??????????
+??????????
+??????????
+??????????
+??????????
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 14.2 局部变量与全局变量
+
+**局部变量（Local Varaible）**
+
+JS的局部变量是在函数里面被声明的，这些变量的作用域在本地，也就是说这些变量只能在函数内部可用。本地变量在函数调用时被创造，在函数结束时被销毁。
+
+在函数中，函数的每次调用就会产生一个独立的空间，在这个空间中的变量，是函数的这次运行所独有的，函数的参数也是局部变量。
+
+---
+
+【代码】局部变量
+
+```js
+function test(a) {
+    a = 2;
+    console.log("a = " + a);
+}
+
+var a = 1;
+console.log("a = " + a);
+test(a);
+console.log("a = " + a);
+```
+
+> 运行结果
+
+```
+a = 1
+a = 2
+a = 1
+```
+
+---
 
 
 
+**全局变量（Global Varaible）**
+
+JS的全局变量就是在函数外被声明的变量，作用域为全局，所有的在页面上的脚本和函数都可以获取这些变量。全局变量在其被声明时创建，在页面被关闭时被销毁。
+
+全局变量的优先级低于局部变量，当全局变量与局部变量重名的时候，起作用的是局部变量，全局变量会被暂时屏蔽掉。
+
+```mermaid
+graph TB
+	subgraph 全局
+		subgraph 局部
+			变量A
+		end
+		变量B
+	end
+```
+
+---
+
+【代码】全局变量
+
+```js
+var a = 1;          // 全局变量
+
+function test() {
+    var a = 2;      // 本地变量
+    console.log("a = " + a);
+}
+
+test();
+```
+
+> 运行结果
+
+```
+a = 2
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 14.3 递归
+
+**递归（Recursion）**
+
+要理解递归，先得理解递归（见14.3章节）。
+
+在函数的内部，直接或者间接的调用自己的过程就叫作递归。对于一些问题，使用递归可以简洁易懂的解决问题，但是递归的缺点是性能低，占用大量系统栈空间。
+
+递归算法很多时候可以处理一些特别复杂、难以直接解决的问题。
+
+比如：
+
+- 迷宫
+- 汉诺塔
+- 八皇后
+- 排序
+- 搜索
+
+在定义递归函数时，一定要确定一个结束条件，否则会造成无限递归的情况，最终会导致栈溢出。
+
+![](./img/C14/14-3/1.png)
+
+![](./img/C14/14-3/2.png)
+
+![](./img/C14/14-3/3.png)
+
+![](./img/C14/14-3/4.png)
+
+![](./img/C14/14-3/5.png)
+
+---
+
+【代码】无限递归
+
+```js
+function tell_story() {
+    console.log("从前有座山");
+    console.log("山里有座庙");
+    console.log("庙里有个老和尚和小和尚");
+    console.log("老和尚对小和尚在讲故事");
+    console.log("他讲的故事是：");
+    tell_story();
+}
+
+tell_story();
+```
+
+> 运行结果
+
+```
+从前有座山
+山里有座庙
+庙里有个老和尚和小和尚
+老和尚对小和尚在讲故事
+他讲的故事是：
+从前有座山
+山里有座庙
+庙里有个老和尚和小和尚
+老和尚对小和尚在讲故事
+他讲的故事是：
+...
+```
+
+---
+
+递归函数一般需要定义递归的出口，即结束条件，确保递归能够在适合的地方退出。
+
+---
+
+【代码】阶乘
+
+```js
+function factorial(n) {
+    if(n == 0 || n == 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+console.log("5! = " + factorial(5));
+```
+
+> 运行结果
+
+```
+5! = 120
+```
+
+![](./img/C14/14-3/6.png)
+
+---
+
+【代码】斐波那契数列（递归）
+
+```js
+function fibonacci(n) {
+    if(n == 1 || n == 2) {
+        return 1;
+    }
+    return fibonacci(n - 2) + fibonacci(n - 1);
+}
+
+n = 7;
+console.log("斐波那契数列第" + n + "位：" + fibonacci(7));
+```
+
+> 运行结果
+
+```
+斐波那契数列第7位：13
+```
+
+![](./img/C14/14-3/7.png)
+
+---
+
+【代码】斐波那契数列（迭代）
+
+```js
+function fibonacci(n) {
+    var f = new Array(n + 1);
+    f[1] = f[2] = 1;
+    for(var i = 3; i <= n; i++) {
+        f[i] = f[i - 2] + f[i - 1];
+    }
+    return f[n];
+}
+
+n = 7;
+console.log("斐波那契数列第" + n + "位：" + fibonacci(7));
+```
+
+> 运行结果
+
+```
+斐波那契数列第7位：13
+```
+
+---
+
+【代码】阿克曼函数
+$$
+A(m, n) =
+\begin{cases}
+	n + 1 & m = 0 \\
+	A(m-1, 1) & m > 0, n = 0 \\
+	A(m-1, A(m, n-1)) & m > 0, n > 0 \\
+\end{cases}
+$$
+
+```js
+function A(m, n) {
+    if(m == 0) {
+        return n + 1;
+    } else if(m > 0 && n == 0) {
+        return A(m-1, 1);
+    } else if(m > 0 && n > 0) {
+        return A(m-1, A(m, n-1));
+    }
+}
+
+console.log(A(3, 4));
+```
+
+> 运行结果
+
+```
+125
+```
+
+|  m\n  |      0      |         1         |         2         |            3            |         4         |                           n                            |
+| :---: | :---------: | :---------------: | :---------------: | :---------------------: | :---------------: | :----------------------------------------------------: |
+| **0** |      1      |         2         |         3         |            4            |         5         |                       $ n + 1 $                        |
+| **1** |      2      |         3         |         4         |            5            |         6         |                  $ 2 + (n + 3) - 3 $                   |
+| **2** |      3      |         5         |         7         |            9            |        11         |                    $ 2(n + 3) - 3 $                    |
+| **3** |      5      |        13         |        29         |           61            |        125        |                   $ 2^{n + 3} - 3 $                    |
+| **4** |     13      |       65533       | $ 2^{65536} - 3 $ | $ A(3, 2^{65536} - 3) $ | $ A(3, A(4, 3)) $ | $ \underbrace{2^{2^{.^{.^{.{^2}}}}}}_{n+3\ twos} - 3 $ |
+| **5** |    65533    |  $ A(4, 65533) $  | $ A(4, A(5, 1)) $ |    $ A(4, A(5, 2)) $    | $ A(4, A(5, 3)) $ |                       $ \dots $                        |
+| **6** | $ A(5, 1) $ | $ A(5, A(5, 1)) $ | $ A(5, A(6, 1)) $ |    $ A(5, A(6, 2)) $    | $ A(5, A(6, 3)) $ |                       $ \dots $                        |
+
+<img src="./img/C14/14-3/8.png" style="zoom: 50%;" />
+
+---
+
+【代码】汉诺塔
+
+给定三根柱子，其中A柱子从大到小套有n个圆盘，问题是如何借助B柱子，将圆盘从A搬到C。
+
+> 规则：
+>
+> - 一次只能搬动一个圆盘
+> - 不能将大圆盘放在小圆盘上面
+
+<img src="./img/C14/14-3/9.png" style="zoom:40%;" />
+
+递归算法求解汉诺塔问题：
+
+1. 将前n-1个圆盘从A柱借助于C柱搬到B柱。
+2. 将最后一个圆盘直接从A柱搬到C柱。
+3. 将n-1个圆盘从B柱借助于A柱搬到C柱。
+
+```js
+var move = 0;       // 移动次数
+
+/**
+ * @brief  汉诺塔算法
+ * @note   把 n 个盘子从 src 借助 mid 移到 dst
+ * @param  n: 层数
+ * @param  src: 起点柱子
+ * @param  mid: 临时柱子
+ * @param  dst: 目标柱子
+ */
+function hanoi(n, src, mid, dst) {
+    if(n == 1) {
+        console.log(n + "号盘：" + src + " -> " + dst);
+        move++;
+    } else {
+        // 把前 n-1 个盘子从 src 借助 dst 移到 mid
+        hanoi(n-1, src, dst, mid);
+        // 移动第 n 个盘子
+        console.log(n + "号盘：" + src + " -> " + dst);
+        move++;
+        // 把刚才的 n-1 个盘子从 mid 借助 src 移到 dst
+        hanoi(n-1, mid, src, dst);
+    }
+}
+
+hanoi(4, 'A', 'B', 'C');
+console.log("步数 ==> " + move);
+```
+
+> 运行结果
+
+```
+1号盘：A -> B
+2号盘：A -> C
+1号盘：B -> C
+3号盘：A -> B
+1号盘：C -> A
+2号盘：C -> B
+1号盘：A -> B
+4号盘：A -> C
+1号盘：B -> C
+2号盘：B -> A
+1号盘：C -> A
+3号盘：B -> C
+1号盘：A -> B
+2号盘：A -> C
+1号盘：B -> C
+步数 ==> 15
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+# 第15章 事件
+
+## 15.1 事件
+
+**事件（Event）**
+
+JS创建动态页面时，事件是可以被JS侦测到的行为。网页中的每个元素都可以产生某些可以出发JS函数或程序的事件。例如当用户单击或者提交表单数据时，就发生一个鼠标单击事件，需要浏览器做出处理，返回给用户一个结果。
+
+| 事件        | 说明                 |
+| :---------- | -------------------- |
+| onclick     | 鼠标单击事件         |
+| onmouseover | 鼠标经过事件         |
+| onmouseout  | 鼠标移开事件         |
+| onchange    | 文本框内容改变事件   |
+| onselect    | 文本框内容被选中事件 |
+| onfocus     | 光标聚集             |
+| onblur      | 光标离开             |
+| onload      | 网页导入             |
+| onunload    | 关闭网页             |
+
+<div style="page-break-after: always;"></div>
+
+## 15.2 鼠标单击事件
+
+**鼠标单击事件onclick**
+
+当在网页上单击鼠标时，就会发生该事件，同时`onclick`事件调用的程序块就会被执行，`onclick`通常与按钮一起使用。
+
+<img src="./img/C15/15-2/1.png" style="zoom:67%;" />
+
+---
+
+【代码】onclick
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标单击事件onclick</title>
+    <script type="text/JavaScript">
+        var cnt = 0;
+        function feedback() {
+            cnt++;
+            console.log("我被点击了"+ cnt + "次");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        <input type="button" value="点击" onclick="feedback();">
+    </form>
+</body>
+</html>
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 15.3 鼠标经过/移开事件
+
+**鼠标经过事件onmouseover**
+
+当鼠标移到一个对象上时，该对象就会触发`onmouseover`事件，并执行`onmouseover`事件调用的程序。
+
+<img src="./img/C15/15-3/1.png" style="zoom:67%;" />
+
+---
+
+【代码】onmouseover
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标经过事件onmouseover</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            alert("卸载之前再想想吧...");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        <input type="button" value="卸载" 
+            onmouseover="feedback();">
+    </form>
+</body>
+</html>
+```
+
+---
 
 
 
+**鼠标移开事件onmouseout**
+
+当鼠标移开当前对象时，执行`onmouseout`事件调用的程序。
+
+---
+
+【代码】onmouseout
+
+```html
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移开事件onmouseout</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            alert("不要离开！只要输入密码，再点击登录就OK啦！");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        密码：<input type="password"
+                onmouseout="feedback();">
+        <input type="button" value="登录">
+    </form>
+</body>
+</html>
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 15.4 光标聚焦/失焦事件
+
+**光标聚焦事件onfocus**
+
+当网页中的对象获得聚点时，执行`onfocus`事件调用的程序。
+
+---
+
+【代码】onfocus
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>光标聚焦事件onfocus</title>
+    <script type="text/JavaScript">
+        var flag = true;
+        function feedback() {
+            if(flag) {
+                alert("不要填错啦！");
+                flag = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        密码：<input type="password"
+                onfocus="feedback();">
+        <input type="button" value="登录">
+    </form>
+</body>
+</html>
+```
+
+---
 
 
 
+**失焦事件onblur**
+
+`onblur`事件与`onfocus`事件是相对事件，当光标离开当前获得聚焦对象的时候，就会触发`onblur`事件，同时执行被调用的程序。
+
+---
+
+【代码】onblur
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>失焦事件onblur</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            alert("确定输对了再点登录哟！");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        密码：<input type="password"
+                onblur="feedback();">
+        <input type="button" value="登录">
+    </form>
+</body>
+</html>
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 15.5 内容选中/改变事件
+
+**内容选中事件onselect**
+
+当文本框或者文本域中的文本被选中时，触发`onselect`事件，同时调用的程序就会被执行。
+
+---
+
+【代码】onselect
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容选中事件onselect</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            console.log("文本内容被选中");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        <textarea rows="10" cols="30" onselect="feedback();">填写个人信息，不少于20个字。</textarea>
+    </form>
+</body>
+</html>
+```
+
+---
 
 
 
+**内容改变事件onchange**
+
+通过改变文本框的内容可以触发`onchange`事件，同时执行被调用的程序。
+
+---
+
+【代码】onchange
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容改变事件onchange</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            console.log("文本内容被修改");
+        }
+    </script>
+</head>
+<body>
+    <form action="get/post">
+        <textarea rows="10" cols="30" onchange="feedback();">填写个人信息，不少于20个字。</textarea>
+    </form>
+</body>
+</html>
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 15.6 加载/卸载事件
+
+**加载事件onload**
+
+加载事件会在页面加载完成后立即发生，同时执行被调用的程序。注意，加载事件需要写在`<body>`标签内。
+
+<img src="./img/C15/15-6/1.png" style="zoom:67%;" />
+
+---
+
+【代码】onload
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加载事件onload</title>
+    <script type="text/JavaScript">
+        function feedback() {
+            alert("页面加载完成");
+        }
+    </script>
+</head>
+<body onload="feedback();">
+    <p>Hello World!</p>
+</body>
+</html>
+```
+
+---
 
 
 
+**卸载事件onunload**
+
+当用户退出页面时（页面关闭、页面刷新等），就会触发`onunload`事件，同时执行被调用的程序。注意，不同浏览器对`onunload`事件的支持不同。
+
+<div style="page-break-after: always;"></div>
+
+# 第16章 对象
+
+## 16.1 对象
+
+**对象（Object）**
+
+JS中的所有事物都是对象，如字符串、数值、数组、函数等，每个对象带有属性和方法。对象的属性反映了该对象的某些特定性质，如字符串的长度、图像的长宽等，对象的方法指的是能够在对象上执行的动作，如表单的提交、时间的获取等。
+
+JS提供了多个内建对象，如`String`、`Date`、`Array`等，使用对象前需要先使用`new`关键字进行定义。
+
+---
+
+【代码】访问对象属性
+
+```js
+var arr = new Array(1, 2, 3, 4, 5);
+console.log(arr.length);
+```
+
+> 运行结果
+
+```
+5
+```
+
+---
+
+【代码】访问对象方法
+
+```js
+var str = "Hello World";
+console.log(str.toUpperCase());
+```
+
+> 运行结果
+
+```
+HELLO WORLD
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 16.2 Date
+
+**Date**
+
+Date对象可以存储任意一个日期，并且可以精确到毫秒数（$ 1 / 1000 $秒）。使用默认构造函数创建的日期对象有初始值，为当前电脑系统时间。
+
+---
+
+【代码】定义Date对象
+
+```js
+var date1 = new Date();
+console.log(date1);
+
+var date2 = new Date(2021, 3, 19);      //此处月份从0开始
+console.log(date2);
+```
+
+> 运行结果
+
+```
+2021-03-19T05:09:47.713Z
+2021-04-18T16:00:00.000Z
+```
+
+---
+
+| 方法名称                      | 功能描述                           |
+| ----------------------------- | ---------------------------------- |
+| getDate() / setDate()         | 返回/设置日期                      |
+| getFullYear() / setFullYear() | 返回/设置年份，用四位数表示        |
+| getYear() / setYear()         | 返回/设置年份                      |
+| getMonth() / setMonth()       | 返回/设置月份，月份从0开始         |
+| getHours() / setHours()       | 返回/设置小时，24小时制            |
+| getMinutes() / setMinutes()   | 返回/设置分钟数                    |
+| getSeconds() / setSeconds()   | 返回/设置秒钟数                    |
+| getTime() / setTime()         | 返回/设置时间（毫秒为单位）        |
+| getDay()                      | 返回0-6的数字表示星期，0表示星期天 |
+
+---
+
+【代码】获取今日星期
+
+```js
+var date = new Date();
+var weekday = [
+    "星期天", 
+    "星期一", 
+    "星期二", 
+    "星期三", 
+    "星期四", 
+    "星期五", 
+    "星期六"
+];
+console.log("今天是" + weekday[date.getDay()]);
+```
+
+> 运行结果
+
+```
+今天是星期五
+```
+
+---
+
+<div style="page-break-after: always;"></div>
+
+## 16.3 String
+
+**String**
+
+定义`String`对象后就可以访问它的属性和方法。
+
+---
+
+【代码】计算字符串长度
+
+```js
+var str = "Hello World!"
+console.log(str.length);
+```
+
+> 运行结果
+
+```
+12
+```
+
+---
 
 
 
+**大小写转换**
+
+使用String对象的`toUpperCase()`和`toLowerCase()`方法可以将字符串进行大小写字母转换。
+
+---
+
+【代码】大小写字母转换
+
+```js
+var str = "Hello World!"
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+```
+
+> 运行结果
+
+```
+HELLO WORLD!
+hello world!
+```
+
+---
 
 
 
+**返回指定的字符**
+
+使用`charAt()`方法可返回指定位置的字符，返回的字符是长度为1的字符串。
+
+```js
+stringObj.charAt(index);
+```
+
+字符串第一个字符的下标是`0`，最后一个字符的下标为`length - 1`，如果参数`index`不在`0`与`length - 1`之间，该方法将返回一个空字符串。
+
+---
+
+【代码】charAt()
+
+```js
+var str = "Hello World!"
+console.log(str.charAt(6));
+```
+
+> 运行结果
+
+```
+W
+```
+
+---
 
 
 
+**返回指定的字符串首次出现的位置**
+
+`indexOf()`方法可以返回某个指定的字符串值在字符串中首次出现的位置。
+
+```js
+stringObj.indexOf(substring, startPos);
+```
+
+该方法将从头到尾地检索字符串，检查是否含有需检索的子串。参数`startPos`为可选参数，用于规定开始查找的位置，如果没有设置此参数将从头开始查找。如果找到了子串，在返回子串的第一次出现位置。如果要检索的字符串值没有出现，则该方法返回`-1`。
+
+---
+
+【代码】indexOf()
+
+```js
+var str = "Hello World!";
+console.log(str.indexOf("Hell"));
+console.log(str.indexOf("o", 6));
+console.log(str.indexOf("JS"));
+```
+
+> 运行结果
+
+```
+0
+7
+-1
+```
+
+---
 
 
 
+**字符串分割**
+
+`split()`方法可以将字符串分割为字符串数组，并返回此数组。
+
+```js
+stringObj.split(separator, limit);
+```
+
+其中参数`separator`必选，用于指定将字符串按某个字符切割成若干个子字符串，并以数组的形式返回。参数`limit`可选，用于指定分隔的次数。
+
+如果把空字符串作为`separator`，那么字符串的每个字符之间都会被分隔。
+
+---
+
+【代码】split()
+
+```js
+var str = "hello HTML hello CSS hello JavaScript";
+console.log(str.split(" "));
+console.log(str.split(" ", 4));
+```
+
+> 运行结果
+
+```
+["hello", "HTML", "hello", "CSS", "hello", "JavaScript"]
+["hello", "HTML", "hello", "CSS"]
+```
+
+---
 
 
 
+**提取字符串**
+
+`substring()`方法用于提取字符串中介于两个指定下标之间的字符。
+
+```js
+stringObj.substring(startPos, stopPos);
+```
+
+该方法返回的内容是从`startPos`开始到`stopPos - 1`处的所有内容，其长度为`stopPos - startPos`。如果`startPos`和`stopPos`相等，那么返回的就是一个空串（长度为`0`的字符串）。如果`startPos`比`stopPos`大，那么该方法在提取子串之间会先交换这两个参数。
+
+---
+
+【代码】substring()
+
+```js
+var str = "HelloWorld";
+console.log(str.substring(2, 8));
+console.log(str.substring(3, 3));
+console.log(str.substring(7, 3));
+```
+
+> 运行结果
+
+```
+lloWor
+
+loWo
+```
+
+---
 
 
 
+**提取指定数目的字符**
 
+`substr()`方法用于从字符串中提取从`startPos`位置开始的指定数目的字符串。
 
+```js
+stringObj.substr(startPos, length);
+```
 
+如果参数`startPos`是负数，则从字符串的尾部开始算起，如果`startPos`为负数且绝对值大于字符串长度，则`startPos`会被视为`0`。
 
+---
 
+【代码】substr()
 
+```js
+var str = "HelloWorld";
+console.log(str.substr(2, 3));
+console.log(str.substr(-5, 4));
+```
 
+> 运行结果
 
+```
+llo
+Worl
+```
 
+---
 
-
-
-
-
-
-
-
-
-
-
+<div style="page-break-after: always;"></div>
