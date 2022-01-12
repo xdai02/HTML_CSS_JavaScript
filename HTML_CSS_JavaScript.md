@@ -1,37 +1,4 @@
-<center><h1>HTML/CSS/JavaScript</h1></center>
-
-<div style="border-bottom: none;"><center><h3>目录</h3></center></div>
-
-[TOC]
-
-<div style="page-break-after: always;"></div>
-
-**代码注释**
-
-在`HTML`、`CSS`、`JavaScript`中代码的注释是不一样的。
-
-- HTML
-
-```html
-<!-- 注释内容 -->
-```
-
-- CSS
-
-```css
-/* 注释内容 */
-```
-
-- JavaScript
-
-```js
-// 注释内容
-/* 注释内容 */
-```
-
-<div style="page-break-after: always;"></div>
-
-# 第2章 HTML5介绍
+第2章 HTML5介绍
 
 ## 2.1 Hello World!
 
