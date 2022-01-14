@@ -1,0 +1,219 @@
+\chapter{语义化标签}
+
+\section{开始我们的第一段对话吧}
+
+\subsection{语义化（Semantic）}
+
+学习HTML标签需要注意标签的用途和标签在浏览器中的默认样式。 \\
+
+语义化，通俗的讲就是明白每个标签的用途，即在什么情况下使用此标签合理。比如，网页上文章的标题可以用标题标签、各个栏目的名称也可以使用标题标签、文章内容的段落就得放在段落标签中。 \\
+
+语义化可以带来一些好处：
+
+\begin{itemize}
+    \item 更容易被搜索引擎收录
+    \item 更容易让屏幕阅读器读出网页内容
+\end{itemize}
+
+\subsection{p标签}
+
+如果想在网页上显示文章，就需要使用\lstinline|<p>|了，把文章的段落放到\lstinline|<p>|中。 \\
+
+\begin{lstlisting}[style=htmlcssjs]
+<p>段落文本</p>
+\end{lstlisting}
+
+注意一段文字一个\lstinline|<p>|标签，如在一篇文章中有三段文字，就要分别放到三个\lstinline|<p>|标签中。
+
+\begin{lstlisting}[style=htmlcssjs, title=p标签]
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p标签</title>
+</head>
+<body>
+    <p>所有主流浏览器都支持p标签。</p>
+    <p>p标签定义段落。</p>
+    <p>p元素会自动在其前后创建一些空白。</p>
+</body>
+</html>
+\end{lstlisting}
+
+\lstinline|<p>|的默认样式，在段前段后都会有空白，如果不喜欢这个空白，可以用CSS样式来删除或改变它。
+
+\subsection{span标签}
+
+\lstinline|<span>|是没有语义的，它的作用就是为了设置单独的样式用的。 \\
+
+\begin{lstlisting}[style=htmlcssjs]
+<span>文本</span>
+\end{lstlisting}
+
+如果现在想把一段中某些字设置成蓝色，这种情况下就可以用到\lstinline|<span>|了。
+
+\begin{lstlisting}[style=htmlcssjs, title=span标签]
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>span标签</title>
+    <style type="text/css">
+        span {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span>莫里亚蒂</span>有份包裹指明要交给<span>夏洛克</span>
+    </p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{做个标题党——hx标签}
+
+\subsection{hx标签}
+
+文章的段落用\lstinline|<p>|，那么文章的标题可以使用标题标签。标题标签一共有6个，\lstinline|<h1>|、\lstinline|<h2>|、\lstinline|<h3>|、\lstinline|<h4>|、\lstinline|<h5>|、\lstinline|<h6>|分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题，并且依据重要性递减，\lstinline|<h1>|是最高的等级。 \\
+
+\begin{lstlisting}[style=htmlcssjs]
+<h1>标题文本</h1>
+<h2>标题文本</h2>
+<h3>标题文本</h3>
+<h4>标题文本</h4>
+<h5>标题文本</h5>
+<h6>标题文本</h6>
+\end{lstlisting}
+
+网页上的各个栏目标题也可使用标题标签。因为\lstinline|<h1>|在网页中比较重要，一般\lstinline|<h1>|被用在网站名称上。 \\
+
+标题标签的样式都会加粗，\lstinline|<h1>|字号最大，\lstinline|<h2>|字号相对\lstinline|<h1>|要小，以此类推\lstinline|<h6>|的字号最小。
+
+\newpage
+
+\section{div标签}
+
+\subsection{div标签}
+
+网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个\lstinline|<div>|中，\lstinline|<div>|的作用就相当于一个容器。 \\
+
+逻辑部分是页面上相互关联的一组元素，如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示，图中用红色边框标出的部分就是一个逻辑部分，就可以使用\lstinline|<div>|作为容器。 \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/C2/2-3/1.png}
+\end{figure}
+
+\begin{lstlisting}[style=htmlcssjs, title=div标签]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div标签</title>
+</head>
+<body>
+    <div>
+    <h2>热门课程排行榜</h2>
+        <ol>
+            <li>前端开发面试心法</li>
+            <li>零基础学习HTML</li>
+            <li>JavaScript全攻略</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>最新课程排行</h2>
+        <ol>
+            <li>版本管理工具介绍—Git篇</li>
+            <li>Canvas绘图详解</li>
+            <li>QQ5.0侧滑菜单</li>
+        </ol>
+    </div>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{写代码都不换行吗？——br标签}
+
+\subsection{br标签}
+
+在HTML代码中输入回车、空格都是没有作用的，在HTML中是忽略回车和空格的，输入再多的回车和空格也是现实不出来的。如果需要在HTML文本中输入回车换行，就必须使用\lstinline|<br/>|。在需要加回车换行的地方加入\lstinline|<br/>|，\lstinline|<br/>|的作用相当于Word文档中的回车。 \\
+
+\lstinline|<br/>|是一个单标签，没有HTML内容的标签就是单标签。单标签只需要写一个开始标签，这样的标签有\lstinline|<br/>|、\lstinline|<hr/>|和\lstinline|<img/>|。
+
+\begin{lstlisting}[style=htmlcssjs, title=br标签]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>br标签</title>
+</head>
+<body>
+    <h2>《望庐山瀑布》</h2>
+    <p>唐·李白</p>
+    <p>
+        日照香炉生紫烟，<br/>
+        遥看瀑布挂前川。<br/>
+        飞流直下三千尺，<br/>
+        疑是银河落九天。
+    </p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{再加点空格呢？——特殊字符}
+
+\subsection{特殊字符}
+
+在HTML代码中输入空格、回车都是没有作用的，输出多个空格只会显示1个空格。如果需要输入空格，必须使用特殊字符\lstinline|&nbsp;|。
+
+\begin{lstlisting}[style=htmlcssjs, title=特殊字符]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>空格</title>
+</head>
+<body>
+    <h2>新闻纵览</h2>
+    来源：XXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者：XXX
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{再来个水平分割线——hr标签}
+
+\subsection{hr标签}
+
+在信息展示时，有时会需要加一些用于分隔的横线，这样会使文章看起来整齐些。 \\
+
+\lstinline|<hr/>|和\lstinline|<br/>|一样也是一个单标签，所以只有一个开始标签，没有结束标签。 \\
+
+\lstinline|<hr/>|在浏览器中的默认样式线条比较粗，颜色为灰色。有些人觉得这种样式不美观，这些在样式可以通过CSS进行修改。
+
+\begin{lstlisting}[style=htmlcssjs, title=hr标签]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hr标签</title>
+</head>
+<body>
+    <p>深夜，一道黑影潜入贝克街221B。</p>
+    <hr/>
+    <p>坐在暗处的夏洛克已等候多时，正等着贝尔纳多自投罗网。</p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
