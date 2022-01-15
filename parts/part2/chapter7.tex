@@ -1,0 +1,45 @@
+\chapter{字体、文本样式}
+
+\section{字体样式}
+
+\subsection{字体样式}
+
+使用CSS样式可以为网页中的文字设置字体。注意不要设置不常用的字体，因为如果用户本地电脑上没有安装该字体，就会显示浏览器默认的字体。 \\
+
+浏览器默认的字号为16px，使用font-size可以修改字号大小。 \\
+
+为文字设置粗体是有单独的CSS样式来实现的，再也不用为了实现粗体样式而使用\lstinline|<h1>|-\lstinline|<h6>|或\lstinline|<strong>|了。 \\
+
+font-weight的默认值为normal，通过设置属性值为lighter、bold、bolder或100-900之间的整百数值改变文字的粗细。注意，字体能否被bolder或lighter更改取决于字体包是否存在该样式。 \\
+
+font-style可以设置字体样式，并且有3种设置方式：
+
+\begin{enumerate}
+    \item 正常字体为normal，也是font-style的默认值
+    \item italic为字体设置为斜体，用于字体本身就有倾斜的样式
+    \item oblique强制将字体倾斜
+\end{enumerate}
+
+\begin{lstlisting}[style=htmlcssjs, title=字体样式]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体样式</title>
+    <style type="text/css">
+        p {
+            font-family: "arial";
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }   
+    </style>
+</head>
+<body>
+    <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.</p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
