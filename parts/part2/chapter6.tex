@@ -1,0 +1,200 @@
+\chapter{选择器}
+
+\section{选一个标签——标签选择器}
+
+\subsection{标签选择器}
+
+标签选择器其实就是HTML代码中的标签。 \\
+
+\begin{lstlisting}[style=htmlcssjs]
+tag_selector {
+    attribute: value;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[style=htmlcssjs, title=标签选择器]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签选择器</title>
+    <style type="text/css">
+        h2 {
+            color: green;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS特点</h2>
+    <p>CSS为HTML标记语言提供了一种样式描述。</p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{再选一个类——类选择器}
+
+\subsection{类选择器}
+
+类选择器在CSS样式中是最常用的。类选择器使用【.】开头，后加类选择器的名称，CSS样式代码会被作用到属于该类的HTML标签中。在标签中使用class属性为标签设置一个类。 \\
+
+类选择器与标签是多对多的关系，即类选择器名称可以多个标签共用，一个元素可以用多个class，一个class值可以对应多个元素。多个class值之间使用空格分隔。
+
+\begin{lstlisting}[style=htmlcssjs, title=类选择器]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类选择器</title>
+    <style type="text/css">
+        .title {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="title">丰富的样式定义</h3>
+    <p>CSS提供了丰富的文档样式外观。</p>
+    <h3 class="title">易于使用和修改</h3>
+    <p>CSS样式表可以将所有的样式声明统一存放，进行统一管理。</p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{取个唯一表示——ID选择器}
+
+\subsection{ID选择器}
+
+使用ID选择器，必须给标签添加上id属性，即为标签设置id属性。ID选择器名称的前面使用【\#】。 \\
+
+ID选择器与标签是一对一的关系，即一个元素只能有一个id值，一个id值只能对应一个元素。id是全局唯一的，就像身份证号码一样。
+
+\begin{lstlisting}[style=htmlcssjs, title=ID选择器]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ID选择器</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #square1 {
+            background-color: red;
+        }
+        #square2 {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="square1"></div>
+    <div id="square2"></div>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{捡了个儿子——子选择器}
+
+\subsection{子选择器}
+
+子选择器【>】，用于选择指定标签元素的第一代子元素。
+
+\begin{lstlisting}[style=htmlcssjs, title=子选择器]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子选择器</title>
+    <style type="text/css">
+        .food > li {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>食物</h2>
+    <ul class="food">
+        <li>水果
+            <ul>
+                <li>苹果</li>
+                <li>香蕉</li>
+            </ul>
+        </li>
+        <li>蔬菜
+            <ul>
+                <li>白菜</li>
+                <li>油菜</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{这么快就当爷爷了——后代选择器}
+
+\subsection{后代选择器}
+
+后代选择器，也称包含选择器，用于选择指定标签元素的后辈元素。 \\
+
+\begin{lstlisting}[style=htmlcssjs]
+ancestor_selector descendant_selector {
+    attribute: value;
+}
+\end{lstlisting}
+
+后代选择器与子选择器的区别在于，子选择器仅是指它的直接后代，而后代选择器是作用于所有子后代元素。
+
+\begin{lstlisting}[style=htmlcssjs, title=后代选择器]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <style type="text/css">
+        .food li {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>食物</h2>
+    <ul class="food">
+        <li>
+            水果
+            <ul>
+                <li>苹果</li>
+                <li>香蕉</li>
+                <li>橘子</li>
+            </ul>
+        </li>
+        <li>
+            蔬菜
+            <ul>
+                <li>白菜</li>
+                <li>油菜</li>
+                <li>卷心菜</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{我全都要——通配符选择器}
+
+\subsection{通配符选择器}
+
