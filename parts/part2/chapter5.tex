@@ -1,0 +1,43 @@
+\chapter{CSS简介}
+
+\section{给HTML打扮——CSS样式}
+
+\subsection{层叠样式表（CSS, Cascading Style Sheets）}
+
+CSS主要用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。使用CSS样式的一个好处是通过定义某个样式，可以让不同网页位置的问题有着统一的字体、字号或颜色等。CSS样式由选择器和声明组成，而声明又由属性和值组成。 \\
+
+\begin{lstlisting}[style=htmlcssjs]
+selector {
+    attribute: value;
+}
+\end{lstlisting}
+
+选择器也称选择符，用于指明网页中要应用样式规则的元素。声明的内容写在大括号【{}】内，属性和值之前用冒号【:】分隔。当有多条声明时，中间可以用分号【;】分隔。 最后一条声明可以没有分号，但是为了后续修改方便，一般也加上分号。为了使样式更加容易阅读，可以将每条声明单独成行。
+
+\begin{lstlisting}[style=htmlcssjs, title=修改字体大小和颜色]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改字体大小和颜色</title>
+    <style type="text/css">
+        p {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>修改字体大小和颜色</p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
+
+\section{既然那么好，那就引入CSS吧——内联式CSS}
+
+\subsection{内联式CSS}
+
+内联式CSS样式，也称行间样式，就是把CSS代码直接写在现有的HTML标签中。注意CSS样式必须写在元素的开始标签里，不能在结束标签里。 \\
+

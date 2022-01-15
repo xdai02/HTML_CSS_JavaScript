@@ -16,21 +16,15 @@
 \usepackage{amssymb}
 \usepackage{fontawesome5}
 \usepackage[most]{tcolorbox}
-\usepackage{circuitikz}
 \usepackage{stackengine}
 \usepackage{multirow}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
 % \usepackage{minted}
 
-\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
-\usetikzlibrary{calc}
-\usetikzlibrary{calc,shapes.multipart,chains,arrows}
-\usetikzlibrary{automata, positioning, arrows}
+\lstset{upquote=true}
 
-\usetikzlibrary{arrows,positioning, calc,lindenmayersystems,decorations.pathmorphing,intersections}
-\tikzstyle{resource}= [draw,minimum size=30pt,inner sep=0pt]
-\tikzstyle{process} = [draw,minimum size=30pt,inner sep=0pt,circle]
-\tikzstyle{allocated} = [->,thick,arrows={-latex}]
-\tikzstyle{requested} = [<-,thick,arrows={latex-}, dashed]
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
 
 \def\rlwd{.5pt} \def\rlht{2.2ex} \def\rldp{.5ex}
 \def\mydiv#1{~%
@@ -81,6 +75,7 @@
   tag=[s],
   otherkeywords={
   % Standard tags
+	<html, <meta, </html>,
 	</body>, <body>,
 	<div>, </div>, 
 	<p>, </p>,
@@ -94,13 +89,27 @@
 	<h6>, </h6>,
 	<head>, </head>,
 	<title>, </title>,
-	<style>, </style>,
+	<style>, </style>, <style,
 	<ol>, </ol>,
+	<ul>, </ul>,
 	<li>, </li>,
-	<br/>, <br />,
-	<hr/>, <hr />,
-	<img/>, <img />,
-	&nbsp;, 
+	<br/>, <br />, <br>,
+	<hr/>, <hr />, <hr>, 
+	<img/>, <img />, <img>, <img,
+	&nbsp;,
+	<a>, </a>, <a,
+	<div>, </div>, <div,
+	<table>, </table>, <table,
+	<input,
+	<caption>, </caption>,
+	<tr>, </tr>,
+	<th>, </th>,
+	<td>, </td>,
+	<form>, </form>, <form,
+	<textarea>, </textarea>, <textarea,
+	<label>, <label, </label>,
+	<select>, </select>,
+	<option>, </option>, <option,
   % More tags...
   <canvas, /canvas>, <svg, <rect, <animateTransform, </rect>, </svg>, <video, <source, <iframe, </iframe>, </video>, <image, </image>, <header, </header, <article, </article
   },
@@ -108,11 +117,13 @@
   % General
   =,
   % HTML attributes
-  charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+  lang=, charset=, src=, id=, width=, height=, style=, type=, rel=, href=, alt=, title=, border=,
+  method=, action=, name=, value=, placeholder=, for=, rows=, cols=, checked=, selected=,
   % SVG attributes
   fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
   % properties
   color:, margin:, padding:, background-image:, border:, top:, left:, position:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:, text-align:,
+  background-color:, border-radius:, cursor:, float:, list-style:, 
 	% CSS3 properties
   transform:, -moz-transform:, -webkit-transform:,
   animation:, -webkit-animation:,
@@ -302,5 +313,6 @@
 \setcounter{page}{1}
 
 \input{parts/part1/part1}
+\input{parts/part2/part2}
 
 \end{document}
