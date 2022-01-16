@@ -43,3 +43,101 @@ font-style可以设置字体样式，并且有3种设置方式：
 
 \newpage
 
+\section{上个色——color}
+
+\subsection{color}
+
+color属性可以设置字体颜色。color的值有3种设置方式：
+
+\begin{enumerate}
+    \item 英文命令颜色。 \\
+          \begin{lstlisting}[style=htmlcssjs]
+color: red;
+    \end{lstlisting}
+
+    \item 十六进制颜色代码：使用6位十六进制数表示光学三原色“红绿蓝”。
+          \begin{table}[H]
+              \centering
+              \setlength{\tabcolsep}{5mm}{
+                  \begin{tabular}{|c|c|c|}
+                      \hline
+                      \textbf{R} & \textbf{H} & \textbf{B} \\
+                      \hline
+                      00 - FF    & 00 - FF    & 00 - FF    \\
+                      \hline
+                  \end{tabular}
+              }
+              \caption{颜色代码}
+          \end{table}
+          如果每两位十六进制数都相同，可简写。
+          \begin{table}[H]
+              \centering
+              \setlength{\tabcolsep}{5mm}{
+                  \begin{tabular}{|c|c|}
+                      \hline
+                      \textbf{颜色代码} & \textbf{颜色} \\
+                      \hline
+                      \#F00             & 红色          \\
+                      \hline
+                      \#0F0             & 绿色          \\
+                      \hline
+                      \#00F             & 蓝色          \\
+                      \hline
+                      \#000             & 黑色          \\
+                      \hline
+                      \#FFF             & 白色          \\
+                      \hline
+                      \#0FF             & 青色          \\
+                      \hline
+                      \#F40             & 淘宝红        \\
+                      \hline
+                  \end{tabular}
+              }
+              \caption{常见颜色代码}
+          \end{table}
+
+    \item 颜色函数rgb()：由光学三原色RGB的比例来配色。rgb()函数中每一项的值可以是0-255之间的整数，也可以是0\%-100\%的百分数。 \\
+          \begin{lstlisting}[style=htmlcssjs]
+color: rgb(133, 45, 200);
+color: rgb(20%, 33%, 25%);
+    \end{lstlisting}
+\end{enumerate}
+
+\newpage
+
+\section{文本样式}
+
+\subsection{文本样式}
+
+text-decoration可以设置添加到文本的修饰，默认值为none。属性值为underline为文本添加下划线，属性值为overline为文本添加上划线，属性值为line-through为添加穿过文本的线，一般用于商品折扣价。 \\
+
+使用line-height可以设置段落中的行间距离（行高）。使用text-align可以为文本设置对齐方式，属性值包括left、right和center。
+
+\begin{lstlisting}[style=htmlcssjs, title=文本样式]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本样式</title>
+    <style type="text/css">
+        h2, p {
+            text-decoration: underline;
+            line-height: 2em;   /* 两倍行间距 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>《望庐山瀑布》</h2>
+    <p>唐·李白</p>
+    <p>
+        日照香炉生紫烟，<br/>
+        遥看瀑布挂前川。<br/>
+        飞流直下三千尺，<br/>
+        疑是银河落九天。
+    </p>
+</body>
+</html>
+\end{lstlisting}
+
+\newpage
