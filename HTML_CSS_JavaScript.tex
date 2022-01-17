@@ -25,6 +25,13 @@
 \lstset{upquote=true}
 
 \usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usetikzlibrary{backgrounds}
+
+\tikzstyle{startend} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{io}        = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, inner xsep = -15pt, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process}   = [rectangle, minimum width=3cm, minimum height=1cm, inner ysep=0, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision}  = [diamond,shape aspect=2.5, minimum width=3cm, minimum height=1cm, inner xsep=0,text centered, draw=black, fill=green!30]
+\tikzstyle{arrow}     = [thick,->,>=stealth]
 
 \def\rlwd{.5pt} \def\rlht{2.2ex} \def\rldp{.5ex}
 \def\mydiv#1{~%
@@ -79,7 +86,7 @@
 	</body>, <body>,
 	<div>, </div>, 
 	<p>, </p>, <p,
-	</script>, <script>,
+	</script>, <script>, <script,
 	<span>, </span>,
 	<h1>, </h1>, <h1,
 	<h2>, </h2>, <h2,
@@ -145,7 +152,7 @@
 }
 
 \lstdefinelanguage{JavaScript}{
-  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, default},
   morecomment=[s]{/*}{*/},
   morecomment=[l]//,
   morestring=[b]",
@@ -316,6 +323,7 @@
 
 \input{parts/part1}
 \input{parts/part2}
-\input{parts/part3}
+\input{parts/part3_1}
+\input{parts/part3_2}
 
 \end{document}
