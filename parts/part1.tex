@@ -27,12 +27,12 @@
 前端技术可以被应用在一系列领域中：
 
 \begin{itemize}
-    \item 网页网站
-    \item APP、微信小程序
-    \item 移动端小游戏
-    \item 炫酷的特效
-    \item 大数据可视化
-    \item VR虚拟现实
+	\item 网页网站
+	\item APP、微信小程序
+	\item 移动端小游戏
+	\item 炫酷的特效
+	\item 大数据可视化
+	\item VR虚拟现实
 \end{itemize}
 
 前端工程师需要具备大量必要的技能，其中前端三大基础语言为HTML、CSS、JavaScript，除此之外还需要学习jQuery、网络、es6、webpack4.0、小程序、VUE、React、Node.js、Mongo DB数据库等内容。 \\
@@ -44,11 +44,11 @@
 \subsection{结构层/表现层/行为层}
 
 \begin{itemize}
-    \item 结构层HTML（HyperText Markup Language）：一个超文本标记语言，负责描绘出网页内容的架构。
+	\item 结构层HTML（HyperText Markup Language）：一个超文本标记语言，负责描绘出网页内容的架构。
 
-    \item 表示层CSS（Cascading Style Sheets）：层叠样式表，负责如何显示结构层的有关内容。
+	\item 表示层CSS（Cascading Style Sheets）：层叠样式表，负责如何显示结构层的有关内容。
 
-    \item 行为层JavaScript：目前在Web上使用的最主要的客户端脚本语言，是Web脚本语言的一个标准，可以对结构层和表现层的内容随意进行更改。
+	\item 行为层JavaScript：目前在Web上使用的最主要的客户端脚本语言，是Web脚本语言的一个标准，可以对结构层和表现层的内容随意进行更改。
 \end{itemize}
 
 \subsection{代码注释}
@@ -95,8 +95,8 @@
 先来看一下单纯的HTML标签长什么样：
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[]{img/C1/1-3/1.png}
+	\centering
+	\includegraphics[]{img/C1/1-3/1.png}
 \end{figure}
 
 再来看一下经过CSS修饰过后的HTML标签： \\
@@ -111,8 +111,8 @@ p {
 \end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[]{img/C1/1-3/2.png}
+	\centering
+	\includegraphics[]{img/C1/1-3/2.png}
 \end{figure}
 
 CSS是用来修饰HTML样式的。虽然HTML本身是有一些默认样式，但如果想改变HTML标签的样式，就需要借助CSS。 \\
@@ -149,21 +149,21 @@ HTML + CSS构成了网页的基本页面结构和样式。 \\
 HTML中标签的语法有以下几点：
 
 \begin{enumerate}
-    \item 标签（tag）是由英文尖括号【<】和【>】括起来的，如\lstinline|<html>|就是一个标签??
+	\item 标签（tag）是由英文尖括号【<】和【>】括起来的，如<html>就是一个标签。
 
-    \item HTML中的标签一般都是成对出现的，分开始标签和结束标签。结束标签比开始标签多了一个【/】。 \\
-          \begin{lstlisting}[style=htmlcssjs]
+	\item HTML中的标签一般都是成对出现的，分开始标签和结束标签。结束标签比开始标签多了一个【/】。 \\
+	      \begin{lstlisting}[style=htmlcssjs]
 <p></p>
 <div></div>
 <span></span>
     \end{lstlisting}
 
-    \item 标签与标签之间是可以嵌套的，但先后顺序必须保持一致。如，\lstinline|<div>|里嵌套\lstinline|<p>|，那么\lstinline|</p>|必须放在\lstinline|</div>|的前面。 \\
-          \begin{lstlisting}[style=htmlcssjs]
+	\item 标签与标签之间是可以嵌套的，但先后顺序必须保持一致。如，<div>里嵌套<p>，那么</p>必须放在</div>的前面。 \\
+	      \begin{lstlisting}[style=htmlcssjs]
 <div><p>Hello World!</p></div>
     \end{lstlisting}
 
-    \item HTML标签不区分大小写，如\lstinline|<h1>|和\lstinline|<H1>|是一样的，但建议小写，因为大部分程序员都已小写为准。
+	\item HTML标签不区分大小写，如<h1>和<H1>是一样的，但建议小写，因为大部分程序员都已小写为准。
 \end{enumerate}
 
 \newpage
@@ -187,13 +187,13 @@ HTML中标签的语法有以下几点：
 \end{lstlisting}
 
 \begin{itemize}
-    \item \lstinline|<!DOCTYPE html>|：文档类型声明，表示该文件为HTML文件。声明必须是HTML文档的第一行，位于\lstinline|<html>|之前。
+	\item <!DOCTYPE html>：文档类型声明，表示该文件为HTML文件。声明必须是HTML文档的第一行，位于<html>之前。
 
-    \item \lstinline|<html></html>|：\lstinline|<html>|用来标识HTML文档的开始，\lstinline|</html>|位于HTML文档的最后面，用来标识HTML文档的结束。这两个标签对成对存在，中间的部分是文档的头部和主题。
+	\item <html></html>：<html>用来标识HTML文档的开始，</html>位于HTML文档的最后面，用来标识HTML文档的结束。这两个标签对成对存在，中间的部分是文档的头部和主题。
 
-    \item \lstinline|<head></head>|：标签包含有关HTML文档的信息，可以包含一些辅助性标签。如\lstinline|<title></title>|、\lstinline|<link />|、\lstinline|<meta />|、\lstinline|<style></style>|、\lstinline|<script></script>|等，浏览器除了会在标题栏显示\lstinline|<title>|元素的内容外，不会向用户显示\lstinline|head|元素内的其他任何内容。
+	\item <head></head>：标签包含有关HTML文档的信息，可以包含一些辅助性标签。如<title></title>、<link />、<meta />、<style></style>、<script></script>等，浏览器除了会在标题栏显示<title>元素的内容外，不会向用户显示<head>元素内的其他任何内容。
 
-    \item \lstinline|<body></body>|：HTML文档的主体部分，在此标签中可以包含\lstinline|<p>|、\lstinline|<h1>|、\lstinline|<br>|等众多标签。\lstinline|<body>|出现在\lstinline|</head>|之后，且必须在闭标签\lstinline|</html>|之前闭合。
+	\item <body></body>：HTML文档的主体部分，在此标签中可以包含<p>、<h1>、<br>等众多标签。<body>出现在</head>之后，且必须在闭标签</html>之前闭合。
 \end{itemize}
 
 \newpage
@@ -204,14 +204,14 @@ HTML中标签的语法有以下几点：
 
 文档的头部描述了文档的各种属性和信息，包括文档的标题等，绝大多数文档头部包含的数据都不会真正作为内容显示给读者。 \\
 
-\lstinline|head|标签为双标签\lstinline|<head></head>|，表示头部标签，通常用来嵌套\lstinline|meta|、\lstinline|title|、\lstinline|style|等标签。
+<head></head>为双标签，表示头部标签，通常用来嵌套meta、title、style等标签。
 
 \begin{itemize}
-    \item \lstinline|<title>|：在\lstinline|<title>|和\lstinline|</title>|标签之间的文字内容是网页的标题信息，它会出现在浏览器的标题栏中。网页的\lstinline|<title>|用于告诉用户和搜索引擎这个网页的主要内容是什么，搜索引擎可以通过网页标题，迅速的判断出网页的主题。每个网页的内容都是不同的，每个网页都应该有一个独一无二的title。
+	\item <title>：在<title>和</title>之间的文字内容是网页的标题信息，它会出现在浏览器的标题栏中。网页的<title>用于告诉用户和搜索引擎这个网页的主要内容是什么，搜索引擎可以通过网页标题，迅速的判断出网页的主题。每个网页的内容都是不同的，每个网页都应该有一个独一无二的title。
 
-    \item \lstinline|<meta charset="UTF-8">|：设置当前文件字符编码。
+	\item <meta charset="UTF-8">：设置当前文件字符编码。
 
-    \item \lstinline|<style>|：设置当前文件样式。
+	\item <style>：设置当前文件样式。
 \end{itemize}
 
 \newpage
@@ -220,7 +220,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{body标签}
 
-在网页上要展示出来的页面内容一定要放在\lstinline|<body>|中。 \\
+在网页上要展示出来的页面内容一定要放在<body>中。 \\
 
 \mybox{body标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -256,19 +256,19 @@ HTML中标签的语法有以下几点：
 语义化可以带来一些好处：
 
 \begin{itemize}
-    \item 更容易被搜索引擎收录
-    \item 更容易让屏幕阅读器读出网页内容
+	\item 更容易被搜索引擎收录
+	\item 更容易让屏幕阅读器读出网页内容
 \end{itemize}
 
 \subsection{p标签}
 
-如果想在网页上显示文章，就需要使用\lstinline|<p>|了，把文章的段落放到\lstinline|<p>|中。 \\
+如果想在网页上显示文章，就需要使用<p>了，把文章的段落放到<p>中。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <p>段落文本</p>
 \end{lstlisting}
 
-注意一段文字一个\lstinline|<p>|标签，如在一篇文章中有三段文字，就要分别放到三个\lstinline|<p>|标签中。 \\
+注意一段文字一个<p>，如在一篇文章中有三段文字，就要分别放到三个<p>中。 \\
 
 \mybox{p标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -286,11 +286,11 @@ HTML中标签的语法有以下几点：
 </html>
 \end{lstlisting}
 
-\lstinline|<p>|的默认样式，在段前段后都会有空白，如果不喜欢这个空白，可以用CSS样式来删除或改变它。
+<p>的默认样式，在段前段后都会有空白，如果不喜欢这个空白，可以用CSS样式来删除或改变它。
 
 \subsection{span标签}
 
-\lstinline|<span>|是没有语义的，它的作用就是为了设置单独的样式用的。如果现在想把一段中某些字设置成蓝色，这种情况下就可以用到\lstinline|<span>|了。 \\
+<span>是没有语义的，它的作用就是为了设置单独的样式用的。如果现在想把一段中某些字设置成蓝色，这种情况下就可以用到<span>了。 \\
 
 \mybox{span标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -319,7 +319,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{hx标签}
 
-文章的段落用\lstinline|<p>|，那么文章的标题可以使用标题标签。标题标签一共有6个，\lstinline|<h1>|、\lstinline|<h2>|、\lstinline|<h3>|、\lstinline|<h4>|、\lstinline|<h5>|、\lstinline|<h6>|分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题，并且依据重要性递减，\lstinline|<h1>|是最高的等级。 \\
+文章的段落用<p>，那么文章的标题可以使用标题标签。标题标签一共有6个，<h1>、<h2>、<h3>、<h4>、<h5>、<h6>分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题，并且依据重要性递减，<h1>是最高的等级。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <h1>标题文本</h1>
@@ -330,9 +330,9 @@ HTML中标签的语法有以下几点：
 <h6>标题文本</h6>
 \end{lstlisting}
 
-网页上的各个栏目标题也可使用标题标签。因为\lstinline|<h1>|在网页中比较重要，一般\lstinline|<h1>|被用在网站名称上。 \\
+网页上的各个栏目标题也可使用标题标签。因为<h1>在网页中比较重要，一般<h1>被用在网站名称上。 \\
 
-标题标签的样式都会加粗，\lstinline|<h1>|字号最大，\lstinline|<h2>|字号相对\lstinline|<h1>|要小，以此类推\lstinline|<h6>|的字号最小。
+标题标签的样式都会加粗，<h1>字号最大，<h2>字号相对<h1>要小，以此类推<h6>的字号最小。
 
 \newpage
 
@@ -340,14 +340,14 @@ HTML中标签的语法有以下几点：
 
 \subsection{div标签}
 
-网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个\lstinline|<div>|中，\lstinline|<div>|的作用就相当于一个容器。 \\
+网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个<div>中，<div>的作用就相当于一个容器。 \\
 
-逻辑部分是页面上相互关联的一组元素，如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示，图中用红色边框标出的部分就是一个逻辑部分，就可以使用\lstinline|<div>|作为容器。 \\
+逻辑部分是页面上相互关联的一组元素，如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示，图中用红色边框标出的部分就是一个逻辑部分，就可以使用<div>作为容器。 \\
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{img/C2/2-3/1.png}
-    \caption{div容器}
+	\centering
+	\includegraphics[scale=0.5]{img/C2/2-3/1.png}
+	\caption{div容器}
 \end{figure}
 
 \mybox{div标签} \\
@@ -386,9 +386,9 @@ HTML中标签的语法有以下几点：
 
 \subsection{br标签}
 
-在HTML代码中输入回车、空格都是没有作用的，在HTML中是忽略回车和空格的，输入再多的回车和空格也是现实不出来的。如果需要在HTML文本中输入回车换行，就必须使用\lstinline|<br/>|。在需要加回车换行的地方加入\lstinline|<br/>|，\lstinline|<br/>|的作用相当于Word文档中的回车。 \\
+在HTML代码中输入回车、空格都是没有作用的，在HTML中是忽略回车和空格的，输入再多的回车和空格也是现实不出来的。如果需要在HTML文本中输入回车换行，就必须使用<br/>。在需要加回车换行的地方加入<br/>，<br/>的作用相当于Word文档中的回车。 \\
 
-\lstinline|<br/>|是一个单标签，没有HTML内容的标签就是单标签。单标签只需要写一个开始标签，这样的标签有\lstinline|<br/>|、\lstinline|<hr/>|和\lstinline|<img/>|。 \\
+<br/>是一个单标签，没有HTML内容的标签就是单标签。单标签只需要写一个开始标签，这样的标签有<br/>、<hr/>和<img/>。 \\
 
 \mybox{br标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -442,9 +442,9 @@ HTML中标签的语法有以下几点：
 
 在信息展示时，有时会需要加一些用于分隔的横线，这样会使文章看起来整齐些。 \\
 
-\lstinline|<hr/>|和\lstinline|<br/>|一样也是一个单标签，所以只有一个开始标签，没有结束标签。 \\
+<hr/>和<br/>一样也是一个单标签，所以只有一个开始标签，没有结束标签。 \\
 
-\lstinline|<hr/>|在浏览器中的默认样式线条比较粗，颜色为灰色。有些人觉得这种样式不美观，这些在样式可以通过CSS进行修改。 \\
+<hr/>在浏览器中的默认样式线条比较粗，颜色为灰色。有些人觉得这种样式不美观，这些在样式可以通过CSS进行修改。 \\
 
 \mybox{hr标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -470,7 +470,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{有序列表（Ordered List）}
 
-如果想在网页中展示有前后顺序的信息列表，如热度排行榜等，这类信息展示可以使用\lstinline|<ol>|-\lstinline|<li>|来实现有序列表。 \\
+如果想在网页中展示有前后顺序的信息列表，如热度排行榜等，这类信息展示可以使用<ol>-<li>来实现有序列表。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <ol>
@@ -480,9 +480,9 @@ HTML中标签的语法有以下几点：
 \end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/C3/3-1/1.png}
-    \caption{有序列表}
+	\centering
+	\includegraphics[scale=0.7]{img/C3/3-1/1.png}
+	\caption{有序列表}
 \end{figure}
 
 \mybox{有序列表} \\
@@ -508,21 +508,21 @@ HTML中标签的语法有以下几点：
 
 \subsection{序号类型}
 
-\lstinline|<ol>|-\lstinline|<li>|在网页中显示的默认样式一般为每项\lstinline|<li>|前都自带一个序号，序号默认从1开始。通过修改\lstinline|<ol>|的type属性，也能对序号进行修改。 \\
+<ol>-<li>在网页中显示的默认样式一般为每项<li>前都自带一个序号，序号默认从1开始。通过修改<ol>的type属性，也能对序号进行修改。 \\
 
-\lstinline|<ol>|的type属性有5个值：
+<ol>的type属性有5个值：
 
 \begin{enumerate}
-    \item 默认为数字序号：\lstinline|type="1"|
-    \item 小写字母序号：\lstinline|type="a"|
-    \item 大写字母序号：\lstinline|type="A"|
-    \item 小写罗马数字序号：\lstinline|type="i"|
-    \item 大写罗马数字序号：\lstinline|type="I"|
+	\item 默认为数字序号：\lstinline|type="1"|
+	\item 小写字母序号：\lstinline|type="a"|
+	\item 大写字母序号：\lstinline|type="A"|
+	\item 小写罗马数字序号：\lstinline|type="i"|
+	\item 大写罗马数字序号：\lstinline|type="I"|
 \end{enumerate}
 
-\lstinline|<ol>|中设置start属性，可以指定开始序号。 \\
+<ol>中设置start属性，可以指定开始序号。 \\
 
-\lstinline|<ol>|中设置\lstinline|reversed="reversed"|属性，可以将列表序号降序排序。
+<ol>中设置\lstinline|reversed="reversed"|属性，可以将列表序号降序排序。
 
 \newpage
 
@@ -530,7 +530,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{无序列表（Unordered List）}
 
-网页上也有很多信息是无需按照先后次序排列的，如新闻列表、图片列表等，这类信息展示可以使用\lstinline|<ul>|-\lstinline|<li>|来实现无序列表。
+网页上也有很多信息是无需按照先后次序排列的，如新闻列表、图片列表等，这类信息展示可以使用<ul>-<li>来实现无序列表。
 
 \begin{lstlisting}[style=htmlcssjs]
 <ul>
@@ -540,18 +540,18 @@ HTML中标签的语法有以下几点：
 \end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{img/C3/3-2/1.png}
-    \caption{无序列表}
+	\centering
+	\includegraphics[scale=0.8]{img/C3/3-2/1.png}
+	\caption{无序列表}
 \end{figure}
 
-\lstinline|<ul>|-\lstinline|<li>|在网页中显示的默认样式一般为每项\lstinline|<li>|前都自带一个圆点。通过修改\lstinline|<ul>|的type属性，也能对前面的符号进行修改。 \\
+<ul>-<li>在网页中显示的默认样式一般为每项<li>前都自带一个圆点。通过修改<ul>的type属性，也能对前面的符号进行修改。 \\
 
-\lstinline|<ul>|的type属性有2个值：
+<ul>的type属性有2个值：
 
 \begin{enumerate}
-    \item 默认为实心小圆点：\lstinline|type="disc"|
-    \item 实心正方形：\lstinline|type="square"|
+	\item 默认为实心小圆点：\lstinline|type="disc"|
+	\item 实心正方形：\lstinline|type="square"|
 \end{enumerate}
 
 \mybox{无序列表} \\
@@ -573,12 +573,12 @@ HTML中标签的语法有以下几点：
 </html>
 \end{lstlisting}
 
-淘宝网的导航栏就是利用\lstinline|<ul>|-\lstinline|<li>|的父子结构进行实现的。
+淘宝网的导航栏就是利用<ul>-<li>的父子结构进行实现的。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{img/C3/3-2/2.png}
-    \caption{淘宝导航栏}
+	\centering
+	\includegraphics[scale=0.5]{img/C3/3-2/2.png}
+	\caption{淘宝导航栏}
 \end{figure}
 
 \mybox{淘宝导航栏} \\
@@ -624,18 +624,18 @@ HTML中标签的语法有以下几点：
 
 \subsection{img标签}
 
-在网页的制作中为使网页炫丽美观，肯定是缺少不了图片，\lstinline|<img>|用于插入图片。 \\
+在网页的制作中为使网页炫丽美观，肯定是缺少不了图片，<img>用于插入图片。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <img src="图片地址" alt="下载失败时的替换文本" title="提示文本">
 \end{lstlisting}
 
 \begin{itemize}
-    \item src属性用于标识图像的资源地址，资源地址可以来源于网上的URL，也可以来源于本地。
+	\item src属性用于标识图像的资源地址，资源地址可以来源于网上的URL，也可以来源于本地。
 
-    \item alt属性指定图像的描述性文本，当图像下载不成功时，可看到该属性指定的文本。
+	\item alt属性指定图像的描述性文本，当图像下载不成功时，可看到该属性指定的文本。
 
-    \item title属性提供当鼠标停留在图片时显示的文本。
+	\item title属性提供当鼠标停留在图片时显示的文本。
 \end{itemize}
 
 \mybox{img标签} \\
@@ -658,13 +658,13 @@ HTML中标签的语法有以下几点：
 
 \subsection{a标签}
 
-使用\lstinline|<a>|可实现超链接，它在网页制作中可以说是无处不在，只要有链接的地方，就会有这个标签。 \\
+<a>可实现超链接，它在网页制作中可以说是无处不在，只要有链接的地方，就会有这个标签。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <a href="目标网址" title="鼠标停留显示的文本">链接显示的文本</a>
 \end{lstlisting}
 
-\lstinline|<a>|中title属性提供的功能是当鼠标停留在链接文字时显示这个属性的文本内容，这个属性在实际网页开发中作用很大，主要方便搜索引擎了解链接地址的内容（语义化更友好）。 \\
+<a>中title属性提供的功能是当鼠标停留在链接文字时显示这个属性的文本内容，这个属性在实际网页开发中作用很大，主要方便搜索引擎了解链接地址的内容（语义化更友好）。 \\
 
 \mybox{a标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -682,13 +682,13 @@ HTML中标签的语法有以下几点：
 </html>
 \end{lstlisting}
 
-只要为文本加入\lstinline|<a>|后，文字的颜色就会自动变为蓝色，被点击过的文本颜色会变为紫色，通过CSS样式可以对文字的颜色进行修改。 \\
+只要为文本加入<a>后，文字的颜色就会自动变为蓝色，被点击过的文本颜色会变为紫色，通过CSS样式可以对文字的颜色进行修改。 \\
 
-\lstinline|<a>|中还有一个target属性，默认值为\_self,表示在同页面中打开被链接的文档。如果需要在新窗口打开被链接的文档，需要将target属性的值设置为\_blank。
+<a>中还有一个target属性，默认值为\_self,表示在同页面中打开被链接的文档。如果需要在新窗口打开被链接的文档，需要将target属性的值设置为\_blank。
 
 \subsection{锚点（Anchor）}
 
-\lstinline|<a>|最初的功能是记录锚点（记录位置），通过\lstinline|<a>|回到那个位置去。 \\
+<a>最初的功能是记录锚点（记录位置），通过<a>回到那个位置去。 \\
 
 \mybox{锚点} \\
 \begin{lstlisting}[style=htmlcssjs, breaklines=true, breakatwhitespace=false]
@@ -708,17 +708,17 @@ HTML中标签的语法有以下几点：
 </html>
 \end{lstlisting}
 
-\lstinline|<a>|作为锚点的应用场景也很多，比如目录跳转。
+<a>作为锚点的应用场景也很多，比如目录跳转。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.35]{img/C3/3-4/1.png}
-    \caption{目录跳转}
+	\centering
+	\includegraphics[scale=0.35]{img/C3/3-4/1.png}
+	\caption{目录跳转}
 \end{figure}
 
 \subsection{协议限定符}
 
-\lstinline|<a>|还能作为协议限定符，在点击链接时会强制执行JavaScript代码。 \\
+<a>还能作为协议限定符，在点击链接时会强制执行JavaScript代码。 \\
 
 \mybox{协议限定符} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -745,23 +745,23 @@ HTML中标签的语法有以下几点：
 有时候需要在网页中添加一些表格数据，如企业员工通讯录等。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.9]{img/C4/4-1/1.png}
-    \caption{企业员工通讯录}
+	\centering
+	\includegraphics[scale=0.9]{img/C4/4-1/1.png}
+	\caption{企业员工通讯录}
 \end{figure}
 
 创建表格主要包含5个元素：
 
 \begin{enumerate}
-    \item \lstinline|<caption>|：定义表格的标题。
+	\item <caption>：定义表格的标题。
 
-    \item \lstinline|<table>|：整个表格以\lstinline|<table>|开始、\lstinline|</table>|结束，\lstinline|<table>|在没有添加border属性之前，在浏览器中显示是没有表格线的。
+	\item <table>：整个表格以<table>开始、</table>结束，<table>在没有添加border属性之前，在浏览器中显示是没有表格线的。
 
-    \item \lstinline|<tr>|：表格的一行，有几对\lstinline|<tr>|表格就有几行，\lstinline|<tr>|里只能放\lstinline|<th>|或者\lstinline|<td>|。
+	\item <tr>：表格的一行，有几对<tr>表格就有几行，<tr>里只能放<th>或者<td>。
 
-    \item \lstinline|<th>|：表格头部的一个单元格，会加粗居中显示。
+	\item <th>：表格头部的一个单元格，会加粗居中显示。
 
-    \item \lstinline|<td>|：表格的一个单元格，有几对\lstinline|<td>|一行中就有几列。
+	\item <td>：表格的一个单元格，有几对<td>一行中就有几列。
 \end{enumerate}
 
 \mybox{企业员工通讯录} \\
@@ -824,9 +824,9 @@ HTML中标签的语法有以下几点：
 <form method="传送方式" action="服务器文件">表单内容</form>
 \end{lstlisting}
 
-\lstinline|<form>|是成对出现的，以\lstinline|<form>|开始、\lstinline|</form>|结束。method属性表示数据传送的方式，包括get和post两种方式，get和post的区别属于后端程序员需要考虑的问题，完全取决于后端人员要求什么方式进行传输。action属性表示浏览者输入的数据被传送到的地方，比如一个PHP页面。 \\
+<form>是成对出现的，以<form>开始、</form>结束。method属性表示数据传送的方式，包括get和post两种方式，get和post的区别属于后端程序员需要考虑的问题，完全取决于后端人员要求什么方式进行传输。action属性表示浏览者输入的数据被传送到的地方，比如一个PHP页面。 \\
 
-所有的表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在\lstinline|<form>|之间，否则用户输入的信息无法提交到服务器上。
+所有的表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在<form>之间，否则用户输入的信息无法提交到服务器上。
 
 \newpage
 
@@ -846,31 +846,31 @@ HTML中标签的语法有以下几点：
 \end{lstlisting}
 
 \begin{itemize}
-    \item \lstinline|type="text"|：输入框为文本输入框
-    \item \lstinline|type="password"|：输入框为密码输入框
-    \item name：为文本框命名，以备后台程序使用
-    \item value：为文本输入框设置默认值，一般起提示作用
+	\item \lstinline|type="text"|：输入框为文本输入框
+	\item \lstinline|type="password"|：输入框为密码输入框
+	\item name：为文本框命名，以备后台程序使用
+	\item value：为文本输入框设置默认值，一般起提示作用
 \end{itemize}
 
 \subsection{给点提示呗——placeholder属性}
 
-有时候需要提示用户输入框需要输入的内容，这时候就需要使用\lstinline|<input>|中的占位符placeholder属性。
+有时候需要提示用户输入框需要输入的内容，这时候就需要使用<input>中的占位符placeholder属性。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[]{img/C4/4-3/1.png}
-    \caption{placeholder提示文本}
+	\centering
+	\includegraphics[]{img/C4/4-3/1.png}
+	\caption{placeholder提示文本}
 \end{figure}
 
 placeholder属性的值可以根据情况合理填写，当输入框输入内容时，占位符内容消失，当输入框无内容时，占位符内容显示。注意，占位符内容不是输入框真正的内容。
 
 \subsection{重置按钮}
 
-当用户需要重置表单信息到初始状态时，比如输入“账号”或“密码”有误，就可以使用重置按钮使输入框恢复到初始状态。通过设置\lstinline|<input>|中type属性为reset即可实现重置按钮。
+当用户需要重置表单信息到初始状态时，比如输入“账号”或“密码”有误，就可以使用重置按钮使输入框恢复到初始状态。通过设置<input>中type属性为reset即可实现重置按钮。
 
 \subsection{提交按钮}
 
-当用户需要提交表单信息到服务器时，需要用到提交按钮。通过设置\lstinline|<input>|中type属性为submit即可实现提交按钮。表单信息会被发送给后端，在数据库对比账户和密码信息。 \\
+当用户需要提交表单信息到服务器时，需要用到提交按钮。通过设置<input>中type属性为submit即可实现提交按钮。表单信息会被发送给后端，在数据库对比账户和密码信息。 \\
 
 \mybox{登录功能} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -899,15 +899,15 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 
 \subsection{数字输入框}
 
-将\lstinline|<input>|的type属性设置为number，则表示该输入框的类型为数字。数字框只能输入数字，输入其它字符无效。数字框最右侧会有一个加减符号，可以调整输入数字的大小，不同浏览器表现不一致。
+将<input>的type属性设置为number，则表示该输入框的类型为数字。数字框只能输入数字，输入其它字符无效。数字框最右侧会有一个加减符号，可以调整输入数字的大小，不同浏览器表现不一致。
 
 \subsection{网址输入框}
 
-将\lstinline|<input>|的type属性设置为url，则表示输入类型为网址。网址输入框必须以http://或https://开头，且后面必须有内容，否则表单提交的时候会报错误提示。
+将<input>的type属性设置为url，表示输入类型为网址。网址输入框必须以http://或https://开头，且后面必须有内容，否则提交时会报错误提示。
 
 \subsection{邮箱输入框}
 
-将\lstinline|<input>|的type属性设置为email，则表示该输入框的类型为邮箱。邮箱输入框的值必须包含`@`，并且之后必须有内容，否则会报错误提示。 \\
+将<input>的type属性设置为email，则表示该输入框的类型为邮箱。邮箱输入框的值必须包含`@`，并且之后必须有内容，否则会报错误提示。 \\
 
 \mybox{个人信息} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -935,15 +935,15 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 
 \subsection{文本域}
 
-当用户需要在表单中输入大段文字时，就需要用到文本输入域。\lstinline|<textarea>|中也可以设置placeholder属性来显示提示信息。 \\
+当用户需要在表单中输入大段文字时，就需要用到文本输入域。<textarea>中也可以设置placeholder属性来显示提示信息。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <textarea rows="行数" cols="列数">文本</textarea>
 \end{lstlisting}
 
 \begin{itemize}
-    \item rows：多行输入域的行数，可以用CSS样式的height代替
-    \item cols：多行输入域的列数，可以用CSS样式的width代替
+	\item rows：多行输入域的行数，可以用CSS样式的height代替
+	\item cols：多行输入域的列数，可以用CSS样式的width代替
 \end{itemize}
 
 \mybox{文本域} \\
@@ -968,13 +968,13 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 
 \subsection{label标签}
 
-\lstinline|<label>|不会向用户呈现任何特殊特效，它的作用是为鼠标用户改进了可用性。如果在\lstinline|<label>|内点击文本，就会触发此控件。也就是说，当用户单击选中该\lstinline|<label>|时，浏览器就会自动将焦点转到和标签相关的表单控件上。
+<label>不会向用户呈现任何特殊特效，它的作用是为鼠标用户改进了可用性。如果在<label>内点击文本，就会触发此控件。也就是说，当用户单击选中该<label>时，浏览器就会自动将焦点转到和标签相关的表单控件上。
 
 \begin{lstlisting}[style=htmlcssjs]
 <label for="控件id名称">
 \end{lstlisting}
 
-注意，\lstinline|<label>|的for属性的值必须要与相关空间的id属性值相同。 \\
+注意，<label>的for属性的值必须要与相关空间的id属性值相同。 \\
 
 \mybox{label标签} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -1006,10 +1006,10 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 \end{lstlisting}
 
 \begin{itemize}
-    \item \lstinline|type="radio"|：单选框
-    \item \lstinline|type="checkbox"|：复选框
-    \item name：为控件命名，具有相同名称的选择框属于同一组
-    \item checked：设置默认选中的值
+	\item \lstinline|type="radio"|：单选框
+	\item \lstinline|type="checkbox"|：复选框
+	\item name：为控件命名，具有相同名称的选择框属于同一组
+	\item checked：设置默认选中的值
 \end{itemize}
 
 在网页开发中，往往需要优化用户体验。一个好的产品有3个特点：解决刚需的问题、用户体验、用户黏性（产品定位）。用户体验就是养成用户的懒习惯，减少用户操作，能不让用户操作就不让用户操作，节省用户时间，用户不动手就会觉得方便。例如一个选择性别的单选框，概率上看，假设有100个人，50男50女，使用默认选项，可以节省一半人的操作。 \\
@@ -1052,8 +1052,8 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 \end{lstlisting}
 
 \begin{itemize}
-    \item value：向服务器提交的值，而双标签中间的内容才是显示的值
-    \item selected：设置\lstinline|selected="selected"|表示该选项被默认选中
+	\item value：向服务器提交的值，而双标签中间的内容才是显示的值
+	\item selected：设置\lstinline|selected="selected"|表示该选项被默认选中
 \end{itemize}
 
 \mybox{下拉列表} \\

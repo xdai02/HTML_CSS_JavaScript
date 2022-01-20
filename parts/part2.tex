@@ -66,7 +66,7 @@ CSS样式必须写在style属性的双引号中，如果有多条CSS样式代码
 
 \subsection{嵌入式CSS}
 
-嵌入式CSS样式，也称页面级CSS样式，就是把CSS样式代码写在\lstinline|<style>|之间，嵌入式CSS样式一般放在\lstinline|<head>|内。 \\
+嵌入式CSS样式，也称页面级CSS样式，就是把CSS样式代码写在<style>之间，嵌入式CSS样式一般放在<head>内。 \\
 
 \mybox{嵌入式CSS} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -93,15 +93,15 @@ CSS样式必须写在style属性的双引号中，如果有多条CSS样式代码
 
 \subsection{外部式CSS}
 
-外部式CSS样式，也称外联式CSS样式，就是把CSS样式代码写一个单独的外部文件中，这个CSS样式文件以.css为扩展名。在\lstinline|<head>|内使用\lstinline|<link>|将CSS外部样式文件链接到HTML文件内。 \\
+外部式CSS样式，也称外联式CSS样式，就是把CSS样式代码写一个单独的外部文件中，这个CSS样式文件以.css为扩展名。在<head>内使用<link>将CSS外部样式文件链接到HTML文件内。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <link href="CSS样式文件名" rel="stylesheet" type="text/css" />
 \end{lstlisting}
 
-CSS样式文件名以有意义的英文命名，\lstinline|<link>|中\lstinline|rel="stylesheet" type="text/css"|是固定写法，不需要修改。 \\
+CSS样式文件名以有意义的英文命名，<link>中\lstinline|rel="stylesheet" type="text/css"|是固定写法，不需要修改。 \\
 
-\mybox{外部式CSS} \\
+\mybox{外部式CSS}
 \begin{lstlisting}[style=htmlcssjs, title=external\_css.html]
 <!DOCTYPE html>
 <html lang="en">
@@ -132,15 +132,15 @@ div {
 
 如果有一种情况：对于同一个元素同时使用了三种方法设置CSS样式，那么哪种方式真正有效呢？ \\
 
-三种CSS引入方式是有优先级的：内联式 > 嵌入式 > 外部式。但是嵌入式 > 外部式有一个前提，那就是嵌入式CSS样式的位置一定在外部式的后面。在实际开发中也会将\lstinline|<link>|写在\lstinline|<style>|的前面。 \\
+三种CSS引入方式是有优先级的：内联式 > 嵌入式 > 外部式。但是嵌入式 > 外部式有一个前提，那就是嵌入式CSS样式的位置一定在外部式的后面。在实际开发中也会将<link>写在<style>的前面。 \\
 
 总的来说，优先级遵循“就近原则”，离被设置元素越近优先级别越高。 \\
 
 但是以上总结的优先级有一个前提，那就是内联式、嵌入式、外部式样式表中CSS样式是在相同权值的情况下。那权值是什么呢？
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[]{img/C5/5-5/1.png}
+	\centering
+	\includegraphics[]{img/C5/5-5/1.png}
 \end{figure}
 
 \newpage
@@ -159,6 +159,7 @@ tag_selector {
 }
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{标签选择器} \\
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -346,7 +347,7 @@ ancestor_selector descendant_selector {
 
 \subsection{通配符选择器}
 
-通配符选择器【*】，也称通用选择器，是功能最强大的选择器，用于匹配HTML中所有的标签元素，包括\lstinline|<html>|、\lstinline|<body>|等。 \\
+通配符选择器【*】，也称通用选择器，是功能最强大的选择器，用于匹配HTML中所有的标签元素，包括<html>、<body>等。 \\
 
 \mybox{通配符选择器} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -405,30 +406,30 @@ ancestor_selector descendant_selector {
 伪类选择器【:】允许给HTML标签的某种状态设置样式，例如给一个标签元素的鼠标滑过的状态设置字体颜色。
 
 \begin{table}[H]
-    \centering
-    \setlength{\tabcolsep}{5mm}{
-        \begin{tabular}{|c|c|}
-            \hline
-            \textbf{伪类选择器} & \textbf{功能}    \\
-            \hline
-            :link               & 未访问           \\
-            \hline
-            :visited            & 已访问           \\
-            \hline
-            :hover              & 鼠标悬停         \\
-            \hline
-            :active             & 鼠标按下         \\
-            \hline
-            :enabled            & 可用的时候触发   \\
-            \hline
-            :disabled           & 不可用的时候触发 \\
-            \hline
-        \end{tabular}
-    }
-    \caption{常用伪类选择器}
+	\centering
+	\setlength{\tabcolsep}{5mm}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{伪类选择器} & \textbf{功能}    \\
+			\hline
+			:link               & 未访问           \\
+			\hline
+			:visited            & 已访问           \\
+			\hline
+			:hover              & 鼠标悬停         \\
+			\hline
+			:active             & 鼠标按下         \\
+			\hline
+			:enabled            & 可用的时候触发   \\
+			\hline
+			:disabled           & 不可用的时候触发 \\
+			\hline
+		\end{tabular}
+	}
+	\caption{常用伪类选择器}
 \end{table}
 
-到目前为止，可以兼容所有浏览器的伪类选择器就是在\lstinline|<a>|上使用:hover。 \\
+到目前为止，可以兼容所有浏览器的伪类选择器就是在<a>上使用:hover。 \\
 
 \mybox{伪类选择器} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -464,32 +465,32 @@ ancestor_selector descendant_selector {
 浏览器是根据权值来判断使用哪种CSS样式的，权值高的优先级更高。
 
 \begin{table}[H]
-    \centering
-    \setlength{\tabcolsep}{5mm}{
-        \begin{tabular}{|c|c|}
-            \hline
-            \textbf{选择器} & \textbf{权值} \\
-            \hline
-            !important      & $ \infty $    \\
-            \hline
-            行间样式        & 1000          \\
-            \hline
-            ID              & 100           \\
-            \hline
-            class           & 10            \\
-            \hline
-            标签            & 1             \\
-            \hline
-            通配符          & 0             \\
-            \hline
-        \end{tabular}
-    }
-    \caption{选择器权重}
+	\centering
+	\setlength{\tabcolsep}{5mm}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{选择器} & \textbf{权值} \\
+			\hline
+			!important      & $ \infty $    \\
+			\hline
+			行间样式        & 1000          \\
+			\hline
+			ID              & 100           \\
+			\hline
+			class           & 10            \\
+			\hline
+			标签            & 1             \\
+			\hline
+			通配符          & 0             \\
+			\hline
+		\end{tabular}
+	}
+	\caption{选择器权重}
 \end{table}
 
 \subsection{!important}
 
-有些特殊情况需要为某些样式设置具有最高权值，这时候可以使用\lstinline|!important|，注意\lstinline|!important|要写在分号的前面。 \\
+有些特殊情况需要为某些样式设置具有最高权值，这时候可以使用!important，注意!important要写在分号的前面。 \\
 
 \mybox{!important} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -526,16 +527,16 @@ ancestor_selector descendant_selector {
 
 浏览器默认的字号为16px，使用font-size可以修改字号大小。 \\
 
-为文字设置粗体是有单独的CSS样式来实现的，再也不用为了实现粗体样式而使用\lstinline|<h1>|-\lstinline|<h6>|或\lstinline|<strong>|了。 \\
+为文字设置粗体是有单独的CSS样式来实现的，再也不用为了实现粗体样式而使用<h1>-<h6>或<strong>了。 \\
 
 font-weight的默认值为normal，通过设置属性值为lighter、bold、bolder或100-900之间的整百数值改变文字的粗细。注意，字体能否被bolder或lighter更改取决于字体包是否存在该样式。 \\
 
 font-style可以设置字体样式，并且有3种设置方式：
 
 \begin{enumerate}
-    \item 正常字体为normal，也是font-style的默认值
-    \item italic为字体设置为斜体，用于字体本身就有倾斜的样式
-    \item oblique强制将字体倾斜
+	\item 正常字体为normal，也是font-style的默认值
+	\item italic为字体设置为斜体，用于字体本身就有倾斜的样式
+	\item oblique强制将字体倾斜
 \end{enumerate}
 
 \mybox{字体样式} \\
@@ -569,54 +570,54 @@ font-style可以设置字体样式，并且有3种设置方式：
 color属性可以设置字体颜色。color的值有3种设置方式：
 
 \begin{enumerate}
-    \item 英文命令颜色。 \\
-          \begin{lstlisting}[style=htmlcssjs]
+	\item 英文命令颜色。 \\
+	      \begin{lstlisting}[style=htmlcssjs]
 color: red;
     \end{lstlisting}
 
-    \item 十六进制颜色代码：使用6位十六进制数表示光学三原色“红绿蓝”。
-          \begin{table}[H]
-              \centering
-              \setlength{\tabcolsep}{5mm}{
-                  \begin{tabular}{|c|c|c|}
-                      \hline
-                      \textbf{R} & \textbf{H} & \textbf{B} \\
-                      \hline
-                      00 - FF    & 00 - FF    & 00 - FF    \\
-                      \hline
-                  \end{tabular}
-              }
-              \caption{颜色代码}
-          \end{table}
-          如果每两位十六进制数都相同，可简写。
-          \begin{table}[H]
-              \centering
-              \setlength{\tabcolsep}{5mm}{
-                  \begin{tabular}{|c|c|}
-                      \hline
-                      \textbf{颜色代码} & \textbf{颜色} \\
-                      \hline
-                      \#F00             & 红色          \\
-                      \hline
-                      \#0F0             & 绿色          \\
-                      \hline
-                      \#00F             & 蓝色          \\
-                      \hline
-                      \#000             & 黑色          \\
-                      \hline
-                      \#FFF             & 白色          \\
-                      \hline
-                      \#0FF             & 青色          \\
-                      \hline
-                      \#F40             & 淘宝红        \\
-                      \hline
-                  \end{tabular}
-              }
-              \caption{常见颜色代码}
-          \end{table}
+	\item 十六进制颜色代码：使用6位十六进制数表示光学三原色“红绿蓝”。
+	      \begin{table}[H]
+		      \centering
+		      \setlength{\tabcolsep}{5mm}{
+			      \begin{tabular}{|c|c|c|}
+				      \hline
+				      \textbf{R} & \textbf{H} & \textbf{B} \\
+				      \hline
+				      00 - FF    & 00 - FF    & 00 - FF    \\
+				      \hline
+			      \end{tabular}
+		      }
+		      \caption{颜色代码}
+	      \end{table}
+	      如果每两位十六进制数都相同，可简写。
+	      \begin{table}[H]
+		      \centering
+		      \setlength{\tabcolsep}{5mm}{
+			      \begin{tabular}{|c|c|}
+				      \hline
+				      \textbf{颜色代码} & \textbf{颜色} \\
+				      \hline
+				      \#F00             & 红色          \\
+				      \hline
+				      \#0F0             & 绿色          \\
+				      \hline
+				      \#00F             & 蓝色          \\
+				      \hline
+				      \#000             & 黑色          \\
+				      \hline
+				      \#FFF             & 白色          \\
+				      \hline
+				      \#0FF             & 青色          \\
+				      \hline
+				      \#F40             & 淘宝红        \\
+				      \hline
+			      \end{tabular}
+		      }
+		      \caption{常见颜色代码}
+	      \end{table}
 
-    \item 颜色函数rgb()：由光学三原色RGB的比例来配色。rgb()函数中每一项的值可以是0-255之间的整数，也可以是0\%-100\%的百分数。 \\
-          \begin{lstlisting}[style=htmlcssjs]
+	\item 颜色函数rgb()：由光学三原色RGB的比例来配色。rgb()函数中每一项的值可以是0-255之间的整数，也可以是0\%-100\%的百分数。 \\
+	      \begin{lstlisting}[style=htmlcssjs]
 color: rgb(133, 45, 200);
 color: rgb(20%, 33%, 25%);
     \end{lstlisting}
@@ -628,11 +629,7 @@ color: rgb(20%, 33%, 25%);
 
 \subsection{文本样式}
 
-text-decoration可以设置添加到文本的修饰，默认值为none。属性值为underline为文本添加下划线，属性值为overline为文本添加上划线，属性值为line-through为添加穿过文本的线，一般用于商品折扣价。 \\
-
-使用line-height可以设置段落中的行间距离（行高）。 \\
-
-使用text-align可以为文本设置对齐方式，属性值包括left、right和center。 \\
+使用text-decoration可以设置对文本的修饰，默认值为none；属性值为underline为下划线，属性值为overline为上划线，属性值为line-through为穿过文本的线，一般用于商品折扣价。使用line-height可以设置段落中的行间距离（行高）。使用text-align可以为文本设置对齐方式，属性值包括left、right和center。 \\
 
 \mybox{文本样式} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -670,7 +667,7 @@ text-decoration可以设置添加到文本的修饰，默认值为none。属性�
 
 \subsection{我要独占一行——块级元素}
 
-在HTML中\lstinline|<div>|、\lstinline|<p>|、\lstinline|<h1>|、\lstinline|<form>|、\lstinline|<ul>|、\lstinline|<li>|等都是块级元素。每个块级元素都从新的一行开始，并且其后的元素也另起一行。块级元素的高度、宽度、行高遗迹顶和底边距都可以设置，宽度在不设定的情况下，是它本身父容器的100\%（和父元素的宽度一致）。 \\
+在HTML中<div>、<p>、<h1>、<form>、<ul>、<li>等都是块级元素。每个块级元素都从新的一行开始，并且其后的元素也另起一行。块级元素的高度、宽度、行高遗迹顶和底边距都可以设置，宽度在不设定的情况下，是它本身父容器的100\%（和父元素的宽度一致）。 \\
 
 \mybox{块级元素} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -692,7 +689,7 @@ text-decoration可以设置添加到文本的修饰，默认值为none。属性�
 
 \subsection{我要和你站一起——内联元素}
 
-在HTML中，\lstinline|<span>|、\lstinline|<a>|、\lstinline|<label>|、\lstinline|<strong>|、\lstinline|<em>|等都是内联元素（行内元素）。内联元素和其它元素都在一行上，元素的高度、宽度及顶部和底部编剧不可设置，元素的宽度就是它包含的文字或图片的宽度，不可改变。 \\
+在HTML中，<span>、<a>、<label>、<strong>、<em>等都是内联元素（行内元素）。内联元素和其它元素都在一行上，元素的高度、宽度及顶部和底部编剧不可设置，元素的宽度就是它包含的文字或图片的宽度，不可改变。 \\
 
 块级元素也可以设置\lstinline|display: inline|将元素设置为内联元素。 \\
 
@@ -726,7 +723,7 @@ text-decoration可以设置添加到文本的修饰，默认值为none。属性�
 
 内联块状元素就是同时具备内联元素和块级元素的特点。内联块状元素的特点是和其它元素都在一行上，但元素的高度、宽度、行高以及顶和底边距都可以设置。 \\
 
-通过设置\lstinline|display: inline-block|就可以将元素设置为内联块状元素。如\lstinline|<img>|、\lstinline|<input>|就是这种内联块状标签。
+通过设置\lstinline|display: inline-block|就可以将元素设置为内联块状元素。如<img>、<input>就是这种内联块状标签。
 
 \newpage
 
@@ -737,15 +734,15 @@ text-decoration可以设置添加到文本的修饰，默认值为none。属性�
 盒子模型包含4个部分：
 
 \begin{enumerate}
-    \item 外边距（margin）
-    \item 外边框（border）
-    \item 内边距（padding）
-    \item 内容（content）
+	\item 外边距（margin）
+	\item 外边框（border）
+	\item 内边距（padding）
+	\item 内容（content）
 \end{enumerate}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/C8/8-2/1.png}
+	\centering
+	\includegraphics[scale=0.7]{img/C8/8-2/1.png}
 \end{figure}
 
 盒模型的宽度和高度和平常所说的物体的宽度和高度的理解是不一样的，CSS内定义的宽和高，指的是盒模型中内容的宽和高。 \\
@@ -753,8 +750,8 @@ text-decoration可以设置添加到文本的修饰，默认值为none。属性�
 元素实际的宽度（盒子的宽度） = 左外边距 + 左边框 + 左内边距 + 内容宽度 + 右内边距 + 右边框 + 右外边距 \\
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[]{img/C8/8-2/2.png}
+	\centering
+	\includegraphics[]{img/C8/8-2/2.png}
 \end{figure}
 
 \subsection{外边框（Border）}
@@ -762,9 +759,9 @@ text-decoration可以设置添加到文本的修饰，默认值为none。属性�
 盒子模型的外边框可以设置粗细、样式和颜色：
 
 \begin{enumerate}
-    \item border-width：设置边框的宽度，常用单位为像素（px）
-    \item border-style：边框样式包括实线solid、虚线dashed、点线dotted
-    \item border-color：设置边框颜色
+	\item border-width：设置边框的宽度，常用单位为像素（px）
+	\item border-style：边框样式包括实线solid、虚线dashed、点线dotted
+	\item border-color：设置边框颜色
 \end{enumerate}
 
 当三个属性都需要被设置时，也可以使用border属性简写。例如设置一个粗细为1px实心的黑色边框： \\
@@ -802,13 +799,13 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 通过单独设置每条边的属性，可以在正方形内展现不同的颜色。
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \filldraw[draw=black, fill=black] (0,0) -- (5,0) -- (2.5,2.5) -- cycle;
-        \filldraw[draw=red, fill=red] (0,0) -- (2.5,2.5) -- (0,5) -- cycle;
-        \filldraw[draw=blue, fill=blue] (5,0) -- (2.5,2.5) -- (5,5) -- cycle;
-        \filldraw[draw=green, fill=green] (2.5,2.5) -- (0,5) -- (5,5) -- cycle;
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+		\filldraw[draw=black, fill=black] (0,0) -- (5,0) -- (2.5,2.5) -- cycle;
+		\filldraw[draw=red, fill=red] (0,0) -- (2.5,2.5) -- (0,5) -- cycle;
+		\filldraw[draw=blue, fill=blue] (5,0) -- (2.5,2.5) -- (5,5) -- cycle;
+		\filldraw[draw=green, fill=green] (2.5,2.5) -- (0,5) -- (5,5) -- cycle;
+	\end{tikzpicture}
 \end{figure}
 
 \mybox{四色正方形} \\
@@ -838,11 +835,11 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 通过设置透明色（transparent），可以绘制出三角形。
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \filldraw[draw=black, fill=black] (0,0) -- (5,0) -- (2.5,2.5) -- cycle;
-        \filldraw[draw=black, fill=black] (0,0) -- (2.5,2.5) -- (0,5) -- cycle;
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}
+		\filldraw[draw=black, fill=black] (0,0) -- (5,0) -- (2.5,2.5) -- cycle;
+		\filldraw[draw=black, fill=black] (0,0) -- (2.5,2.5) -- (0,5) -- cycle;
+	\end{tikzpicture}
 \end{figure}
 
 \mybox{三角形} \\
@@ -874,8 +871,8 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 元素内容与边框之间是可以设置距离的，称之为内边距或填充。内边距也可分为上、右、下、左（顺时针）。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/C8/8-2/3.png}
+	\centering
+	\includegraphics[scale=0.7]{img/C8/8-2/3.png}
 \end{figure}
 
 \subsection{外边距（Margin）}
@@ -883,8 +880,8 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 元素与其他元素之间的距离可以使用外边距来设置，外边距也可分为上、右、下、左。
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/C8/8-2/4.png}
+	\centering
+	\includegraphics[scale=0.7]{img/C8/8-2/4.png}
 \end{figure}
 
 margin与padding的区别在于，padding在外边框里，margin在外边框外。
@@ -898,9 +895,9 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 布局模型建立在盒子模型的基础上，在网页中，元素有3种布局模型：
 
 \begin{enumerate}
-    \item 流动模型（flow）
-    \item 浮动模型（float）
-    \item 层模型（layer）
+	\item 流动模型（flow）
+	\item 浮动模型（float）
+	\item 层模型（layer）
 \end{enumerate}
 
 \subsection{流动模型}
@@ -910,22 +907,22 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 流动布局模型有2个典型的特征：
 
 \begin{enumerate}
-    \item 块级元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块级元素的宽度都为100\%，即都会以行的形式占据位置。
-          \begin{figure}[H]
-              \centering
-              \includegraphics[scale=0.7]{img/C8/8-3/1.png}
-          \end{figure}
+	\item 块级元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块级元素的宽度都为100\%，即都会以行的形式占据位置。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[scale=0.7]{img/C8/8-3/1.png}
+	      \end{figure}
 
-    \item 内联元素都会在所处的包含元素内从左到右水平分布显示。
-          \begin{figure}[H]
-              \centering
-              \includegraphics[]{img/C8/8-3/2.png}
-          \end{figure}
+	\item 内联元素都会在所处的包含元素内从左到右水平分布显示。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[]{img/C8/8-3/2.png}
+	      \end{figure}
 \end{enumerate}
 
 \subsection{浮动模型}
 
-块级元素这么霸道都是独占一行，如果想让两个块级元素并排显示，可以设置元素浮动。任何元素在默认情况下是不能浮动的，但可以设置float属性定义为浮动，如\lstinline|<div>|、\lstinline|<p>|、\lstinline|<table>|、\lstinline|<img>|等元素都可以被定义为浮动。 \\
+块级元素这么霸道都是独占一行，如果想让两个块级元素并排显示，可以设置元素浮动。任何元素在默认情况下是不能浮动的，但可以设置float属性定义为浮动，如<div>、<p>、<table>、<img>等元素都可以被定义为浮动。 \\
 
 \mybox{浮动模型} \\
 \begin{lstlisting}[style=htmlcssjs]
@@ -968,9 +965,9 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 层模型有3种形式：
 
 \begin{enumerate}
-    \item 绝对定位（absolute）
-    \item 相对定位（relative）
-    \item 固定定位（fixed）
+	\item 绝对定位（absolute）
+	\item 相对定位（relative）
+	\item 固定定位（fixed）
 \end{enumerate}
 
 \subsection{万事无绝对——绝对定位}
@@ -1012,11 +1009,11 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 \end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[scale=0.7]
-        \filldraw[draw=blue, fill=blue] (0,2) -- (0,7) -- (5,7) -- (5,2) -- cycle;
-        \filldraw[draw=red, fill=red] (4.5,0) -- (9.5,0) -- (9.5,5) -- (4.5,5) -- cycle;
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}[scale=0.7]
+		\filldraw[draw=blue, fill=blue] (0,2) -- (0,7) -- (5,7) -- (5,2) -- cycle;
+		\filldraw[draw=red, fill=red] (4.5,0) -- (9.5,0) -- (9.5,5) -- (4.5,5) -- cycle;
+	\end{tikzpicture}
 \end{figure}
 
 \subsection{相对于自己的位置——相对定位}
@@ -1056,19 +1053,19 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 \end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[scale=0.7]
-        \filldraw[draw=blue, fill=blue] (0,0) -- (0,5) -- (5,5) -- (5,0) -- cycle;
-        \filldraw[draw=red, fill=red] (5,2.5) -- (5,7.5) -- (10,7.5) -- (10,2.5) -- cycle;
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}[scale=0.7]
+		\filldraw[draw=blue, fill=blue] (0,0) -- (0,5) -- (5,5) -- (5,0) -- cycle;
+		\filldraw[draw=red, fill=red] (5,2.5) -- (5,7.5) -- (10,7.5) -- (10,2.5) -- cycle;
+	\end{tikzpicture}
 \end{figure}
 
 使用\lstinline|position: absolute|可以实现元素相对于浏览器（body）设置定位，那可不可以相对于其它元素进行定位呢？当然可以，但是必须要满足以下的3点条件：
 
 \begin{enumerate}
-    \item 参照定位的元素必须是相对定位元素的前辈元素。
-    \item 参照定位的元素必须加入\lstinline|position: relative|。
-    \item 定位元素加入`position: absolute`后便可以使用top、bottom、left、right来进行偏移了。
+	\item 参照定位的元素必须是相对定位元素的前辈元素。
+	\item 参照定位的元素必须加入\lstinline|position: relative|。
+	\item 定位元素加入`position: absolute`后便可以使用top、bottom、left、right来进行偏移了。
 \end{enumerate}
 
 \mybox{相对父元素定位} \\
@@ -1104,11 +1101,11 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 \end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[scale=0.7]
-        \filldraw[draw=red, fill=red] (0,0) -- (0,5) -- (5,5) -- (5,0) -- cycle;
-        \filldraw[draw=blue, fill=blue] (0,2) -- (0,3) -- (5,3) -- (5,2) -- cycle;
-    \end{tikzpicture}
+	\centering
+	\begin{tikzpicture}[scale=0.7]
+		\filldraw[draw=red, fill=red] (0,0) -- (0,5) -- (5,5) -- (5,0) -- cycle;
+		\filldraw[draw=blue, fill=blue] (0,2) -- (0,3) -- (5,3) -- (5,2) -- cycle;
+	\end{tikzpicture}
 \end{figure}
 
 \subsection{我就在那不动了——固定定位}
@@ -1137,11 +1134,12 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 </html>
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{奥运五环}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{img/C8/8-4/1.png}
+	\centering
+	\includegraphics[scale=0.7]{img/C8/8-4/1.png}
 \end{figure}
 
 \begin{lstlisting}[style=htmlcssjs, title=olympic.html]

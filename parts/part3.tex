@@ -58,7 +58,7 @@
 
 \subsection{Hello World!}
 
-使用\lstinline|<script>|在HTML网页中插入JavaScript代码。 \\
+使用<script>在HTML网页中插入JavaScript代码。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 <script type="text/JavaScript">
@@ -66,13 +66,13 @@
 </script>
 \end{lstlisting}
 
-type属性表示在\lstinline|<script>|之间的是文本类型，告诉了浏览器里面的文本属于JavaScript语言。 \\
+type属性表示在<script>之间的是文本类型，告诉了浏览器里面的文本属于JavaScript语言。 \\
 
-JS作为一种脚本语言可以放在HTML页面中任何位置，但是一般放在网页的\lstinline|<head>|或\lstinline|<body>|部分。最常用的方式是在页面\lstinline|<head>|部分放置\lstinline|<script>|元素，浏览器解析HTML时是按先后顺序的，所以前面的\lstinline|<script>|就先被执行。 \\
+JS作为一种脚本语言可以放在HTML页面中任何位置，但是一般放在网页的<head>或<body>部分。最常用的方式是在页面<head>部分放置<script>元素，浏览器解析HTML时是按先后顺序的，所以前面的<script>就先被执行。 \\
 
 \subsection{引入外部JS文件}
 
-除了在HTML文件中使用\lstinline|<script>|添加JS代码，还能把HTML和JS分开，单独创建一个JS文件，其文件后缀为“.js”，然后直接将JS代码写在JS文件中。注意在JS文件中，不需要\lstinline|<script>|，直接编写JS代码即可。 \\
+除了在HTML文件中使用<script>添加JS代码，还能把HTML和JS分开，单独创建一个JS文件，其文件后缀为“.js”，然后直接将JS代码写在JS文件中。注意在JS文件中，不需要<script>，直接编写JS代码即可。 \\
 
 JS文件不能直接运行，需要嵌入到HTML文件中执行，因此需要在HTML中引入外部JS文件。 \\
 
@@ -80,6 +80,7 @@ JS文件不能直接运行，需要嵌入到HTML文件中执行，因此需要�
 <script src="JS文件.js"></script>
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{Hello World!}
 
 \begin{lstlisting}[style=htmlcssjs, title=hello\_world.html]
@@ -137,7 +138,7 @@ document.write("多行注释");
 
 \subsection{document.write()}
 
-\lstinline|document.write()|可用于直接向HTML输出流写内容，简单地说就是直接在网页中输出内容。 \\
+document.write()可用于直接向HTML输出流写内容，简单地说就是直接在网页中输出内容。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 document.write("互动方法：document.write()");
@@ -145,7 +146,7 @@ document.write("互动方法：document.write()");
 
 \subsection{console.log()}
 
-\lstinline|console.log()|用于在控制台输出信息，该方法对于开发过程进行测试很有帮助。 \\
+console.log()用于在控制台输出信息，该方法对于开发过程进行测试很有帮助。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 console.log("互动方法：console.log()");
@@ -153,7 +154,7 @@ console.log("互动方法：console.log()");
 
 \subsection{alert()}
 
-在访问网站的时候，有时会突然弹出一个小窗口，上面写着一段提示信息文字，如果不点击“确定”，就不能对网页做任何操作，这个小窗口就是使用\lstinline|alert()|实现的。 \\
+在访问网站的时候，有时会突然弹出一个小窗口，上面写着一段提示信息文字，如果不点击“确定”，就不能对网页做任何操作，这个小窗口就是使用alert()实现的。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 alert("互动方法：alert()");
@@ -161,9 +162,9 @@ alert("互动方法：alert()");
 
 \subsection{confirm()}
 
-\lstinline|confirm()|消息对话框通常用于允许用户做选择的动作，弹出对话框包含一个确定按钮和一个取消按钮。 \\
+confirm()消息对话框通常用于允许用户做选择的动作，弹出对话框包含一个确定按钮和一个取消按钮。 \\
 
-\lstinline|confirm()|的返回值为boolean值，当用户点击“确定”按钮时返回true，当用户点击“取消”按钮时返回false。 \\
+confirm()的返回值为boolean值，当用户点击“确定”按钮时返回true，当用户点击“取消”按钮时返回false。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 confirm("互动方法：confirm()");
@@ -171,9 +172,9 @@ confirm("互动方法：confirm()");
 
 \subsection{prompt()}
 
-\lstinline|prompt()|弹出消息对话框，通常用于询问一些需要与用户交互的信息，弹出的消息对话框包含一个确定按钮、取消按钮和一个文本输入框。 \\
+prompt()弹出消息对话框，通常用于询问一些需要与用户交互的信息，弹出的消息对话框包含一个确定按钮、取消按钮和一个文本输入框。 \\
 
-\lstinline|prompt()|接受两个参数，第一个参数为要显示在消息对话框中的文本，不可修改；第二个参数为文本框中的内容，可以修改。点击“确定”按钮，文本框中的内容将作为函数的返回值；点击“取消”按钮，将返回null。 \\
+prompt()接受两个参数，第一个参数为要显示在消息对话框中的文本，不可修改；第二个参数为文本框中的内容，可以修改。点击“确定”按钮，文本框中的内容将作为函数的返回值；点击“取消”按钮，将返回null。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 prompt("互动方法：prompt()", "文本内容");
@@ -264,7 +265,7 @@ JS中变量主要有以下几种类型：
 	\item 复杂数据类型：数组Array、对象Object
 \end{enumerate}
 
-使用\lstinline|typeof()|可以检测一个变量的数据类型。 \\
+使用typeof()可以检测一个变量的数据类型。 \\
 
 \mybox{数据类型} \\
 
@@ -358,17 +359,17 @@ JS中除法【/】的意义与数学中不同：
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\textbf{运算符} & \textbf{描述}                                        \\
+			\textbf{运算符} & \textbf{描述}           \\
 			\hline
-			+=              & \lstinline|a += b|等价于\lstinline|a = a + b| \\
+			+=              & a += b等价于a = a + b   \\
 			\hline
-			-=              & \lstinline|a -= b|等价于\lstinline|a = a - b| \\
+			-=              & a -= b等价于a = a - b   \\
 			\hline
-			*=              & \lstinline|a *= b|等价于\lstinline|a = a * b| \\
+			*=              & a *= b等价于a = a * b   \\
 			\hline
-			/=              & \lstinline|a /= b|等价于\lstinline|a = a / b| \\
+			/=              & a /= b等价于a = a / b   \\
 			\hline
-			\%=             & \lstinline|a %= b|等价于\lstinline|a = a % b| \\
+			\%=             & a \%= b等价于a = a \% b \\
 			\hline
 		\end{tabular}
 	}
@@ -403,17 +404,17 @@ console.log("Hello" + "World");
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\textbf{转义字符}       & \textbf{描述}                         \\
+			\textbf{转义字符}      & \textbf{描述}                        \\
 			\hline
 			\lstinline|\\| & 表示一个反斜杠\lstinline|\| \\
 			\hline
 			\lstinline|\'| & 表示一个单引号\lstinline|'| \\
-			\hline3
+			\hline
 			\lstinline|\"| & 表示一个双引号\lstinline|"| \\
 			\hline
-			\lstinline|\n| & 换行                                  \\
+			\lstinline|\n| & 换行                                 \\
 			\hline
-			\lstinline|\t| & 横向制表符                            \\
+			\lstinline|\t| & 横向制表符                           \\
 			\hline
 		\end{tabular}
 	}
@@ -436,7 +437,7 @@ console.log("全球最大同性交友网站\n\'https://github.com\'");
 
 表达式与数学中的定义相似，表达式是值具有一定的值，用操作符把常数和变量连接起来的代数式。 \\
 
-使用\lstinline|prompt()|可以获取用户输入的信息，返回值为字符串类型。 \\
+使用prompt()可以获取用户输入的信息，返回值为字符串类型。 \\
 
 \mybox{计算圆的面积} \\
 
@@ -453,7 +454,7 @@ console.log("面积 = " + area);
 	面积 = 78.53975
 \end{tcolorbox}
 
-\lstinline|Math.floor()|的作用是向下取整，\lstinline|Math.ceil()|的作用是向上取整。 \\
+Math.floor()的作用是向下取整，Math.ceil()的作用是向上取整。 \\
 
 \mybox{逆序三位数} \\
 
@@ -581,15 +582,15 @@ JS中逻辑运算符有三种：
 if语句主要有以下几种形式：
 
 \begin{itemize}
-	\item 单分支
+	\item 单分支 \\
 	      \begin{lstlisting}[style=htmlcssjs]
 var age = 15;
-if(age > 0 && age < 18) {
+if(age > 0 && age < 18) {
     console.log("未成年")
 }
         \end{lstlisting}
 
-	\item 双分支
+	\item 双分支 \\
 	      \begin{lstlisting}[style=htmlcssjs]
 var age = 30;
 if(age > 0 && age < 18) {
@@ -599,7 +600,7 @@ if(age > 0 && age < 18) {
 }
 \end{lstlisting}
 
-	\item 多分支
+	\item 多分支 \\
 	      \begin{lstlisting}[style=htmlcssjs]
 var score = 76;
 
@@ -625,6 +626,7 @@ if(条件1) {
 }
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{判断整数奇偶} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -665,9 +667,7 @@ switch(表达式) {
 }
 \end{lstlisting}
 
-根据表达式的值，跳转到对应的case处进行执行。需要注意的是，当对应的case中的代码被执行完后，并不会跳出switch，而是会继续执行后面的代码，所以需要使用break跳出switch结构。 \\
-
-当所有case都不满足表达式的值时，会执行default语句中的代码，相当于if-else结构中的else。 \\
+根据表达式的值，跳转到对应的case处进行执行。需要注意的是，当对应的case中的代码被执行完后，并不会跳出switch，而是会继续执行后面的代码，所以需要使用break跳出switch结构。当所有case都不满足表达式的值时，会执行default语句中的代码，相当于if-else结构中的else。 \\
 
 \mybox{根据月份输出对应的英语简写} \\
 
@@ -745,15 +745,15 @@ switch(month) {
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|l|}
 			\hline
-			\textbf{表达式}         & \textbf{含义}        \\
+			\textbf{表达式} & \textbf{含义}        \\
 			\hline
-			\lstinline|count++| & 执行完所在语句后自增 \\
+			count++         & 执行完所在语句后自增 \\
 			\hline
-			\lstinline|++count| & 执行所在语句前自增   \\
+			++count         & 执行所在语句前自增   \\
 			\hline
-			\lstinline|count--| & 执行完所在语句后自减 \\
+			count--         & 执行完所在语句后自减 \\
 			\hline
-			\lstinline|--count| & 执行所在语句前自减   \\
+			--count         & 执行所在语句前自减   \\
 			\hline
 		\end{tabular}
 	}
@@ -778,6 +778,7 @@ while(条件) {
 }
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{计算5个人的平均身高} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -822,6 +823,7 @@ do {
 } while(条件);
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{计算整数位数} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -933,6 +935,7 @@ console.log("累加：" + sum);
 	累加：5050
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{计算$ 1 + {1 \over 2} + {1 \over 3} + ... + {1 \over n} $} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -951,6 +954,7 @@ console.log(sum);
 	2.928968
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{斐波那契数列}
 
 \begin{figure}[H]
@@ -1032,6 +1036,7 @@ for(var i = 1; i <= 9; i++) {
 console.log(str);
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{输出图案}
 
 \begin{lstlisting}
@@ -1086,6 +1091,7 @@ console.log(str);
 	1 2 3 4
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{continue} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1142,13 +1148,13 @@ console.log(str);
 使用数组之前首先要创建数组，数组的创建有2种方式：
 
 \begin{enumerate}
-	\item 直接创建
+	\item 直接创建 \\
 	      \begin{lstlisting}[style=htmlcssjs]
 var arr1 = [];          //创建一个空数组
 var arr2 = [1, 2, 3];   //创建有内容的数组
         \end{lstlisting}
 
-	\item 利用构造函数创建
+	\item 利用构造函数创建 \\
 	      \begin{lstlisting}[style=htmlcssjs]
 var arr1 = new Array();                 //创建空数组
 var arr2 = new Array(10);               //创建长度为10的数组
@@ -1169,6 +1175,7 @@ for(var i = 0; i < arr.length; i++) {
 }
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{数组最大值和最小值} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1232,6 +1239,7 @@ console.log(arr);
 	length: 2
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{构造函数创建二维数组} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1264,6 +1272,7 @@ for(var i = 0; i < arr.length; i++) {
 }
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{矩阵运算} \\
 
 矩阵的加法/减法是指两个矩阵把其相对应元素进行加减的运算。 \\
@@ -1403,9 +1412,9 @@ console.log(arr);
 	\text{[0, 1, 2, 3, 4, 5]}
 \end{tcolorbox}
 
-使用\lstinline|unshift()|可以向数组第一个元素前面添加一个元素，返回值为数组长度。 \\
+使用unshift()可以向数组第一个元素前面添加一个元素，返回值为数组长度。 \\
 
-\mybox{\lstinline|unshift()|} \\
+\mybox{unshift()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4];
@@ -1418,9 +1427,9 @@ console.log(arr);
 	\text{[5, 0, 1, 2, 3, 4]}
 \end{tcolorbox}
 
-\lstinline|push()|可以向数组最后一个元素后面添加一个元素，返回值为数组长度。 \\
+push()可以向数组最后一个元素后面添加一个元素，返回值为数组长度。 \\
 
-\mybox{\lstinline|push()|} \\
+\mybox{push()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4];
@@ -1435,9 +1444,9 @@ console.log(arr);
 
 \subsection{删除元素：}
 
-\lstinline|shift()|可以删除数组的第一个元素，返回值为被删除元素。 \\
+shift()可以删除数组的第一个元素，返回值为被删除元素。 \\
 
-\mybox{\lstinline|shift()|} \\
+\mybox{shift()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4];
@@ -1450,9 +1459,9 @@ console.log(arr);
 	\text{[1, 2, 3, 4]}
 \end{tcolorbox}
 
-\lstinline|pop()|可以删除数组的最后一个元素，返回值为被删除元素。 \\
+pop()可以删除数组的最后一个元素，返回值为被删除元素。 \\
 
-\mybox{\lstinline|pop()|} \\
+\mybox{pop()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4];
@@ -1467,9 +1476,9 @@ console.log(arr);
 
 \subsection{合并数组}
 
-使用\lstinline|concat()|可以合并两个或多个数组，该方法不会改变原有数组，而是返回一个新的合并完的数组。 \\
+使用concat()可以合并两个或多个数组，该方法不会改变原有数组，而是返回一个新的合并完的数组。 \\
 
-\mybox{\lstinline|concat()|} \\
+\mybox{concat()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr1 = [1, 2, 3, 4, 5];
@@ -1488,9 +1497,9 @@ console.log(arr2);
 
 \subsection{数组转字符串}
 
-使用\lstinline|join(separator)|方法可以将数组转换为字符串，其中`separator`参数可选，用于指定要使用的分隔符，如果该参数省略，则使用逗号作为分隔符。 \\
+使用join(separator)方法可以将数组转换为字符串，其中`separator`参数可选，用于指定要使用的分隔符，如果该参数省略，则使用逗号作为分隔符。 \\
 
-\mybox{\lstinline|join()|} \\
+\mybox{join()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4];
@@ -1504,9 +1513,9 @@ console.log(arr.join());
 
 \subsection{字符串转数组}
 
-6. 使用\lstinline|split(separator, n)|可以将字符串转换为数组，其中参数separator必选，用于指定将字符串按某个字符切割成若干个子字符串，并以数组的形式返回。参数n可选，用于指定返回的数组的最大长度，如果设置了该参数，返回的子串数量不会多于n；如果没有设置该参数，整个字符串都会被分隔。 \\
+6. 使用split(separator, n)可以将字符串转换为数组，其中参数separator必选，用于指定将字符串按某个字符切割成若干个子字符串，并以数组的形式返回。参数n可选，用于指定返回的数组的最大长度，如果设置了该参数，返回的子串数量不会多于n；如果没有设置该参数，整个字符串都会被分隔。 \\
 
-\mybox{\lstinline|split()|} \\
+\mybox{split()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var str = "hello HTML hello CSS hello JavaScript";
@@ -1521,9 +1530,9 @@ console.log(arr);
 
 \subsection{翻转数组}
 
-使用\lstinline|reverse()|可以颠倒数组中元素的顺序。 \\
+使用reverse()可以颠倒数组中元素的顺序。 \\
 
-\mybox{\lstinline|reverse()|} \\
+\mybox{reverse()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [1, 2, 3, 4, 5];
@@ -1537,9 +1546,9 @@ console.log(arr.reverse());
 
 \subsection{数组排序}
 
-使用\lstinline|sort(sortfun)|可以将数组进行排序，其中参数sortfun可选，用于指定排序规则，而且必须是函数，该参数省略则按照字符编码顺序排序。 \\
+使用sort(sortfun)可以将数组进行排序，其中参数sortfun可选，用于指定排序规则，而且必须是函数，该参数省略则按照字符编码顺序排序。 \\
 
-\mybox{\lstinline|sort()|} \\
+\mybox{sort()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [98, 1, 21, 8, 12, 2, 10, 25];
@@ -1556,9 +1565,9 @@ console.log(arr);
 
 \subsection{数组切片}
 
-使用\lstinline|slice(start, end)|可以返回数组中被选定的元素，不包含下标为end的元素。其中参数start必选，用于指定开始位置，如果是负数则从数组尾部开始算起。参数end可选，用于指定结束位置，没有该参数省略，则切分到数组结束为止，如果是负数则从数组尾部开始算起。 \\
+使用slice(start, end)可以返回数组中被选定的元素，不包含下标为end的元素。其中参数start必选，用于指定开始位置，如果是负数则从数组尾部开始算起。参数end可选，用于指定结束位置，没有该参数省略，则切分到数组结束为止，如果是负数则从数组尾部开始算起。 \\
 
-\mybox{\lstinline|slice()|} \\
+\mybox{slice()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4, 5, 6];
@@ -1572,9 +1581,9 @@ console.log(arr.slice(2, 5));
 
 \subsection{查找元素}
 
-使用\lstinline|indexOf(item, start)|可以查找指定元素，如果查找成功则返回该元素的下标，如果查找失败者返回-1。其中参数item必选，用于指定需要查找的元素，参数start可选，用于指定在数组中开始检索的位置，如省略则从第一个元素开始检索。 \\
+使用indexOf(item, start)可以查找指定元素，如果查找成功则返回该元素的下标，如果查找失败者返回-1。其中参数item必选，用于指定需要查找的元素，参数start可选，用于指定在数组中开始检索的位置，如省略则从第一个元素开始检索。 \\
 
-\mybox{\lstinline|indexOf()|} \\
+\mybox{indexOf()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var arr = [0, 1, 2, 3, 4, 5, 6];
@@ -1594,7 +1603,7 @@ console.log(arr.indexOf(4));
 
 \subsection{函数（Function）}
 
-函数执行一个特定的任务，JS提供了大量内置函数，例如\lstinline|alert()|用来显示警告对话框、\lstinline|parseInt()|用来将字符串转换为整型等。
+函数执行一个特定的任务，JS提供了大量内置函数，例如alert()用来显示警告对话框、parseInt()用来将字符串转换为整型等。
 
 \begin{figure}[H]
 	\centering
@@ -1702,6 +1711,7 @@ console.log(max(-999, -774));
 	-774
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{函数实现累加和} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1723,6 +1733,7 @@ console.log("1024-2048的累加和 = " + sum(1024, 2048));
 	1024-2048的累加和 = 1574400
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{函数实现输出i行j列由自定义字符组成的图案} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1757,7 +1768,7 @@ print_chars(5, 10, '?');
 
 JS的局部变量是在函数里面被声明的，这些变量的作用域在本地，也就是说这些变量只能在函数内部可用。本地变量在函数调用时被创造，在函数结束时被销毁。 \\
 
-在函数中，函数的每次调用就会产生一个独立的空间，在这个空间中的变量，是函数的这次运行所独有的，函数的参数也是局部变量。
+在函数中，函数的每次调用就会产生一个独立的空间，在这个空间中的变量，是函数的这次运行所独有的，函数的参数也是局部变量。 \\
 
 \mybox{局部变量} \\
 
@@ -2439,7 +2450,7 @@ onblur事件与onfocus事件是相对事件，当光标离开当前获得聚焦�
 
 \subsection{加载事件onload}
 
-加载事件会在页面加载完成后立即发生，同时执行被调用的程序。注意，加载事件需要写在\lstinline|<body>|内。 \\
+加载事件会在页面加载完成后立即发生，同时执行被调用的程序。注意，加载事件需要写在<body>内。 \\
 
 \mybox{onload} \\
 
@@ -2489,6 +2500,7 @@ console.log(arr.length);
 	5
 \end{tcolorbox}
 
+\vspace{0.5cm}
 \mybox{访问对象方法} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -2530,25 +2542,25 @@ console.log(date2);
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|l|l|}
 			\hline
-			\textbf{方法名称}                                 & \textbf{描述}                      \\
+			\textbf{方法名称}             & \textbf{描述}                      \\
 			\hline
-			\lstinline|getDate()| / \lstinline|setDate()|   & 返回/设置日期                      \\
+			getDate() / setDate()         & 返回/设置日期                      \\
 			\hline
-			\lstinline|getFullYear()| / \lstinline|setFullYear()|   & 返回/设置年份，用四位数表示        \\
+			getFullYear() / setFullYear() & 返回/设置年份，用四位数表示        \\
 			\hline
-			\lstinline|getYear()| / \lstinline|setYear()|   & 返回/设置年份                      \\
+			getYear() / setYear()         & 返回/设置年份                      \\
 			\hline
-			\lstinline|getMonth()| / \lstinline|setMonth()|   & 返回/设置月份，月份从0开始         \\
+			getMonth() / setMonth()       & 返回/设置月份，月份从0开始         \\
 			\hline
-			\lstinline|getHours()| / \lstinline|setHours()|  & 返回/设置小时，24小时制            \\
+			getHours() / setHours()       & 返回/设置小时，24小时制            \\
 			\hline
-			\lstinline|getMinutes()| / \lstinline|setMinutes()| & 返回/设置分钟数                    \\
+			getMinutes() / setMinutes()   & 返回/设置分钟数                    \\
 			\hline
-			\lstinline|getSeconds()| / \lstinline|setSeconds()| & 返回/设置秒钟数                    \\
+			getSeconds() / setSeconds()   & 返回/设置秒钟数                    \\
 			\hline
-			\lstinline|getTime()| / \lstinline|setTime()| & 返回/设置时间（毫秒为单位）        \\
+			getTime() / setTime()         & 返回/设置时间（毫秒为单位）        \\
 			\hline
-			\lstinline|getDay()|                           & 返回0-6的数字表示星期，0表示星期天 \\
+			getDay()                      & 返回0-6的数字表示星期，0表示星期天 \\
 			\hline
 		\end{tabular}
 	}
@@ -2598,7 +2610,7 @@ console.log(str.length);
 
 \subsection{大小写转换}
 
-使用String对象的\lstinline|toUpperCase()|和\lstinline|toLowerCase()|可以将字符串进行大小写字母转换。 \\
+使用String对象的toUpperCase()和toLowerCase()可以将字符串进行大小写字母转换。 \\
 
 \mybox{大小写字母转换} \\
 
@@ -2616,9 +2628,9 @@ console.log(str.toLowerCase());
 
 \subsection{返回指定的字符}
 
-使用\lstinline|charAt()|可返回指定位置的字符，返回的字符是长度为1的字符串。 \\
+使用charAt()可返回指定位置的字符，返回的字符是长度为1的字符串。 \\
 
-\mybox{\lstinline|charAt()|} \\
+\mybox{charAt()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var str = "Hello World!"
@@ -2632,7 +2644,7 @@ console.log(str.charAt(6));
 
 \subsection{返回指定的字符串首次出现的位置}
 
-\lstinline|indexOf()|可以返回某个指定的字符串值在字符串中首次出现的位置。 \\
+indexOf()可以返回某个指定的字符串值在字符串中首次出现的位置。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 stringObj.indexOf(substring, startPos);
@@ -2640,7 +2652,7 @@ stringObj.indexOf(substring, startPos);
 
 该方法将从头到尾地检索字符串，检查是否含有需检索的子串。参数startPos为可选参数，用于规定开始查找的位置，如果没有设置此参数将从头开始查找。如果找到了子串，在返回子串的第一次出现位置。如果要检索的字符串值没有出现，则该方法返回-1。 \\
 
-\mybox{\lstinline|indexOf()|} \\
+\mybox{indexOf()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var str = "Hello World!";
@@ -2658,7 +2670,7 @@ console.log(str.indexOf("JS"));
 
 \subsection{字符串分割}
 
-\lstinline|split()|可以将字符串分割为字符串数组，并返回此数组。 \\
+split()可以将字符串分割为字符串数组，并返回此数组。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 stringObj.split(separator, limit);
@@ -2666,7 +2678,7 @@ stringObj.split(separator, limit);
 
 其中参数separator必选，用于指定将字符串按某个字符切割成若干个子字符串，并以数组的形式返回。参数limit可选，用于指定分隔的次数。如果把空字符串作为separator，那么字符串的每个字符之间都会被分隔。 \\
 
-\mybox{\lstinline|split()|} \\
+\mybox{split()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var str = "hello HTML hello CSS hello JavaScript";
@@ -2682,7 +2694,7 @@ console.log(str.split(" ", 4));
 
 \subsection{提取字符串}
 
-\lstinline|substring()|用于提取字符串中介于两个指定下标之间的字符。 \\
+substring()用于提取字符串中介于两个指定下标之间的字符。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 stringObj.substring(startPos, stopPos);
@@ -2690,7 +2702,7 @@ stringObj.substring(startPos, stopPos);
 
 该方法返回的内容是从startPos开始到stopPos - 1处的所有内容，其长度为stopPos - startPos。如果startPos和stopPos相等，那么返回的就是一个空串（长度为0的字符串）。如果startPos比stopPos大，那么该方法在提取子串之间会先交换这两个参数。 \\
 
-\mybox{\lstinline|substring()|} \\
+\mybox{substring()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var str = "HelloWorld";
@@ -2708,7 +2720,7 @@ console.log(str.substring(7, 3));
 
 \subsection{提取指定数目的字符}
 
-\lstinline|substr()|用于从字符串中提取从startPos位置开始的指定数目的字符串。 \\
+substr()用于从字符串中提取从startPos位置开始的指定数目的字符串。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 stringObj.substr(startPos, length);
@@ -2716,7 +2728,7 @@ stringObj.substr(startPos, length);
 
 如果参数startPos是负数，则从字符串的尾部开始算起，如果startPos为负数且绝对值大于字符串长度，则startPos会被视为0。 \\
 
-\mybox{\lstinline|substr()|} \\
+\mybox{substr()} \\
 
 \begin{lstlisting}[style=htmlcssjs]
 var str = "HelloWorld";
@@ -2743,23 +2755,23 @@ Math对象提供对数据的数学计算。需要注意的是，Math对象是一
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|l|}
 			\hline
-			\textbf{属性}           & \textbf{描述}                                          \\
+			\textbf{属性} & \textbf{描述}                                          \\
 			\hline
-			\lstinline|E|  & 返回算术常量$ e $，即自然对数的底数（约等于$ 2.718 $） \\
+			E             & 返回算术常量$ e $，即自然对数的底数（约等于$ 2.718 $） \\
 			\hline
-			\lstinline|LN2|  & 返回$ 2 $的自然对数（约等于$ 0.693 $）                 \\
+			LN2           & 返回$ 2 $的自然对数（约等于$ 0.693 $）                 \\
 			\hline
-			\lstinline|LN10|  & 返回$ 10 $的自然对数（约等于$ 2.302 $）                \\
+			LN10          & 返回$ 10 $的自然对数（约等于$ 2.302 $）                \\
 			\hline
-			\lstinline|LOG2E|  & 返回以$ 2 $为底$ e $的对数（约等于$ 1.442 $）          \\
+			LOG2E         & 返回以$ 2 $为底$ e $的对数（约等于$ 1.442 $）          \\
 			\hline
-			\lstinline|LOG10E|  & 返回以$ 10 $为底$ e $的对数（约等于$ 0.434 $）         \\
+			LOG10E        & 返回以$ 10 $为底$ e $的对数（约等于$ 0.434 $）         \\
 			\hline
-			\lstinline|PI| & 返回圆周率（约等于$ 3.14159 $）                        \\
+			PI            & 返回圆周率（约等于$ 3.14159 $）                        \\
 			\hline
-			\lstinline|SQRT1_2| & 返回$ 2 $的平方根的倒数（约等于$ 0.707 $）             \\
+			SQRT1\_2      & 返回$ 2 $的平方根的倒数（约等于$ 0.707 $）             \\
 			\hline
-			\lstinline|SQRT2| & 返回$ 2 $的平方根（约等于$ 1.414 $）                   \\
+			SQRT2         & 返回$ 2 $的平方根（约等于$ 1.414 $）                   \\
 			\hline
 		\end{tabular}
 	}
@@ -2771,41 +2783,41 @@ Math对象提供对数据的数学计算。需要注意的是，Math对象是一
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|l|}
 			\hline
-			\textbf{方法}           & \textbf{描述}                                          \\
+			\textbf{方法} & \textbf{描述}                    \\
 			\hline
-			\lstinline|sin(x)|  & 返回$ x $的正弦 \\
+			sin(x)        & 返回$ x $的正弦                  \\
 			\hline
-			\lstinline|cos(x)|  & 返回$ x $的余弦 \\
+			cos(x)        & 返回$ x $的余弦                  \\
 			\hline
-			\lstinline|tan(x)|  & 返回$ x $的正切 \\
+			tan(x)        & 返回$ x $的正切                  \\
 			\hline
-			\lstinline|acos(x)|  & 返回$ x $的反余弦值 \\
+			acos(x)       & 返回$ x $的反余弦值              \\
 			\hline
-			\lstinline|asin(x)|  & 返回$ x $的反正弦值 \\
+			asin(x)       & 返回$ x $的反正弦值              \\
 			\hline
-			\lstinline|atan(x)| & 返回$ x $的反正切值 \\
+			atan(x)       & 返回$ x $的反正切值              \\
 			\hline
-			\lstinline|ceil(x)| & 对$ x $进行上取整 \\
+			ceil(x)       & 对$ x $进行上取整                \\
 			\hline
-			\lstinline|floor(x)| & 对$ x $进行下取整 \\
+			floor(x)      & 对$ x $进行下取整                \\
 			\hline
-            \lstinline|abs(x)| & 返回$ x $的绝对值 \\
+			abs(x)        & 返回$ x $的绝对值                \\
 			\hline
-			\lstinline|exp(x)| & 返回$ e $的$ x $次幂 \\
+			exp(x)        & 返回$ e $的$ x $次幂             \\
 			\hline
-			\lstinline|log(x)| & 返回$ x $的自然对数（底为$ e $） \\
+			log(x)        & 返回$ x $的自然对数（底为$ e $） \\
 			\hline
-            \lstinline|pow(x, y)| & 返回$ x $的$ y $次幂 \\
+			pow(x, y)     & 返回$ x $的$ y $次幂             \\
 			\hline
-			\lstinline|max(x, y)| & 返回$ x $和$ y $中的最大值 \\
+			max(x, y)     & 返回$ x $和$ y $中的最大值       \\
 			\hline
-			\lstinline|min(x, y)| & 返回$ x $和$ y $中的最小值 \\
+			min(x, y)     & 返回$ x $和$ y $中的最小值       \\
 			\hline
-            \lstinline|round(x)| & 返回$ x $的四舍五入最接近的整数 \\
+			round(x)      & 返回$ x $的四舍五入最接近的整数  \\
 			\hline
-			\lstinline|sqrt(x)| & 返回$ x $的平方根 \\
+			sqrt(x)       & 返回$ x $的平方根                \\
 			\hline
-			\lstinline|random()| & 返回$ 0 \sim 1 $之间的随机数 \\
+			random()      & 返回$ 0 \sim 1 $之间的随机数     \\
 			\hline
 		\end{tabular}
 	}
@@ -2827,33 +2839,33 @@ window对象是浏览器对象模型BOM（Browser Object Model）的核心。
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|l|}
 			\hline
-			\textbf{方法}           & \textbf{描述}                                  \\
+			\textbf{方法} & \textbf{描述}                                  \\
 			\hline
-			\lstinline|alert()|  & 显示带有一段消息和一个确认按钮的警告框         \\
+			alert()       & 显示带有一段消息和一个确认按钮的警告框         \\
 			\hline
-			\lstinline|prompt()|  & 显示可提示用户输入的对话框                     \\
+			prompt()      & 显示可提示用户输入的对话框                     \\
 			\hline
-			\lstinline|confirm()|  & 显示带有一段消息以及确认按钮和取消按钮的对话框 \\
+			confirm()     & 显示带有一段消息以及确认按钮和取消按钮的对话框 \\
 			\hline
-			\lstinline|open()|  & 打开一个新的浏览器窗口或查找一个已命名的窗口   \\
+			open()        & 打开一个新的浏览器窗口或查找一个已命名的窗口   \\
 			\hline
-			\lstinline|close()|  & 关闭浏览器窗口                                 \\
+			close()       & 关闭浏览器窗口                                 \\
 			\hline
-			\lstinline|print()|  & 打印当前窗口的内容                             \\
+			print()       & 打印当前窗口的内容                             \\
 			\hline
-			\lstinline|focus()|  & 把焦点给与一个窗口                             \\
+			focus()       & 把焦点给与一个窗口                             \\
 			\hline
-			\lstinline|blur()|  & 把焦点从顶层窗口移开                           \\
+			blur()        & 把焦点从顶层窗口移开                           \\
 			\hline
-			\lstinline|moveBy()|  & 可相对窗口的当前坐标把它移动指定的像素         \\
+			moveBy()      & 可相对窗口的当前坐标把它移动指定的像素         \\
 			\hline
-			\lstinline|moveTo()| & 把窗口的左上角移动到一个指定的坐标             \\
+			moveTo()      & 把窗口的左上角移动到一个指定的坐标             \\
 			\hline
-			\lstinline|resizeTo()| & 把窗口的大小调整到指定的宽度和高度             \\
+			resizeTo()    & 把窗口的大小调整到指定的宽度和高度             \\
 			\hline
-			\lstinline|scrollBy()| & 按照指定的像素值来滚动内容                     \\
+			scrollBy()    & 按照指定的像素值来滚动内容                     \\
 			\hline
-			\lstinline|scrollTo()| & 把内容滚动到指定的坐标                         \\
+			scrollTo()    & 把内容滚动到指定的坐标                         \\
 			\hline
 		\end{tabular}
 	}
@@ -2880,15 +2892,15 @@ window对象是浏览器对象模型BOM（Browser Object Model）的核心。
 	\setlength{\tabcolsep}{5mm}{
 		\begin{tabular}{|c|l|}
 			\hline
-			\textbf{方法}           & \textbf{描述}                     \\
+			\textbf{方法}   & \textbf{描述}                  \\
 			\hline
-			\lstinline|setTimeout()| & 在指定的延迟时间之后来执行代码    \\
+			setTimeout()    & 在指定的延迟时间之后来执行代码 \\
 			\hline
-			\lstinline|clearTimeout()| & 取消\lstinline|setTimeout()|的设置 \\
+			clearTimeout()  & 取消setTimeout()的设置         \\
 			\hline
-			\lstinline|setInterval()| & 每隔指定的时间执行代码            \\
+			setInterval()   & 每隔指定的时间执行代码         \\
 			\hline
-			\lstinline|clearInterval()| & 取消\lstinline|setInterval()|的设置 \\
+			clearInterval() & 取消setInterval()的设置        \\
 			\hline
 		\end{tabular}
 	}
@@ -2897,7 +2909,7 @@ window对象是浏览器对象模型BOM（Browser Object Model）的核心。
 
 \subsection{setTimeout()}
 
-\lstinline|setTimeout()|计时器，在载入后延迟指定时间后，去执行一次表达式，仅执行一次。 \\
+setTimeout()计时器，在载入后延迟指定时间后，去执行一次表达式，仅执行一次。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 setTimeout(expr, timeout);
@@ -2913,13 +2925,13 @@ setTimeout(expr, timeout);
 setTimeout("alert('Welcome')", 2000);
 \end{lstlisting}
 
-\lstinline|clearTimeout()|和\lstinline|setTimeout()|一起使用，用于停止计时器。 \\
+clearTimeout()和setTimeout()一起使用，用于停止计时器。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 clearTimeout(id_of_setTimeout);
 \end{lstlisting}
 
-id\_of\_setTimeout：\lstinline|setTimeout()|返回的ID值，该值标识要取消的延迟执行代码块。 \\
+id\_of\_setTimeout：setTimeout()返回的ID值，该值标识要取消的延迟执行代码块。 \\
 
 \mybox{计数器}
 
@@ -2965,7 +2977,7 @@ setTimeout(count, 1000);        // 启动计数器
 
 \subsection{setInterval()}
 
-\lstinline|setInterval()|在执行时，从载入页面后每隔指定的时间执行代码。 \\
+setInterval()在执行时，从载入页面后每隔指定的时间执行代码。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 setInterval(expr, interval);
@@ -2976,13 +2988,13 @@ setInterval(expr, interval);
 	\item interval：周期性执行或调用表达式之间的时间间隔，以毫秒为单位（1s = 1000ms）。
 \end{itemize}
 
-\lstinline|clearInterval()|可取消由\lstinline|setInterval()|设置的交互时间。 \\
+clearInterval()可取消由setInterval()设置的交互时间。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 clearInterval(id_of_setInterval);
 \end{lstlisting}
 
-id\_of\_setInterval：\lstinline|setInterval()|返回的ID值。 \\
+id\_of\_setInterval：setInterval()返回的ID值。 \\
 
 \mybox{实时显示当前时间}
 
@@ -3081,8 +3093,8 @@ screen.availWidth和screen.availHeight属性返回访问者屏幕的宽度和高
 \subsection{DOM（Document Object Model）}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{img/C17/17-1/1.png}
+	\centering
+	\includegraphics[scale=0.8]{img/C17/17-1/1.png}
 \end{figure}
 
 \newpage
@@ -3091,7 +3103,7 @@ screen.availWidth和screen.availHeight属性返回访问者屏幕的宽度和高
 
 \subsection{getElementById()}
 
-\lstinline|getElementById()|可返回拥有指定ID的第一个对象的引用。如果没有指定ID的元素则返回null，如果存在多个指定ID的元素则返回第一个。 \\
+getElementById()可返回拥有指定ID的第一个对象的引用。如果没有指定ID的元素则返回null，如果存在多个指定ID的元素则返回第一个。 \\
 
 \mybox{定时变换颜色}
 
@@ -3137,7 +3149,7 @@ setInterval(function () {
 
 \subsection{getElementsByClassName()}
 
-\lstinline|getElementByClassName()|返回文档中所有指定类名的元素集合，作为NodeList对象。NodeList对象代表一个有顺序的结点列表，可以通过索引来访问列表中的结点。使用NodeList的length属性可以确定指定类名的元素个数，并循环各个元素来获取某个元素。 \\
+getElementByClassName()返回文档中所有指定类名的元素集合，作为NodeList对象。NodeList对象代表一个有顺序的结点列表，可以通过索引来访问列表中的结点。使用NodeList的length属性可以确定指定类名的元素个数，并循环各个元素来获取某个元素。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 document.getElementsByClassName(className);
@@ -3145,17 +3157,17 @@ document.getElementsByClassName(className);
 
 \subsection{getElementByName()}
 
-\lstinline|getElementByName()|返回带有指定名称的结点对象的集合。 \\
+getElementByName()返回带有指定名称的结点对象的集合。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 document.getElementsByName(name);
 \end{lstlisting}
 
-与\lstinline|getElementById()|不同的是，通过元素的name属性查询元素，而不是通过id属性。文档中的name属性可能不唯一，所以\lstinline|getElementByName()|返回的是元素的数组，而不是一个元素。
+getElementByName()通过元素name属性查询元素，文档中的name属性可能不唯一，所以getElementByName()返回的是元素的数组，而不是一个元素。
 
 \subsection{getElementsByTagName()}
 
-\lstinline|getElementsByTagName()|返回带有指定标签名的结点对象的集合，返回元素的顺序是它们在文档中的顺序。
+getElementsByTagName()返回带有指定标签名的结点对象的集合，返回元素的顺序是它们在文档中的顺序。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 document.getElementsByTagName(tagName);
@@ -3167,20 +3179,21 @@ document.getElementsByTagName(tagName);
 
 \subsection{结点属性}
 
-\lstinline|getAttribute()|可以通过元素结点的属性名称获取属性的值。 \\
+getAttribute()可以通过元素结点的属性名称获取属性的值。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 elementNode.getAttribute(name);
 \end{lstlisting}
 
-其中，elementNode可以使用\lstinline|getElementById()|、\lstinline|getElementsByTagName()|等方法获取到元素结点，参数name为需要查询的元素结点的属性名称。 \\
+其中，elementNode可以使用getElementById()、getElementsByTagName()等方法获取到元素结点，参数name为需要查询的元素结点的属性名称。 \\
 
-\lstinline|setAttribute()|可以增加一个指定名称和值的新属性，或者把一个现有的属性设定为指定的值。 \\
+setAttribute()可以增加一个指定名称和值的新属性，或者把一个现有的属性设定为指定的值。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 elementNode.setAttribute(name, value);
 \end{lstlisting}
 
+\vspace{0.5cm}
 \mybox{设置结点属性值}
 
 \begin{lstlisting}[style=htmlcssjs, title=getAttribute.html]
@@ -3211,38 +3224,38 @@ window.onload = function() {
 \begin{tcolorbox}
 	\mybox{运行结果} \\
 	https://www.baidu.com \\
-    https://www.bilibili.com
+	https://www.bilibili.com
 \end{tcolorbox}
 
 \subsection{结点操作}
 
-\lstinline|createElement()|用于创建结点元素，此方法可返回一个Element对象。 \\
+createElement()用于创建结点元素，此方法可返回一个Element对象。 \\
 
-\lstinline|createElement()|要与\lstinline|appendChild()|或\lstinline|insertBefore()|联合使用，将元素显示在页面中。 \\
+createElement()要与appendChild()或insertBefore()联合使用，将元素显示在页面中。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 document.createElement(tagName);
 \end{lstlisting}
 
-\lstinline|appendChild()|用于在指定结点的最后一个子结点列表之后添加一个新的子结点。 \\
+appendChild()用于在指定结点的最后一个子结点列表之后添加一个新的子结点。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 elementNode.appendChild(newNode);
 \end{lstlisting}
 
-\lstinline|insertBefore()|用于在已有的子结点前插入一个新的子结点。 \\
+insertBefore()用于在已有的子结点前插入一个新的子结点。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 elementNode.insertBefore(newNode, node);
 \end{lstlisting}
 
-\lstinline|removeChild()|用于从子结点列表中删除某个结点，如删除成功返回被删除的结点，如失败则返回null。 \\
+removeChild()用于从子结点列表中删除某个结点，如删除成功返回被删除的结点，如失败则返回null。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 elementNode.removeChild(node);
 \end{lstlisting}
 
-\lstinline|replaceChild()|：实现子结点的替换，返回被替换对象的引用。当oldNode被替换时，所有与之相关的属性内容都将被移出。 \\
+replaceChild()：实现子结点的替换，返回被替换对象的引用。当oldNode被替换时，所有与之相关的属性内容都将被移出。 \\
 
 \begin{lstlisting}[style=htmlcssjs]
 elementNode.replaceChild(newNode, oldNode);
