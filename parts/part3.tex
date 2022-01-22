@@ -12,7 +12,7 @@
 
 算法（algorithm）是可完成特定任务的一系列步骤，算法的计算过程定义明确，通过一些值作为输入并产生一些值作为输出。 \\
 
-流程图（flow chart）是算法的一种图形化表示方式，使用一组预定义的符号来说明如何执行特定任务。 \\
+流程图（flow chart）是算法的一种图形化表示方式，使用一组预定义的符号来说明如何执行特定任务。
 
 \begin{itemize}
 	\item 圆角矩形：开始和结束
@@ -81,6 +81,7 @@ JS文件不能直接运行，需要嵌入到HTML文件中执行，因此需要�
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{Hello World!}
 
 \begin{lstlisting}[style=htmlcssjs, title=hello\_world.html]
@@ -282,11 +283,13 @@ console.log(typeof(d))
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	number \\
-	number \\
-	string \\
-	boolean
+	\mybox{运行结果}
+	\begin{verbatim}
+number
+number
+string
+boolean
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{类型转换}
@@ -305,13 +308,15 @@ console.log(Boolean(1));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	123 \\
-	456 \\
-	78.9 \\
-	123456789 \\
-	false \\
-	true
+	\mybox{运行结果}
+	\begin{verbatim}
+123
+456
+78.9
+123456789
+false
+true
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -391,8 +396,10 @@ console.log("Hello" + "World");
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	HelloWorld
+	\mybox{运行结果}
+	\begin{verbatim}
+HelloWorld
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{转义字符}
@@ -428,9 +435,11 @@ console.log("全球最大同性交友网站\n\'https://github.com\'");
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	全球最大同性交友网站 \\
-	'https://github.com'
+	\mybox{运行结果}
+	\begin{verbatim}
+全球最大同性交友网站
+'https://github.com'
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{表达式（Expression）}
@@ -449,9 +458,11 @@ console.log("面积 = " + area);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	输入半径：5 \\
-	面积 = 78.53975
+	\mybox{运行结果}
+	\begin{verbatim}
+输入半径：5
+面积 = 78.53975
+	\end{verbatim}
 \end{tcolorbox}
 
 Math.floor()的作用是向下取整，Math.ceil()的作用是向上取整。 \\
@@ -469,9 +480,11 @@ console.log("逆序：" + num);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	输入一个正三位数：520 \\
-	逆序：25
+	\mybox{运行结果}
+	\begin{verbatim}
+输入一个正三位数：520
+逆序：25
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -627,6 +640,7 @@ if(条件1) {
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{判断整数奇偶} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -642,9 +656,11 @@ if(num > 0) {
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	输入一个正整数：66 \\
-	66是偶数
+	\mybox{运行结果}
+	\begin{verbatim}
+输入一个正整数：66
+66是偶数
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -718,9 +734,11 @@ switch(month) {
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	输入月份：5 \\
-	May
+	\mybox{运行结果}
+	\begin{verbatim}
+输入月份：5
+May
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -779,6 +797,7 @@ while(条件) {
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{计算5个人的平均身高} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -798,13 +817,15 @@ console.log("平均身高：" + average);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	输入第1个人的身高：160.8 \\
-	输入第2个人的身高：175.2 \\
-	输入第3个人的身高：171.2 \\
-	输入第4个人的身高：181.3 \\
-	输入第5个人的身高：164 \\
-	平均身高：170.5
+	\mybox{运行结果}
+	\begin{verbatim}
+输入第1个人的身高：160.8
+输入第2个人的身高：175.2
+输入第3个人的身高：171.2
+输入第4个人的身高：181.3
+输入第5个人的身高：164
+平均身高：170.5
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -824,6 +845,7 @@ do {
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{计算整数位数} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -839,9 +861,11 @@ console.log("位数：" + n);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	输入整数：123 \\
-	位数：3
+	\mybox{运行结果}
+	\begin{verbatim}
+输入整数：123
+位数：3
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{while与do-while区别}
@@ -883,21 +907,23 @@ alert("猜对了！你一共用了" + cnt + "次猜对！");
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	猜一个1-100之间的数字：50 \\
-	猜大了！ \\
-	猜一个1-100之间的数字：25 \\
-	猜小了！ \\
-	猜一个1-100之间的数字：37 \\
-	猜小了！ \\
-	猜一个1-100之间的数字：43 \\
-	猜小了！ \\
-	猜一个1-100之间的数字：46 \\
-	猜小了！ \\
-	猜一个1-100之间的数字：48 \\
-	猜小了！ \\
-	猜一个1-100之间的数字：49 \\
-	猜对了！你一共用了7次猜对！
+	\mybox{运行结果}
+	\begin{verbatim}
+猜一个1-100之间的数字：50
+猜大了！
+猜一个1-100之间的数字：25
+猜小了！
+猜一个1-100之间的数字：37
+猜小了！
+猜一个1-100之间的数字：43
+猜小了！
+猜一个1-100之间的数字：46
+猜小了！
+猜一个1-100之间的数字：48
+猜小了！
+猜一个1-100之间的数字：49
+猜对了！你一共用了7次猜对！
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -931,11 +957,14 @@ console.log("累加：" + sum);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	累加：5050
+	\mybox{运行结果}
+	\begin{verbatim}
+累加：5050
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{计算$ 1 + {1 \over 2} + {1 \over 3} + ... + {1 \over n} $} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -950,11 +979,14 @@ console.log(sum);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	2.928968
+	\mybox{运行结果}
+	\begin{verbatim}
+2.928968
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{斐波那契数列}
 
 \begin{figure}[H]
@@ -986,8 +1018,10 @@ if(n == 1) {
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+	\mybox{运行结果}
+	\begin{verbatim}
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{嵌套循环}
@@ -1037,6 +1071,7 @@ console.log(str);
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{输出图案}
 
 \begin{lstlisting}
@@ -1087,11 +1122,14 @@ console.log(str);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	1 2 3 4
+	\mybox{运行结果}
+	\begin{verbatim}
+1 2 3 4
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{continue} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1108,8 +1146,10 @@ console.log(str);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	1 2 3 4 6 7 8 9 10
+	\mybox{运行结果}
+	\begin{verbatim}
+1 2 3 4 6 7 8 9 10
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -1176,6 +1216,7 @@ for(var i = 0; i < arr.length; i++) {
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{数组最大值和最小值} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1196,9 +1237,11 @@ console.log("min = " + min);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	max = 9
-	min = 0
+	\mybox{运行结果}
+	\begin{verbatim}
+max = 9
+min = 0
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -1232,14 +1275,17 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	(2) [Array(2), Array(2)] \\
-	0: (2) [1, 2] \\
-	1: (2) [3, 4] \\
-	length: 2
+	\mybox{运行结果}
+	\begin{verbatim}
+(2) [Array(2), Array(2)]
+0: (2) [1, 2]
+1: (2) [3, 4]
+length: 2
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{构造函数创建二维数组} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1250,12 +1296,14 @@ for(var i = 0; i < arr.length; i++) {
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	(3) [Array(4), Array(4), Array(4)] \\
-	0: (4) [empty× 4] \\
-	1: (2) [empty× 4] \\
-	2: (4) [empty× 4] \\
-	length: 3
+	\mybox{运行结果}
+	\begin{verbatim}
+(3) [Array(4), Array(4), Array(4)]
+0: (4) [empty× 4]
+1: (2) [empty× 4]
+2: (4) [empty× 4]
+length: 3
+	\end{verbatim}
 \end{tcolorbox}
 
 利用两层循环来初始化二维数组。 \\
@@ -1273,6 +1321,7 @@ for(var i = 0; i < arr.length; i++) {
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{矩阵运算} \\
 
 矩阵的加法/减法是指两个矩阵把其相对应元素进行加减的运算。 \\
@@ -1367,9 +1416,11 @@ console.log("矩阵减法：" + C);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	矩阵加法：[ [ 1, 3 ], [ 8, 5 ], [ 3, 3 ] ] \\
-	矩阵减法：[ [ 1, 3 ], [ -6, -5 ], [ -1, 1 ] ]
+	\mybox{运行结果}
+	\begin{verbatim}
+矩阵加法：[ [ 1, 3 ], [ 8, 5 ], [ 3, 3 ] ]
+矩阵减法：[ [ 1, 3 ], [ -6, -5 ], [ -1, 1 ] ]
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -1390,9 +1441,11 @@ console.log(arr.length);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	5 \\
-	10
+	\mybox{运行结果}
+	\begin{verbatim}
+5
+10
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{增加元素}
@@ -1408,8 +1461,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[0, 1, 2, 3, 4, 5]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[0, 1, 2, 3, 4, 5]
+	\end{verbatim}
 \end{tcolorbox}
 
 使用unshift()可以向数组第一个元素前面添加一个元素，返回值为数组长度。 \\
@@ -1423,8 +1478,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[5, 0, 1, 2, 3, 4]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[5, 0, 1, 2, 3, 4]
+	\end{verbatim}
 \end{tcolorbox}
 
 push()可以向数组最后一个元素后面添加一个元素，返回值为数组长度。 \\
@@ -1438,8 +1495,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[0, 1, 2, 3, 4, 5]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[0, 1, 2, 3, 4, 5]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{删除元素：}
@@ -1455,8 +1514,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[1, 2, 3, 4]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[1, 2, 3, 4]
+	\end{verbatim}
 \end{tcolorbox}
 
 pop()可以删除数组的最后一个元素，返回值为被删除元素。 \\
@@ -1470,8 +1531,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[0, 1, 2, 3]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[0, 1, 2, 3]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{合并数组}
@@ -1489,10 +1552,12 @@ console.log(arr2);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} \\
-	\text{[1, 2, 3, 4, 5]} \\
-	\text{[6, 7, 8, 9, 10]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 2, 3, 4, 5]
+[6, 7, 8, 9, 10]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{数组转字符串}
@@ -1507,8 +1572,10 @@ console.log(arr.join());
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	0,1,2,3,4
+	\mybox{运行结果}
+	\begin{verbatim}
+0,1,2,3,4
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{字符串转数组}
@@ -1524,8 +1591,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{["hello", "HTML", "hello", "CSS", "hello", "JavaScript"]}
+	\mybox{运行结果}
+	\begin{verbatim}
+["hello", "HTML", "hello", "CSS", "hello", "JavaScript"]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{翻转数组}
@@ -1540,8 +1609,10 @@ console.log(arr.reverse());
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[5, 4, 3, 2, 1]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[5, 4, 3, 2, 1]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{数组排序}
@@ -1559,8 +1630,10 @@ console.log(arr);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[1, 2, 8, 10, 12, 21, 25, 98]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[1, 2, 8, 10, 12, 21, 25, 98]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{数组切片}
@@ -1575,8 +1648,10 @@ console.log(arr.slice(2, 5));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{[2, 3, 4]}
+	\mybox{运行结果}
+	\begin{verbatim}
+[2, 3, 4]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{查找元素}
@@ -1591,8 +1666,10 @@ console.log(arr.indexOf(4));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	4
+	\mybox{运行结果}
+	\begin{verbatim}
+4
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -1704,14 +1781,17 @@ console.log(max(-999, -774));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	12 \\
-	54 \\
-	0 \\
-	-774
+	\mybox{运行结果}
+	\begin{verbatim}
+12
+54
+0
+-774
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{函数实现累加和} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1728,12 +1808,15 @@ console.log("1024-2048的累加和 = " + sum(1024, 2048));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	1-100的累加和 = 5050 \\
-	1024-2048的累加和 = 1574400
+	\mybox{运行结果}
+	\begin{verbatim}
+1-100的累加和 = 5050
+1024-2048的累加和 = 1574400
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{函数实现输出i行j列由自定义字符组成的图案} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -1752,12 +1835,14 @@ print_chars(5, 10, '?');
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	?????????? \\
-	?????????? \\
-	?????????? \\
-	?????????? \\
-	??????????
+	\mybox{运行结果}
+	\begin{verbatim}
+??????????
+??????????
+??????????
+??????????
+??????????
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -1785,10 +1870,12 @@ console.log("a = " + a);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	a = 1 \\
-	a = 2 \\
-	a = 1
+	\mybox{运行结果}
+	\begin{verbatim}
+a = 1
+a = 2
+a = 1
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{全局变量（Global Varaible）}
@@ -1829,8 +1916,10 @@ test();
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	a = 2
+	\mybox{运行结果}
+	\begin{verbatim}
+a = 2
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -1896,18 +1985,20 @@ tell_story();
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	从前有座山 \\
-	山里有座庙 \\
-	庙里有个老和尚和小和尚 \\
-	老和尚对小和尚在讲故事 \\
-	他讲的故事是： \\
-	从前有座山 \\
-	山里有座庙 \\
-	庙里有个老和尚和小和尚 \\
-	老和尚对小和尚在讲故事 \\
-	他讲的故事是： \\
-	...
+	\mybox{运行结果}
+	\begin{verbatim}
+从前有座山
+山里有座庙
+庙里有个老和尚和小和尚
+老和尚对小和尚在讲故事
+他讲的故事是：
+从前有座山
+山里有座庙
+庙里有个老和尚和小和尚
+老和尚对小和尚在讲故事
+他讲的故事是：
+...
+	\end{verbatim}
 \end{tcolorbox}
 
 递归函数一般需要定义递归的出口，即结束条件，确保递归能够在适合的地方退出。 \\
@@ -1926,8 +2017,10 @@ console.log("5! = " + factorial(5));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	5! = 120
+	\mybox{运行结果}
+	\begin{verbatim}
+5! = 120
+	\end{verbatim}
 \end{tcolorbox}
 
 \begin{figure}[H]
@@ -1995,8 +2088,10 @@ console.log("斐波那契数列第" + n + "位：" + fibonacci(7));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	斐波那契数列第7位：13
+	\mybox{运行结果}
+	\begin{verbatim}
+斐波那契数列第7位：13
+	\end{verbatim}
 \end{tcolorbox}
 
 \begin{figure}[H]
@@ -2055,8 +2150,10 @@ console.log("斐波那契数列第" + n + "位：" + fibonacci(7));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	斐波那契数列第7位：13
+	\mybox{运行结果}
+	\begin{verbatim}
+斐波那契数列第7位：13
+	\end{verbatim}
 \end{tcolorbox}
 
 \mybox{阿克曼函数}
@@ -2085,8 +2182,10 @@ console.log(A(3, 4));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	125
+	\mybox{运行结果}
+	\begin{verbatim}
+125
+	\end{verbatim}
 \end{tcolorbox}
 
 \begin{table}[H]
@@ -2175,23 +2274,25 @@ console.log("步数 ==> " + move);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	1号盘：A -> B \\
-	2号盘：A -> C \\
-	1号盘：B -> C \\
-	3号盘：A -> B \\
-	1号盘：C -> A \\
-	2号盘：C -> B \\
-	1号盘：A -> B \\
-	4号盘：A -> C \\
-	1号盘：B -> C \\
-	2号盘：B -> A \\
-	1号盘：C -> A \\
-	3号盘：B -> C \\
-	1号盘：A -> B \\
-	2号盘：A -> C \\
-	1号盘：B -> C \\
-	步数 ==> 15
+	\mybox{运行结果}
+	\begin{verbatim}
+1号盘：A -> B
+2号盘：A -> C
+1号盘：B -> C
+3号盘：A -> B
+1号盘：C -> A
+2号盘：C -> B
+1号盘：A -> B
+4号盘：A -> C
+1号盘：B -> C
+2号盘：B -> A
+1号盘：C -> A
+3号盘：B -> C
+1号盘：A -> B
+2号盘：A -> C
+1号盘：B -> C
+步数 ==> 15
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -2496,11 +2597,14 @@ console.log(arr.length);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	5
+	\mybox{运行结果}
+	\begin{verbatim}
+5
+	\end{verbatim}
 \end{tcolorbox}
 
 \vspace{0.5cm}
+
 \mybox{访问对象方法} \\
 
 \begin{lstlisting}[style=htmlcssjs]
@@ -2509,8 +2613,10 @@ console.log(str.toUpperCase());
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	HELLO WORLD
+	\mybox{运行结果}
+	\begin{verbatim}
+HELLO WORLD
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -2532,9 +2638,11 @@ console.log(date2);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	2021-03-19T05:09:47.713Z \\
-	2021-04-18T16:00:00.000Z
+	\mybox{运行结果}
+	\begin{verbatim}
+2021-03-19T05:09:47.713Z
+2021-04-18T16:00:00.000Z
+	\end{verbatim}
 \end{tcolorbox}
 
 \begin{table}[H]
@@ -2584,8 +2692,10 @@ console.log("今天是" + weekday[date.getDay()]);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	今天是星期五
+	\mybox{运行结果}
+	\begin{verbatim}
+今天是星期五
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -2604,8 +2714,10 @@ console.log(str.length);
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	12
+	\mybox{运行结果}
+	\begin{verbatim}
+12
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{大小写转换}
@@ -2621,9 +2733,11 @@ console.log(str.toLowerCase());
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	HELLO WORLD! \\
-	hello world!
+	\mybox{运行结果}
+	\begin{verbatim}
+HELLO WORLD!
+hello world!
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{返回指定的字符}
@@ -2638,8 +2752,10 @@ console.log(str.charAt(6));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	W
+	\mybox{运行结果}
+	\begin{verbatim}
+W
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{返回指定的字符串首次出现的位置}
@@ -2662,10 +2778,12 @@ console.log(str.indexOf("JS"));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	0 \\
-	7 \\
-	-1
+	\mybox{运行结果}
+	\begin{verbatim}
+0
+7
+-1
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{字符串分割}
@@ -2687,9 +2805,11 @@ console.log(str.split(" ", 4));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	\text{["hello", "HTML", "hello", "CSS", "hello", "JavaScript"]} \\
-	\text{["hello", "HTML", "hello", "CSS"]}
+	\mybox{运行结果}
+	\begin{verbatim}
+["hello", "HTML", "hello", "CSS", "hello", "JavaScript"]
+["hello", "HTML", "hello", "CSS"]
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{提取字符串}
@@ -2712,10 +2832,12 @@ console.log(str.substring(7, 3));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	lloWor \\
-	\\
-	loWo
+	\mybox{运行结果}
+	\begin{verbatim}
+lloWor
+
+loWo
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{提取指定数目的字符}
@@ -2737,9 +2859,11 @@ console.log(str.substr(-5, 4));
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	llo \\
-	Worl
+	\mybox{运行结果}
+	\begin{verbatim}
+llo
+Worl
+	\end{verbatim}
 \end{tcolorbox}
 
 \newpage
@@ -3068,8 +3192,12 @@ screen.availWidth和screen.availHeight属性返回访问者屏幕的宽度和高
     <meta charset="UTF-8">
     <title>屏幕信息</title>
     <script type="text/JavaScript">
-        console.log("屏幕分辨率：" + screen.width + "*" + screen.height)
-        console.log("屏幕可用宽高：" + screen.availWidth + "*" + screen.availHeight);
+        console.log("屏幕分辨率："
+					+ screen.width + "*"
+					+ screen.height)
+        console.log("屏幕可用宽高："
+					+ screen.availWidth + "*"
+					+ screen.availHeight);
     </script>
 </head>
 <body>
@@ -3077,12 +3205,6 @@ screen.availWidth和screen.availHeight属性返回访问者屏幕的宽度和高
 </body>
 </html>
 \end{lstlisting}
-
-\begin{tcolorbox}
-	\mybox{运行结果} \\
-	屏幕分辨率：1536*864 \\
-	屏幕可用宽高：1536*824
-\end{tcolorbox}
 
 \newpage
 
@@ -3194,6 +3316,7 @@ elementNode.setAttribute(name, value);
 \end{lstlisting}
 
 \vspace{0.5cm}
+
 \mybox{设置结点属性值}
 
 \begin{lstlisting}[style=htmlcssjs, title=getAttribute.html]
@@ -3222,9 +3345,11 @@ window.onload = function() {
 \end{lstlisting}
 
 \begin{tcolorbox}
-	\mybox{运行结果} \\
-	https://www.baidu.com \\
-	https://www.bilibili.com
+	\mybox{运行结果}
+	\begin{verbatim}
+https://www.baidu.com
+https://www.bilibili.com
+	\end{verbatim}
 \end{tcolorbox}
 
 \subsection{结点操作}

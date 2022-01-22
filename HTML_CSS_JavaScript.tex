@@ -21,7 +21,12 @@
 \usepackage{textcomp}
 \usepackage[T1]{fontenc}
 \usepackage{diagbox}
+\usepackage{newtxtt}
 % \usepackage{minted}
+
+\makeatletter
+\newcommand{\verbatimfont}[1]{\renewcommand{\verbatim@font}{\ttfamily#1}}
+\makeatother
 
 \lstset{upquote=true}
 
