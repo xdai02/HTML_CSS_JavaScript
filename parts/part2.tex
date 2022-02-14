@@ -8,11 +8,11 @@
 
 \subsection{层叠样式表（CSS, Cascading Style Sheets）}
 
-CSS用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。使用CSS的好处是通过定义某个样式，可以让网页不同位置的文本有统一的字体、字号或颜色等。CSS由选择器和声明组成，而声明又由属性和值组成。 \\
+CSS用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。使用CSS的好处是通过定义某个样式，可以让网页不同位置的文本有统一的字体、字号或颜色等。CSS由选择器和声明组成，而声明又由属性和值组成。\\
 
-选择器用于指明网页中要应用样式规则的元素。声明的内容写在大括号内，属性和值之前用【:】分隔。当有多条声明时，中间可以用【;】分隔。为了使样式更加容易阅读，可以将每条声明单独成行。 \\
+选择器用于指明网页中要应用样式规则的元素。声明的内容写在大括号内，属性和值之前用【:】分隔。当有多条声明时，中间可以用【;】分隔。为了使样式更加容易阅读，可以将每条声明单独成行。\\
 
-\mybox{修改字体大小和颜色} \\
+\mybox{修改字体大小和颜色}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -39,15 +39,15 @@ CSS用于定义HTML内容在浏览器内的显示样式，如文字大小、颜�
 
 \subsection{内联式CSS}
 
-内联式CSS样式，也称行间样式，就是把CSS代码直接写在现有的HTML标签中。注意CSS样式必须写在元素的开始标签里，不能在结束标签里。 \\
+内联式CSS样式，也称行间样式，就是把CSS代码直接写在现有的HTML标签中。注意CSS样式必须写在元素的开始标签里，不能在结束标签里。\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <开始标签 style="属性: 值;">文本</结束标签>
 \end{lstlisting}
 
-CSS样式必须写在style属性的双引号中，如果有多条CSS样式代码可以设置可以写在一起，中间用【;】隔开。 \\
+CSS样式必须写在style属性的双引号中，如果有多条CSS样式代码可以设置可以写在一起，中间用【;】隔开。\\
 
-\mybox{内联式CSS} \\
+\mybox{内联式CSS}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -68,9 +68,9 @@ CSS样式必须写在style属性的双引号中，如果有多条CSS样式代码
 
 \subsection{嵌入式CSS}
 
-嵌入式CSS样式，也称页面级CSS样式，就是把CSS样式代码写在<style>之间，嵌入式CSS样式一般放在<head>内。 \\
+嵌入式CSS样式，也称页面级CSS样式，就是把CSS样式代码写在<style>之间，嵌入式CSS样式一般放在<head>内。\\
 
-\mybox{嵌入式CSS} \\
+\mybox{嵌入式CSS}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -96,13 +96,13 @@ CSS样式必须写在style属性的双引号中，如果有多条CSS样式代码
 
 \subsection{外部式CSS}
 
-外部式CSS样式，也称外联式CSS样式，就是把CSS样式代码写一个单独的外部文件中，这个CSS样式文件以.css为扩展名。在<head>内使用<link>将CSS外部样式文件链接到HTML文件内。 \\
+外部式CSS样式，也称外联式CSS样式，就是把CSS样式代码写一个单独的外部文件中，这个CSS样式文件以.css为扩展名。在<head>内使用<link>将CSS外部样式文件链接到HTML文件内。\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <link href="CSS样式文件名" rel="stylesheet" type="text/css" />
 \end{lstlisting}
 
-CSS样式文件名以有意义的英文命名，<link>中\lstinline|rel="stylesheet" type="text/css"|是固定写法，不需要修改。 \\
+CSS样式文件名以有意义的英文命名，<link>中\lstinline|rel="stylesheet" type="text/css"|是固定写法，不需要修改。\\
 
 \mybox{外部式CSS}
 
@@ -134,11 +134,11 @@ div {
 
 \subsection{CSS引入方式优先级}
 
-如果有一种情况：对于同一个元素同时使用了三种方法设置CSS样式，那么哪种方式真正有效呢？ \\
+如果有一种情况：对于同一个元素同时使用了三种方法设置CSS样式，那么哪种方式真正有效呢？\\
 
-三种CSS引入方式是有优先级的：内联式 > 嵌入式 > 外部式。但是嵌入式 > 外部式有一个前提，那就是嵌入式CSS样式的位置一定在外部式的后面。在实际开发中也会将<link>写在<style>的前面。 \\
+三种CSS引入方式是有优先级的：内联式 > 嵌入式 > 外部式。但是嵌入式 > 外部式有一个前提，那就是嵌入式CSS样式的位置一定在外部式的后面。在实际开发中也会将<link>写在<style>的前面。\\
 
-总的来说，优先级遵循“就近原则”，离被设置元素越近优先级别越高。 \\
+总的来说，优先级遵循“就近原则”，离被设置元素越近优先级别越高。\\
 
 但是以上总结的优先级有一个前提，那就是内联式、嵌入式、外部式样式表中CSS样式是在相同权值的情况下。那权值是什么呢？
 
@@ -155,7 +155,7 @@ div {
 
 \subsection{标签选择器}
 
-标签选择器其实就是HTML代码中的标签。 \\
+标签选择器其实就是HTML代码中的标签。\\
 
 \begin{lstlisting}[style=htmlcssjs]
 tag_selector {
@@ -165,7 +165,7 @@ tag_selector {
 
 \vspace{0.5cm}
 
-\mybox{标签选择器} \\
+\mybox{标签选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -193,11 +193,11 @@ tag_selector {
 
 \subsection{类选择器}
 
-类选择器在CSS样式中是最常用的。类选择器使用【.】开头，后加类选择器的名称，CSS样式代码会被作用到属于该类的HTML标签中。在标签中使用class属性为标签设置一个类。 \\
+类选择器在CSS样式中是最常用的。类选择器使用【.】开头，后加类选择器的名称，CSS样式代码会被作用到属于该类的HTML标签中。在标签中使用class属性为标签设置一个类。\\
 
-类选择器与标签是多对多的关系，即类选择器名称可以多个标签共用，一个元素可以用多个class，一个class值可以对应多个元素。多个class值之间使用空格分隔。 \\
+类选择器与标签是多对多的关系，即类选择器名称可以多个标签共用，一个元素可以用多个class，一个class值可以对应多个元素。多个class值之间使用空格分隔。\\
 
-\mybox{类选择器} \\
+\mybox{类选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -226,9 +226,9 @@ tag_selector {
 
 \subsection{ID选择器}
 
-使用ID选择器，必须给标签添加上id属性，即为标签设置id属性。ID选择器名称的前面使用【\#】。ID选择器与标签是一对一的关系，即一个元素只能有一个id值，一个id值只能对应一个元素。id是全局唯一的，就像身份证号码一样。 \\
+使用ID选择器，必须给标签添加上id属性，即为标签设置id属性。ID选择器名称的前面使用【\#】。ID选择器与标签是一对一的关系，即一个元素只能有一个id值，一个id值只能对应一个元素。id是全局唯一的，就像身份证号码一样。\\
 
-\mybox{ID选择器} \\
+\mybox{ID选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -263,9 +263,9 @@ tag_selector {
 
 \subsection{子选择器}
 
-子选择器【>】，用于选择指定标签元素的第一代子元素。 \\
+子选择器【>】，用于选择指定标签元素的第一代子元素。\\
 
-\mybox{子选择器} \\
+\mybox{子选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -303,7 +303,7 @@ tag_selector {
 
 \subsection{后代选择器}
 
-后代选择器，也称包含选择器，用于选择指定标签元素的后辈元素。 \\
+后代选择器，也称包含选择器，用于选择指定标签元素的后辈元素。\\
 
 \begin{lstlisting}[style=htmlcssjs]
 ancestor_selector descendant_selector {
@@ -311,9 +311,9 @@ ancestor_selector descendant_selector {
 }
 \end{lstlisting}
 
-后代选择器与子选择器的区别在于，子选择器仅是指它的直接后代，而后代选择器是作用于所有子后代元素。 \\
+后代选择器与子选择器的区别在于，子选择器仅是指它的直接后代，而后代选择器是作用于所有子后代元素。\\
 
-\mybox{后代选择器} \\
+\mybox{后代选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -357,9 +357,9 @@ ancestor_selector descendant_selector {
 
 \subsection{通配符选择器}
 
-通配符选择器【*】，也称通用选择器，是功能最强大的选择器，用于匹配HTML中所有的标签元素，包括<html>、<body>等。 \\
+通配符选择器【*】，也称通用选择器，是功能最强大的选择器，用于匹配HTML中所有的标签元素，包括<html>、<body>等。\\
 
-\mybox{通配符选择器} \\
+\mybox{通配符选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -385,9 +385,9 @@ ancestor_selector descendant_selector {
 
 \subsection{分组选择器}
 
-分组选择器【,】，用于为HTML中多个标签元素设置同一个样式。 \\
+分组选择器【,】，用于为HTML中多个标签元素设置同一个样式。\\
 
-\mybox{分组选择器} \\
+\mybox{分组选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -441,9 +441,9 @@ ancestor_selector descendant_selector {
 	\caption{常用伪类选择器}
 \end{table}
 
-到目前为止，可以兼容所有浏览器的伪类选择器就是在<a>上使用:hover。 \\
+到目前为止，可以兼容所有浏览器的伪类选择器就是在<a>上使用:hover。\\
 
-\mybox{伪类选择器} \\
+\mybox{伪类选择器}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -469,9 +469,9 @@ ancestor_selector descendant_selector {
 
 \subsection{选择器优先级}
 
-每个选择器都是有优先级的，如果一个元素使用了多个选择器，则会按照选择器的优先级来给定样式。 \\
+每个选择器都是有优先级的，如果一个元素使用了多个选择器，则会按照选择器的优先级来给定样式。\\
 
-选择器的优先级依次是：内联样式 > ID选择器 > 类选择器 > 标签选择器 > 通配符选择器。
+选择器的优先级依次是：内联样式 > ID选择器 > 类选择器 > 标签选择器 > 通配符选择器。\\
 
 \subsection{选择器权重}
 
@@ -501,11 +501,13 @@ ancestor_selector descendant_selector {
 	\caption{选择器权重}
 \end{table}
 
+\vspace{0.5cm}
+
 \subsection{!important}
 
-有些特殊情况需要为某些样式设置具有最高权值，这时候可以使用!important，注意!important要写在分号的前面。 \\
+有些特殊情况需要为某些样式设置具有最高权值，这时候可以使用!important，注意!important要写在分号的前面。\\
 
-\mybox{!important} \\
+\mybox{!important}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -537,13 +539,13 @@ ancestor_selector descendant_selector {
 
 \subsection{字体样式}
 
-使用CSS样式可以为网页中的文字设置字体。注意不要设置不常用的字体，因为如果用户本地电脑上没有安装该字体，就会显示浏览器默认的字体。 \\
+使用CSS样式可以为网页中的文字设置字体。注意不要设置不常用的字体，因为如果用户本地电脑上没有安装该字体，就会显示浏览器默认的字体。\\
 
-浏览器默认的字号为16px，使用font-size可以修改字号大小。 \\
+浏览器默认的字号为16px，使用font-size可以修改字号大小。\\
 
-为文字设置粗体是有单独的CSS样式来实现的，再也不用为了实现粗体样式而使用<h1>-<h6>或<strong>了。 \\
+为文字设置粗体是有单独的CSS样式来实现的，再也不用为了实现粗体样式而使用<h1>-<h6>或<strong>了。\\
 
-font-weight的默认值为normal，通过设置属性值为lighter、bold、bolder或100-900之间的整百数值改变文字的粗细。注意，字体能否被bolder或lighter更改取决于字体包是否存在该样式。 \\
+font-weight的默认值为normal，通过设置属性值为lighter、bold、bolder或100-900之间的整百数值改变文字的粗细。注意，字体能否被bolder或lighter更改取决于字体包是否存在该样式。\\
 
 font-style可以设置字体样式，并且有3种设置方式：
 
@@ -553,7 +555,7 @@ font-style可以设置字体样式，并且有3种设置方式：
 	\item oblique强制将字体倾斜
 \end{enumerate}
 
-\mybox{字体样式} \\
+\mybox{字体样式}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -585,7 +587,7 @@ font-style可以设置字体样式，并且有3种设置方式：
 color属性可以设置字体颜色。color的值有3种设置方式：
 
 \begin{enumerate}
-	\item 英文命令颜色。 \\
+	\item 英文命令颜色。\\
 	      \begin{lstlisting}[style=htmlcssjs]
 color: red;
     \end{lstlisting}
@@ -631,7 +633,7 @@ color: red;
 		      \caption{常见颜色代码}
 	      \end{table}
 
-	\item 颜色函数rgb()：由光学三原色RGB的比例来配色。rgb()函数中每一项的值可以是0-255之间的整数，也可以是0\%-100\%的百分数。 \\
+	\item 颜色函数rgb()：由光学三原色RGB的比例来配色。rgb()函数中每一项的值可以是0-255之间的整数，也可以是0\%-100\%的百分数。\\
 	      \begin{lstlisting}[style=htmlcssjs]
 color: rgb(133, 45, 200);
 color: rgb(20%, 33%, 25%);
@@ -644,9 +646,9 @@ color: rgb(20%, 33%, 25%);
 
 \subsection{文本样式}
 
-使用text-decoration可以设置对文本的修饰，默认值为none；属性值为underline为下划线，属性值为overline为上划线，属性值为line-through为穿过文本的线，一般用于商品折扣价。使用line-height可以设置段落中的行间距离（行高）。使用text-align可以为文本设置对齐方式，属性值包括left、right和center。 \\
+使用text-decoration可以设置对文本的修饰，默认值为none；属性值为underline为下划线，属性值为overline为上划线，属性值为line-through为穿过文本的线，一般用于商品折扣价。使用line-height可以设置段落中的行间距离（行高）。使用text-align可以为文本设置对齐方式，属性值包括left、right和center。\\
 
-\mybox{文本样式} \\
+\mybox{文本样式}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -683,9 +685,9 @@ color: rgb(20%, 33%, 25%);
 
 \subsection{我要独占一行——块级元素}
 
-在HTML中<div>、<p>、<h1>、<form>、<ul>、<li>等都是块级元素。每个块级元素都从新的一行开始，并且其后的元素也另起一行。块级元素的高度、宽度、行高遗迹顶和底边距都可以设置，宽度在不设定的情况下，是它本身父容器的100\%（和父元素的宽度一致）。 \\
+在HTML中<div>、<p>、<h1>、<form>、<ul>、<li>等都是块级元素。每个块级元素都从新的一行开始，并且其后的元素也另起一行。块级元素的高度、宽度、行高遗迹顶和底边距都可以设置，宽度在不设定的情况下，是它本身父容器的100\%（和父元素的宽度一致）。通过设置\lstinline|display: block|可以将元素显示为块级元素。\\
 
-\mybox{块级元素} \\
+\mybox{块级元素}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -702,15 +704,13 @@ color: rgb(20%, 33%, 25%);
 </html>
 \end{lstlisting}
 
-通过设置\lstinline|display: block|可以将元素显示为块级元素。
+\vspace{0.5cm}
 
 \subsection{我要和你站一起——内联元素}
 
-在HTML中，<span>、<a>、<label>、<strong>、<em>等都是内联元素（行内元素）。内联元素和其它元素都在一行上，元素的高度、宽度及顶部和底部编剧不可设置，元素的宽度就是它包含的文字或图片的宽度，不可改变。 \\
+在HTML中，<span>、<a>、<label>、<strong>、<em>等都是内联元素（行内元素）。内联元素和其它元素都在一行上，元素的高度、宽度及顶部和底部编剧不可设置，元素的宽度就是它包含的文字或图片的宽度，不可改变。块级元素也可以设置\lstinline|display: inline|将元素设置为内联元素。\\
 
-块级元素也可以设置\lstinline|display: inline|将元素设置为内联元素。 \\
-
-\mybox{内联元素与块级元素转换} \\
+\mybox{内联元素与块级元素转换}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -737,9 +737,11 @@ color: rgb(20%, 33%, 25%);
 </html>
 \end{lstlisting}
 
+\vspace{0.5cm}
+
 \subsection{我还要占个大位置——内联块状元素}
 
-内联块状元素就是同时具备内联元素和块级元素的特点。内联块状元素的特点是和其它元素都在一行上，但元素的高度、宽度、行高以及顶和底边距都可以设置。 \\
+内联块状元素就是同时具备内联元素和块级元素的特点。内联块状元素的特点是和其它元素都在一行上，但元素的高度、宽度、行高以及顶和底边距都可以设置。\\
 
 通过设置\lstinline|display: inline-block|就可以将元素设置为内联块状元素。如<img>、<input>就是这种内联块状标签。
 
@@ -763,14 +765,16 @@ color: rgb(20%, 33%, 25%);
 	\includegraphics[scale=0.7]{img/C8/8-2/1.png}
 \end{figure}
 
-盒模型的宽度和高度和平常所说的物体的宽度和高度的理解是不一样的，CSS内定义的宽和高，指的是盒模型中内容的宽和高。 \\
+盒模型的宽度和高度和平常所说的物体的宽度和高度的理解是不一样的，CSS内定义的宽和高，指的是盒模型中内容的宽和高。\\
 
-元素实际的宽度（盒子的宽度） = 左外边距 + 左边框 + 左内边距 + 内容宽度 + 右内边距 + 右边框 + 右外边距 \\
+元素实际的宽度（盒子的宽度） = 左外边距 + 左边框 + 左内边距 + 内容宽度 + 右内边距 + 右边框 + 右外边距\\
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[]{img/C8/8-2/2.png}
 \end{figure}
+
+\vspace{0.5cm}
 
 \subsection{外边框（Border）}
 
@@ -782,17 +786,17 @@ color: rgb(20%, 33%, 25%);
 	\item border-color：设置边框颜色
 \end{enumerate}
 
-当三个属性都需要被设置时，也可以使用border属性简写。例如设置一个粗细为1px实心的黑色边框： \\
+当三个属性都需要被设置时，也可以使用border属性简写。例如设置一个粗细为1px实心的黑色边框：\\
 
 \begin{lstlisting}[style=htmlcssjs]
 border: 1px solid black;
 \end{lstlisting}
 
-CSS中也允许只为一个方向的边框设置属性，使用border-top、border-bottom、border-left、border-right可以单独设置上、下、左、右四条边框。 \\
+CSS中也允许只为一个方向的边框设置属性，使用border-top、border-bottom、border-left、border-right可以单独设置上、下、左、右四条边框。\\
 
-元素边框的圆角效果可以使用border-radius属性来设置。设置圆角的值的顺序为左上、右上、右下、左下。如果border-radius属性只给出一个值表示四个圆角都被设置成该值。如果只给出两个值表示左上角和右下角设置为第一个值，右上角和左下角设置为第二个值。当给一个正方形的圆角效果值设置为其宽度一半时，显示效果为圆形。 \\
+元素边框的圆角效果可以使用border-radius属性来设置。设置圆角的值的顺序为左上、右上、右下、左下。如果border-radius属性只给出一个值表示四个圆角都被设置成该值。如果只给出两个值表示左上角和右下角设置为第一个值，右上角和左下角设置为第二个值。当给一个正方形的圆角效果值设置为其宽度一半时，显示效果为圆形。\\
 
-\mybox{圆形} \\
+\mybox{圆形}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -827,7 +831,7 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 	\end{tikzpicture}
 \end{figure}
 
-\mybox{四色正方形} \\
+\mybox{四色正方形}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -862,7 +866,7 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 	\end{tikzpicture}
 \end{figure}
 
-\mybox{三角形} \\
+\mybox{三角形}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -887,6 +891,8 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 </html>
 \end{lstlisting}
 
+\vspace{0.5cm}
+
 \subsection{内边距（Padding）}
 
 元素内容与边框之间是可以设置距离的，称之为内边距或填充。内边距也可分为上、右、下、左（顺时针）。
@@ -895,6 +901,8 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 	\centering
 	\includegraphics[scale=0.7]{img/C8/8-2/3.png}
 \end{figure}
+
+\vspace{0.5cm}
 
 \subsection{外边距（Margin）}
 
@@ -921,9 +929,11 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 	\item 层模型（layer）
 \end{enumerate}
 
+\vspace{0.5cm}
+
 \subsection{流动模型}
 
-流动模型是默认的网页布局模式，也就是说网页在默认状态下的HTML网页元素都是根据流动模型来分布网页内容的。 \\
+流动模型是默认的网页布局模式，也就是说网页在默认状态下的HTML网页元素都是根据流动模型来分布网页内容的。\\
 
 流动布局模型有2个典型的特征：
 
@@ -941,11 +951,13 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 	      \end{figure}
 \end{enumerate}
 
+\vspace{0.5cm}
+
 \subsection{浮动模型}
 
-块级元素这么霸道都是独占一行，如果想让两个块级元素并排显示，可以设置元素浮动。任何元素在默认情况下是不能浮动的，但可以设置float属性定义为浮动，如<div>、<p>、<table>、<img>等元素都可以被定义为浮动。 \\
+块级元素这么霸道都是独占一行，如果想让两个块级元素并排显示，可以设置元素浮动。任何元素在默认情况下是不能浮动的，但可以设置float属性定义为浮动，如<div>、<p>、<table>、<img>等元素都可以被定义为浮动。\\
 
-\mybox{浮动模型} \\
+\mybox{浮动模型}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -982,7 +994,7 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 
 \subsection{层模型}
 
-层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图形能够精确定位操作（positioning）。由于有些元素是定点展示的，定位技术可以让元素在特定的位置出现。 \\
+层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图形能够精确定位操作（positioning）。由于有些元素是定点展示的，定位技术可以让元素在特定的位置出现。\\
 
 层模型有3种形式：
 
@@ -992,13 +1004,15 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 	\item 固定定位（fixed）
 \end{enumerate}
 
+\vspace{0.5cm}
+
 \subsection{万事无绝对——绝对定位}
 
-如果想为元素设置层模型中的绝对定位，需要设置\lstinline|position: absolute|，这条语句的作用是将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。 \\
+如果想为元素设置层模型中的绝对定位，需要设置\lstinline|position: absolute|，这条语句的作用是将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。\\
 
-当一个元素成为绝对定位元素，它就脱离了原来的层面，原来的位置会空出，下面的元素都会上来。 \\
+当一个元素成为绝对定位元素，它就脱离了原来的层面，原来的位置会空出，下面的元素都会上来。\\
 
-\mybox{绝对定位} \\
+\mybox{绝对定位}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -1039,11 +1053,13 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 	\end{tikzpicture}
 \end{figure}
 
+\vspace{0.5cm}
+
 \subsection{相对于自己的位置——相对定位}
 
-如果想为元素设置层模型中的相对定位，需要设置\lstinline|position: relative|，它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static (float)方式生成一个元素，然后相对于以前的位置移动，并且偏移前的位置保留不动，因此下面的元素无法上来。 \\
+如果想为元素设置层模型中的相对定位，需要设置\lstinline|position: relative|，它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static (float)方式生成一个元素，然后相对于以前的位置移动，并且偏移前的位置保留不动，因此下面的元素无法上来。\\
 
-\mybox{相对定位} \\
+\mybox{相对定位}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -1092,7 +1108,9 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 	\item 定位元素加入`position: absolute`后便可以使用top、bottom、left、right来进行偏移了。
 \end{enumerate}
 
-\mybox{相对父元素定位} \\
+\vspace{0.5cm}
+
+\mybox{相对父元素定位}\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <!DOCTYPE html>
@@ -1133,11 +1151,13 @@ margin与padding的区别在于，padding在外边框里，margin在外边框外
 	\end{tikzpicture}
 \end{figure}
 
+\vspace{0.5cm}
+
 \subsection{我就在那不动了——固定定位}
 
-通过设置\lstinline|position: fixed|让一个元素固定在一个位置，它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随着浏览器窗口的滚动条滚动而变化，除非在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小。因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流影响。 \\
+通过设置\lstinline|position: fixed|让一个元素固定在一个位置，它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随着浏览器窗口的滚动条滚动而变化，除非在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小。因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流影响。\\
 
-\mybox{固定定位} \\
+\mybox{固定定位}\\
 
 \begin{lstlisting}[style=htmlcssjs, breaklines=true, breakatwhitespace=false]
 <!DOCTYPE html>
