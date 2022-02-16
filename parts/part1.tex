@@ -345,15 +345,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{div标签}
 
-网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个<div>中，<div>的作用就相当于一个容器。\\
-
-逻辑部分是页面上相互关联的一组元素，如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示，图中用红色边框标出的部分就是一个逻辑部分，就可以使用<div>作为容器。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{img/C2/2-3/1.png}
-	\caption{div容器}
-\end{figure}
+网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个<div>中，<div>的作用就相当于一个容器。逻辑部分是页面上相互关联的一组元素，如网页中的独立的栏目版块，就是一个典型的逻辑部分。\\
 
 \mybox{div标签}\\
 
@@ -488,11 +480,7 @@ HTML中标签的语法有以下几点：
 </ol>
 \end{lstlisting}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.7]{img/C3/3-1/1.png}
-	\caption{有序列表}
-\end{figure}
+\vspace{0.5cm}
 
 \mybox{有序列表}\\
 
@@ -551,12 +539,6 @@ HTML中标签的语法有以下几点：
 </ul>
 \end{lstlisting}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.8]{img/C3/3-2/1.png}
-	\caption{无序列表}
-\end{figure}
-
 <ul>-<li>在网页中显示的默认样式一般为每项<li>前都自带一个圆点。通过修改<ul>的type属性，也能对前面的符号进行修改。\\
 
 <ul>的type属性有2个值：
@@ -592,7 +574,7 @@ HTML中标签的语法有以下几点：
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{img/C3/3-2/2.png}
+	\includegraphics[scale=0.5]{img/C3/3-2/1.png}
 	\caption{淘宝导航栏}
 \end{figure}
 
@@ -766,13 +748,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{table标签}
 
-有时候需要在网页中添加一些表格数据，如企业员工通讯录等。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.9]{img/C4/4-1/1.png}
-	\caption{企业员工通讯录}
-\end{figure}
+有时候需要在网页中添加一些表格数据，如企业员工通讯录等。\\
 
 创建表格主要包含5个元素：
 
@@ -883,13 +859,7 @@ HTML中标签的语法有以下几点：
 
 \subsection{给点提示呗——placeholder属性}
 
-有时候需要提示用户输入框需要输入的内容，这时候就需要使用<input>中的占位符placeholder属性。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[]{img/C4/4-3/1.png}
-	\caption{placeholder提示文本}
-\end{figure}
+有时候需要提示用户输入框需要输入的内容，这时候就需要使用<input>中的占位符placeholder属性。\\
 
 placeholder属性的值可以根据情况合理填写，当输入框输入内容时，占位符内容消失，当输入框无内容时，占位符内容显示。注意，占位符内容不是输入框真正的内容。\\
 
@@ -927,17 +897,17 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 
 \section{数字、网址、邮箱输入框}
 
-\subsection{数字输入框}
+\subsection{数字、网址、邮箱输入框}
 
-将<input>的type属性设置为number，则表示该输入框的类型为数字。数字框只能输入数字，输入其它字符无效。数字框最右侧会有一个加减符号，可以调整输入数字的大小，不同浏览器表现不一致。\\
+\begin{itemize}
+	\item 数字输入框：<input>的type属性设置为number，则表示该输入框的类型为数字。数字框只能输入数字，输入其它字符无效。数字框最右侧会有一个加减符号，可以调整输入数字的大小，不同浏览器表现不一致。
 
-\subsection{网址输入框}
+	\item 网址输入框：<input>的type属性设置为url，表示输入类型为网址。网址输入框必须以http://或https://开头，且后面必须有内容，否则提交时会报错误提示。
 
-将<input>的type属性设置为url，表示输入类型为网址。网址输入框必须以http://或https://开头，且后面必须有内容，否则提交时会报错误提示。\\
+	\item 邮箱输入框：<input>的type属性设置为email，则表示该输入框的类型为邮箱。邮箱输入框的值必须包含`@`，并且之后必须有内容，否则会报错误提示。
+\end{itemize}
 
-\subsection{邮箱输入框}
-
-将<input>的type属性设置为email，则表示该输入框的类型为邮箱。邮箱输入框的值必须包含`@`，并且之后必须有内容，否则会报错误提示。\\
+\vspace{0.5cm}
 
 \mybox{个人信息}\\
 
@@ -1002,7 +972,7 @@ placeholder属性的值可以根据情况合理填写，当输入框输入内容
 
 \subsection{label标签}
 
-<label>不会向用户呈现任何特殊特效，它的作用是为鼠标用户改进了可用性。如果在<label>内点击文本，就会触发此控件。也就是说，当用户单击选中该<label>时，浏览器就会自动将焦点转到和标签相关的表单控件上。
+<label>不会向用户呈现任何特殊特效，它的作用是为鼠标用户改进了可用性。如果在<label>内点击文本，就会触发此控件。也就是说，当用户单击选中该<label>时，浏览器就会自动将焦点转到和标签相关的表单控件上。\\
 
 \begin{lstlisting}[style=htmlcssjs]
 <label for="控件id名称">

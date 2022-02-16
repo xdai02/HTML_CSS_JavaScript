@@ -1458,7 +1458,7 @@ console.log("矩阵减法：" + C);
 
 \subsection{计算数组长度}
 
-引用数组的length属性获取数组长度，需要注意的是，JS数组的length属性是可变的。\\
+引用数组的length属性获取数组长度，需要注意JS数组的length是可变的。\\
 
 \mybox{计算数组长度}\\
 
@@ -1574,7 +1574,7 @@ console.log(arr);
 
 \subsection{合并数组}
 
-使用concat()可以合并两个或多个数组，该方法不会改变原有数组，而是返回一个新的合并完的数组。\\
+concat()用于合并两个或多个数组，该方法不会改变原有数组，而是返回一个新的合并完的数组。\\
 
 \mybox{concat()}\\
 
@@ -1599,7 +1599,7 @@ console.log(arr2);
 
 \subsection{数组转字符串}
 
-使用join(separator)方法可以将数组转换为字符串，其中`separator`参数可选，用于指定要使用的分隔符，如果该参数省略，则使用逗号作为分隔符。\\
+使用join(separator)方法可以将数组转换为字符串，其中separator参数可选，用于指定要使用的分隔符，如果该参数省略，则使用逗号作为分隔符。\\
 
 \mybox{join()}\\
 
@@ -1619,7 +1619,7 @@ console.log(arr.join());
 
 \subsection{字符串转数组}
 
-6. 使用split(separator, n)可以将字符串转换为数组，其中参数separator必选，用于指定将字符串按某个字符切割成若干个子字符串，并以数组的形式返回。参数n可选，用于指定返回的数组的最大长度，如果设置了该参数，返回的子串数量不会多于n；如果没有设置该参数，整个字符串都会被分隔。\\
+split(separator, n)可将字符串转换为数组，参数separator必选，用于指定分隔符，该方法以数组的形式返回。参数n可选，用于指定返回的数组的最大长度。\\
 
 \mybox{split()}\\
 
@@ -1683,7 +1683,7 @@ console.log(arr);
 
 \subsection{数组切片}
 
-使用slice(start, end)可以返回数组中被选定的元素，不包含下标为end的元素。其中参数start必选，用于指定开始位置，如果是负数则从数组尾部开始算起。参数end可选，用于指定结束位置，没有该参数省略，则切分到数组结束为止，如果是负数则从数组尾部开始算起。\\
+slice(start, end)返回数组中被选定的元素，不包含下标为end的元素。参数start必选，用于指定开始位置；参数end可选，用于指定结束位置，省略表示到末尾。\\
 
 \mybox{slice()}\\
 
@@ -1703,7 +1703,7 @@ console.log(arr.slice(2, 5));
 
 \subsection{查找元素}
 
-使用indexOf(item, start)可以查找指定元素，如果查找成功则返回该元素的下标，如果查找失败者返回-1。其中参数item必选，用于指定需要查找的元素，参数start可选，用于指定在数组中开始检索的位置，如省略则从第一个元素开始检索。\\
+使用indexOf(item, start)可以查找指定元素，如果查找成功则返回该元素的下标，如果查找失败者返回-1。其中参数item必选，用于指定需要查找的元素。\\
 
 \mybox{indexOf()}\\
 
@@ -2206,6 +2206,8 @@ console.log("斐波那契数列第" + n + "位：" + fibonacci(7));
 斐波那契数列第7位：13
 	\end{verbatim}
 \end{tcolorbox}
+
+\vspace{0.5cm}
 
 \mybox{阿克曼函数}
 
@@ -3259,7 +3261,39 @@ screen.availWidth和screen.availHeight属性返回访问者屏幕的宽度和高
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{img/C17/17-1/1.png}
+	\begin{tikzpicture}[
+			level distance=2cm,
+			level 1/.style={sibling distance=8cm},
+			level 2/.style={sibling distance=8cm},
+			level 3/.style={sibling distance=8cm},
+			level 4/.style={sibling distance=4cm}
+		]
+		\node[rectangle,draw] {document}
+		child {
+				node[rectangle,draw] {html}
+				child {
+						node[rectangle,draw] {head}
+						child {
+								node[rectangle,draw] {title}
+								child {node[rectangle,draw] {text}}
+							}
+					}
+				child {
+						node[rectangle,draw] {body}
+						child {
+								node[rectangle,draw] {a}
+								child {node[rectangle,draw] {href}}
+								child {node[rectangle,draw] {text}}
+							}
+						child {
+								node[rectangle,draw] {h1}
+								child {node[rectangle,draw] {em}}
+								child {node[rectangle,draw] {text}}
+							}
+					}
+			};
+	\end{tikzpicture}
+	\caption{DOM树}
 \end{figure}
 
 \newpage

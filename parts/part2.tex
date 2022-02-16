@@ -142,11 +142,6 @@ div {
 
 但是以上总结的优先级有一个前提，那就是内联式、嵌入式、外部式样式表中CSS样式是在相同权值的情况下。那权值是什么呢？
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[]{img/C5/5-5/1.png}
-\end{figure}
-
 \newpage
 
 \chapter{选择器}
@@ -763,18 +758,12 @@ color: rgb(20%, 33%, 25%);
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{img/C8/8-2/1.png}
+	\caption{盒子模型}
 \end{figure}
 
 盒模型的宽度和高度和平常所说的物体的宽度和高度的理解是不一样的，CSS内定义的宽和高，指的是盒模型中内容的宽和高。\\
 
 元素实际的宽度（盒子的宽度） = 左外边距 + 左边框 + 左内边距 + 内容宽度 + 右内边距 + 右边框 + 右外边距\\
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[]{img/C8/8-2/2.png}
-\end{figure}
-
-\vspace{0.5cm}
 
 \subsection{外边框（Border）}
 
@@ -895,23 +884,11 @@ CSS中也允许只为一个方向的边框设置属性，使用border-top、bord
 
 \subsection{内边距（Padding）}
 
-元素内容与边框之间是可以设置距离的，称之为内边距或填充。内边距也可分为上、右、下、左（顺时针）。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.7]{img/C8/8-2/3.png}
-\end{figure}
-
-\vspace{0.5cm}
+元素内容与边框之间是可以设置距离的，称之为内边距或填充。内边距也可分为上、右、下、左（顺时针）。\\
 
 \subsection{外边距（Margin）}
 
-元素与其他元素之间的距离可以使用外边距来设置，外边距也可分为上、右、下、左。
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.7]{img/C8/8-2/4.png}
-\end{figure}
+元素与其他元素之间的距离可以使用外边距来设置，外边距也可分为上、右、下、左。\\
 
 margin与padding的区别在于，padding在外边框里，margin在外边框外。
 
